@@ -6,9 +6,9 @@ Structure is as Follows
 APP.jsx 
           
           - SummaryMain
-          - Customer Rating
-          - Customer Rating Visualizer
-          - Recommendation
+            - Customer Rating
+            - Customer Rating Visualizer
+            - Recommendation
           
         - PhotoHeadersList
           - Photos
