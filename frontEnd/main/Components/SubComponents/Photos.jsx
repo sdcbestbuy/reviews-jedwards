@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Photos = (props) => {
+  console.log(props)
   return (
-    <div>
-      test
+    <div id='indivPhoto'>
+      <img src={props.elPhoto.thumbnailImage}></img>
     </div>
   )
 }

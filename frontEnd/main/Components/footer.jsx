@@ -3,8 +3,9 @@ import React from 'react';
 
 const Footer = (props) =>{
   return (
-    <div>
-      Test
+    <div id='FooterMain'>
+      <button id='ShowMoreBTN'>Show More</button>
+      <button id='WriteAReviewBTN'>Write a Review</button>
     </div>
   )
 }
