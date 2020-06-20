@@ -4,7 +4,8 @@ This will be the Reviews Module
 Structure is as Follows
 
 APP.jsx 
-        - SummaryMain
+          
+          - SummaryMain
           - Customer Rating
           - Customer Rating Visualizer
           - Recommendation
