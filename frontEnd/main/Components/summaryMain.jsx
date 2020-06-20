@@ -7,7 +7,7 @@ import Recommendation from './SubComponents/recommendation.jsx';
 
 const SummaryMain = (props)=>{
     return (
-      <div className="SummaryMain">
+      <div className='SummaryMain'>
         <div id='CustomerRatingSection'>
           {/* Customer rating is mostly done */}
           {/* Needs stars underneath customer rating  */}

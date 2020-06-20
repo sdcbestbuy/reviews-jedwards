@@ -1,11 +1,11 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const path = require("path");
+const path = require('path');
 const PORT = 6969;
 const dbquery = require ('../db/queries')
 
 
-app.use(express.static(path.join(__dirname, "../frontEnd/dist")));
+app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json())
 
 app.get('/api/getReviews',(req,res)=>{

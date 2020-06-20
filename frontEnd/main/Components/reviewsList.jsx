@@ -4,7 +4,7 @@ import Review from './SubComponents/reviews.jsx'
 
 const ReviewsList = (props) => {
   return (
-    <div id="AllReviewsSection">
+    <div id='AllReviewsSection'>
       <p>Showing <strong>5</strong> of 5 reviews</p>
       <Review thisProductsData={props}/>
       <Review thisProductsData={props}/>

@@ -57,7 +57,7 @@ class App extends React.Component {
     if (this.state.clicked === false) {
       return (
         <div onClick={()=>this.expand()}>
-          <span id='Main'><h2><strong>Reviews</strong></h2><p className='StarsMain'>&#9734;&#9734;&#9734;&#9734;&#9734;</p> <p id="customerCount">({this.state.reviewsData[0].customerReviewCount})</p></span>
+          <span id='Main'><h2><strong>Reviews</strong></h2><p className='StarsMain'>&#9734;&#9734;&#9734;&#9734;&#9734;</p> <p id='customerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
     } else {
@@ -70,10 +70,10 @@ class App extends React.Component {
             <div id='SummaryMainSection'>
               <SummaryMain thisProductsData={this.state.reviewsData} />
             </div>
-            <div id="PhotoSection">
+            <div id='PhotoSection'>
               <PhotoHeaderList thisProductsData={this.state.reviewsData} />
             </div>
-            <div id="MainReviewsSection">
+            <div id='MainReviewsSection'>
               <ReviewsList thisProductsData={this.state.reviewsData} />
             </div>
             <div>
