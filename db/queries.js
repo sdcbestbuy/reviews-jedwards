@@ -8,6 +8,8 @@ const connection = mysql.createConnection({
 
 connection.connect();
 
+//to do sanitize queries
+
 const getTheReviews = (id,cb) =>{
   console.log('Quering DB FOR ID',id)
   connection.query(`SELECT * FROM product WHERE id='${id}';`,(error,results)=>{

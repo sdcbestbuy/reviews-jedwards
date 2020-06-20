@@ -1,8 +1,8 @@
 
 /* Main App Component */
 html {
-  margin-left: 6%;
-  margin-right: 6%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 #Main {
   display: flex;
@@ -40,8 +40,8 @@ html {
 /* -------------------------------- */
 #SummaryMainSection {
  display: flex;
- border: 2px solid black;
- 
+ border-bottom: 1px solid gray;
+
 }
 .SummaryMain {
   display: flex;
@@ -49,8 +49,9 @@ html {
 }
 /* -----------Sub Section 1----------- */
 #CustomerRatingSection{
-  border: 2px solid orangered;
+  /* border: 2px solid orangered; */
   padding-right: 5%;
+  text-align: inherit;
 }
 
 #CustomerName{
@@ -66,6 +67,8 @@ html {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.2px;
+  float: left;
+  display: inline-block;
 }
 #CustomerRatingNum{
   font-family: Arial, Helvetica, sans-serif;
@@ -87,12 +90,12 @@ html {
 }
 #CustomerSeeAll{
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   color:#0457C8;
 }
 /* -----------Sub Section 2----------- */
 #CustomerRatingVisualizerSection{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin-right: 40px;
 
 }
@@ -107,7 +110,7 @@ html {
 
 /* ----------Sub Section 3------------ */
 #RecommendationSection{
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   margin-left: 10px;
 }
 
@@ -138,7 +141,9 @@ html {
 /* PhotoHeaderList */
 #PhotoSection {
   display: flex;
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
+  border-bottom: 1px solid gray;
+  /* border-top: 1px solid gray; */
   margin-top: 10px;
   width: 100%;
   flex-direction: row;
@@ -154,15 +159,15 @@ html {
 /* Has 1 sub Component */
 #LineofPhotos{
   margin-top: 30px;
-  border: 2px solid green;
   display: flex;
   flex-direction: row; 
   width: 80%;
   justify-content: center;
+  margin-bottom: 1.5%;
 }
 
 #indivPhoto{
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -179,24 +184,30 @@ html {
 #MainReviewsSection{
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 #ReviewNamesSection{
-  border: 2px solid skyblue;
-  padding-right: 10%;
+  /* border: 2px solid skyblue; */
   padding-top: 3%;
+  float: left;
+  width: 20%;
 }
 #ReviewMain{
   display: flex;
   padding-top: 3%;
   padding-bottom: 2%;
   flex-direction: column;
+  
+  float: right;
 }
 
 #OneReview{
-  border: 2px solid salmon;
-  display: flex;
+  /* border: 2px solid salmon; */
+  display: inline-block;
   flex-direction: row;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid gray;
 }
 #CommentHeaderStars{
   padding-bottom: 3px;
@@ -246,6 +257,19 @@ color: #666666;
   font-weight: 700;
 }
 
+#buttonStyleA:hover {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  padding: 6px;
+  border-color: rgb(0, 0, 99);
+  color: white;
+  background-color: rgb(0, 0, 99);
+  border-radius: 4px;
+  border-width: thin;
+  display: inline-block;
+  transition-duration: 0.5s;
+}
+
 
 .buttonStyleB{
   border: none;
@@ -255,8 +279,17 @@ color: #666666;
   font-weight: 700;
 }
 
+.buttonStyleB:hover{
+  border: none;
+  color: #0457C8;
+  background-color: white;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 #ReviewCommentSection{
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   width: 80%;
   margin-left: 6%;
   display: flex;
@@ -276,7 +309,7 @@ color: #666666;
 #FooterSection{
   display: flex;
   flex-direction: row;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   align-items: center;
 }
 
@@ -337,3 +370,4 @@ color: #666666;
   display: inline-block;
   transition-duration: 0.5s;
 }
+
