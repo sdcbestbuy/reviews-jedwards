@@ -3,20 +3,19 @@ This will be the Reviews Module
 
 Structure is as Follows
 
-APP.jsx 
+          - APP.jsx 
+            - SummaryMain
+              - Customer Rating
+              - Customer Rating Visualizer
+              - Recommendation
           
-          - SummaryMain
-            - Customer Rating
-            - Customer Rating Visualizer
-            - Recommendation
+            - PhotoHeadersList
+              - Photos
           
-        - PhotoHeadersList
-          - Photos
-          
-        - ReviewsList
-          - Review
-            - ReviewsNameArea
-            - ReviewCommentArea
+            - ReviewsList
+              - Review
+                - ReviewsNameArea
+                - ReviewCommentArea
             
-        - Footer
+            - Footer
         
