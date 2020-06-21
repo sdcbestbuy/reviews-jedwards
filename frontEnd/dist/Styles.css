@@ -26,6 +26,10 @@ html {
   margin-left: 10px;
 }
 
+.checked {
+  color: orange;
+}
+
 #customerCount {
   font-size: 15px;
   display: flex;

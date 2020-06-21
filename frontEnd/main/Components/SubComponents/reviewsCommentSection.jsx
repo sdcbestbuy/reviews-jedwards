@@ -21,15 +21,46 @@ function generateCommentTitle() {
   return newTitleComment;
 
 }
+// let element = document.getElementById('CommentHeaderStars');
+// function generateRandomStarCount (){
+  
+//   let genNum = Math.round(Math.random()*5);
+//   if (genNum > 5){
+//     genNum = 5;
+//   }
+//   if (genNum === 0){
+//     genNum = 1;
+//   }
+//   let emptyStar = 5 - genNum;
+//   console.log('Gen num is',genNum)
+//   console.log('this is empty star',(emptyStar))
+  
+  
+//   console.log(element)
+//   for (var i = 0; i < emptyStar; i++){
+//     let oneOffStar = document.createElement('li');
+//     oneOffStar.className="fa fa-star"
+//     console.log(oneOffStar)
+//     console.log(element)
+//     element.appendChild(oneOffStar)
+//   } 
 
-
+//   for (var i = 0; i < genNum; i++){
+//     let oneStar = document.createElement('li');
+//     oneStar.className="fa fa-star checked"
+//     console.log(oneStar)
+//     element.appendChild(oneStar)
+//   } 
+//   return;
+// }
 
 const ReviewsCommentArea = (props) => {
   return (
     <div id='ReviewMain'>
       <div id='CommentHeader'>
-        <span id='CommentHeaderStars'> &#9734;&#9734;&#9734;&#9734;&#9734;</span><span id='CommentHeaderTitleText'>{generateCommentTitle()}</span>
+        <ul id='CommentHeaderStars'></ul><span id='CommentHeaderTitleText'>{generateCommentTitle()}</span>
       </div>
+      
       <div id='CommentSubHeader'>
         <span>&#9745;</span><span id='VerifiedServer'>Verified Purchase  |</span><span id='CommentSubHeaderGrayText'> Posted {Math.round(Math.random() * 5)} week(s) ago. Owned for {Math.round(Math.random() * 3)} month(s) when reviewed.</span>
       </div>
