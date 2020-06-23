@@ -3,3 +3,7 @@ frontEnd/dist/bundle.js
 webpack.config.js
 .babelrc
 bundle.js
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
