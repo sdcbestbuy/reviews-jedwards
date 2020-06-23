@@ -1,7 +1,7 @@
 {
   "name": "bestbuy",
   "version": "1.0.0",
-  "description": "Specifications",
+  "description": "Reviews",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HRATX49-BestBuy/Specifications_Polancich.git"
+    "url": "git+https://github.com/HRATX49-BestBuy/Reviews_Polancich.git"
   },
   "keywords": [
-    "Specifications"
+    "Reviews"
   ],
   "author": "Benjamin P.",
   "license": "MIT",
@@ -30,9 +30,9 @@
     "react-dom": "^16.13.1"
   },
   "bugs": {
-    "url": "https://github.com/HRATX49-BestBuy/Specifications_Polancich/issues"
+    "url": "https://github.com/HRATX49-BestBuy/Reviews_Polancich/issues"
   },
-  "homepage": "https://github.com/HRATX49-BestBuy/Specifications_Polancich#readme",
+  "homepage": "https://github.com/HRATX49-BestBuy/Reviews_Polancich#readme",
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
