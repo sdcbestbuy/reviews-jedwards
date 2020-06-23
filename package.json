@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
+    "start": "node server.compiled.js",
     "start-webpack": "webpack -p -w",
     "build": "babel server/server.js --out-file server.compiled.js"
   },
@@ -38,7 +38,6 @@
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.8.3",
-    "babel": "^6.23.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.6.0",
     "nodemon": "^2.0.2",
