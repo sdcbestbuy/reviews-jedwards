@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "start-webpack": "webpack -p -w"
+    "start-webpack": "webpack -p -w",
+    "build": "babel server/server.js --out-file server.compiled.js"
   },
   "repository": {
     "type": "git",
