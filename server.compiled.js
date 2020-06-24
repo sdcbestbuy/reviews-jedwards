@@ -6,7 +6,7 @@ var app = express();
 
 var path = require('path');
 
-var PORT = process.env.HTTP_PORT || 6969;
+var PORT = process.env.RDS_PORT;
 
 var dbquery = require('./db/queries');
 
