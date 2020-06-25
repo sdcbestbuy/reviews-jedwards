@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.compiled.js",
+    "start": "node server/server.compiled.js",
     "start-webpack": "webpack -p -w",
-    "build": "babel server/server.js --out-file server.compiled.js"
+    "build": "babel server/server.js --out-file server/server.compiled.js"
   },
   "repository": {
     "type": "git",

@@ -25,7 +25,7 @@ app.get('/api/getReviews',(req,res)=>{
   })
 })
 
-
+// Need to move server compiled into same folder as server
 
 
 app.listen(PORT, () => {
