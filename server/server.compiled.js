@@ -8,7 +8,7 @@ var path = require('path');
 
 var PORT = process.env.PORT;
 
-var dbquery = require('./db/queries');
+var dbquery = require('../db/queries');
 
 var _require = require('http-proxy-middleware'),
     createProxyMiddleware = _require.createProxyMiddleware; // REVIEWS COMPONENT
