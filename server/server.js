@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT;
-const dbquery = require ('./db/queries')
+const dbquery = require ('../db/queries')
 const { createProxyMiddleware } = require('http-proxy-middleware');
 // REVIEWS COMPONENT
 
