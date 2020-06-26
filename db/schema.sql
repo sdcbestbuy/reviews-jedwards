@@ -4,7 +4,7 @@ CREATE DATABASE bestBuyReviews;
 
 USE bestBuyReviews;
 
-CREATE TABLE product (
+CREATE TABLE product(
   id INT PRIMARY KEY AUTO_INCREMENT,
   customer_review_AVG INT,
   customerReviewCount INT,
@@ -13,7 +13,7 @@ CREATE TABLE product (
   regularPrice INT,
   shortDescription VARCHAR(255),
   thumbnailImage VARCHAR(255),
-  product_url VARCHAR(255)
+  product_url VARCHAR(255),
 );
 
 INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (1,2,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5956/5956026_sa.jpg','Lenovo - Refurbished Desktop - Intel Core i5 - 8GB Memory - 500GB Hard Drive - Black',254.99,'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermen','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5956/5956026_s.gif','https://api.bestbuy.com/click/-/5956026/pdp');
