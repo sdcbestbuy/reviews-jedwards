@@ -4,7 +4,7 @@ html {
   margin-left: 5%;
   margin-right: 5%;
 }
-#Main {
+#bILPMain {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
@@ -15,7 +15,7 @@ html {
   position: relative;
 }
 
-.StarsMain {
+.bILPStarsMain {
   font-size: 15px;
   display: flex;
   position: relative;
@@ -26,11 +26,11 @@ html {
   margin-left: 10px;
 }
 
-.checked {
+.bILPchecked {
   color: orange;
 }
 
-#customerCount {
+#bILPcustomerCount {
   font-size: 15px;
   display: flex;
   position: relative;
@@ -42,29 +42,29 @@ html {
 }
 /* Has 4 Sub Components */
 /* -------------------------------- */
-#SummaryMainSection {
+#bILPSummaryMainSection {
  display: flex;
  border-bottom: 1px solid gray;
 
 }
-.SummaryMain {
+.bILPSummaryMain {
   display: flex;
   flex-direction: row;
 }
 /* -----------Sub Section 1----------- */
-#CustomerRatingSection{
+#bILPCustomerRatingSection{
   /* border: 2px solid orangered; */
   padding-right: 5%;
   text-align: inherit;
 }
 
-#CustomerName{
+#bILPCustomerName{
   white-space: nowrap;
   font-family: Arial, Helvetica, sans-serif;
   color: #0457C8;
 }
 
-#CustomerRatingTag{
+#bILPCustomerRatingTag{
   margin-top: 9px;
   margin-bottom: 5px;
   font-family: Arial, Helvetica, sans-serif;
@@ -74,7 +74,7 @@ html {
   float: left;
   display: inline-block;
 }
-#CustomerRatingNum{
+#bILPCustomerRatingNum{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 38px;
@@ -82,29 +82,29 @@ html {
   margin-top: 9px;
 }
 
-#CustomerStars{
+#bILPCustomerStars{
   font-size: 25px;
   margin-bottom: 0;
 }
 
-#CustomerAmtOfReviews{
+#bILPCustomerAmtOfReviews{
   margin: 0%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
-#CustomerSeeAll{
+#bILPCustomerSeeAll{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color:#0457C8;
 }
 /* -----------Sub Section 2----------- */
-#CustomerRatingVisualizerSection{
+#bILPCustomerRatingVisualizerSection{
   /* border: 2px solid blue; */
   margin-right: 40px;
 
 }
 
-#customerRatingVisualization{
+#bILPcustomerRatingVisualization{
   list-style-type: none;
   margin-left: 20px;
   padding-top: 10px;
@@ -113,15 +113,12 @@ html {
 }
 
 /* ----------Sub Section 3------------ */
-#RecommendationSection{
+#bILPRecommendationSection{
   /* border: 2px solid yellow; */
   margin-left: 10px;
 }
 
-#Reccomendation{
-
-}
-#RecommendPercent{
+#bILPRecommendPercent{
   margin-left: 65px;
   margin-top: 45px;
   font-size: 24px;
@@ -129,7 +126,7 @@ html {
   font-weight: 100;
 }
 
-#RecommendComment{
+#bILPRecommendComment{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   margin-left: 15px;
@@ -143,7 +140,7 @@ html {
 
 /* -------------------------------- */
 /* PhotoHeaderList */
-#PhotoSection {
+#bILPPhotoSection {
   display: flex;
   /* border: 2px solid pink; */
   border-bottom: 1px solid gray;
@@ -152,7 +149,7 @@ html {
   width: 100%;
   flex-direction: row;
 }
-#CustomerImagesLine{
+#bILPCustomerImagesLine{
   display: flex;
   justify-self: start;
   margin: 0%;
@@ -161,7 +158,7 @@ html {
 }
 
 /* Has 1 sub Component */
-#LineofPhotos{
+#bILPLineofPhotos{
   margin-top: 30px;
   display: flex;
   flex-direction: row; 
@@ -170,7 +167,7 @@ html {
   margin-bottom: 1.5%;
 }
 
-#indivPhoto{
+#bILPindivPhoto{
   /* border: 2px solid orange; */
   display: flex;
   flex-direction: row;
@@ -185,18 +182,18 @@ html {
 
 /* -------------------------------- */
 /* ReviewsList */
-#MainReviewsSection{
+#bILPMainReviewsSection{
   display: flex;
   flex-direction: column;
   /* border: 2px solid black; */
 }
-#ReviewNamesSection{
+#bILPReviewNamesSection{
   /* border: 2px solid skyblue; */
   padding-top: 3%;
   float: left;
   width: 20%;
 }
-#ReviewMain{
+#bILPReviewMain{
   display: flex;
   padding-top: 3%;
   padding-bottom: 2%;
@@ -205,7 +202,7 @@ html {
   float: right;
 }
 
-#OneReview{
+#bILPOneReview{
   /* border: 2px solid salmon; */
   display: inline-block;
   flex-direction: row;
@@ -213,44 +210,44 @@ html {
   width: 100%;
   border-bottom: 1px solid gray;
 }
-#CommentHeaderStars{
+#bILPCommentHeaderStars{
   padding-bottom: 3px;
   font-size: 16px;
 }
-#CommentHeaderTitleText{
+#bILPCommentHeaderTitleText{
   padding-left: 4px;
   font-weight: 600;
   font-family: sans-serif;
   font-size: 16px;
 }
 
-#CommentSubHeader{
+#bILPCommentSubHeader{
   padding-top: 9px;
 }
 
-#CommentSubHeaderGrayText{
+#bILPCommentSubHeaderGrayText{
 font-family: sans-serif;
 font-size: 13px;
 color: #666666;
 }
-#VerifiedServer{
+#bILPVerifiedServer{
   font-weight: 700;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 
-#CommentP{
+#bILPCommentP{
   font-family: 'Montserrat', sans-serif;
   margin-top: 10px;
   font-size: 14px;
 }
 
-#CommentThumbnailImage{
+#bILPCommentThumbnailImage{
   padding-bottom: 12px;
 }
 
-#buttonStyleA{
+#bILPbuttonStyleA{
   border-radius: 4px;
   border-width: thin;
   border-color: #666666;
@@ -261,7 +258,7 @@ color: #666666;
   font-weight: 700;
 }
 
-#buttonStyleA:hover {
+#bILPbuttonStyleA:hover {
   font-family: 'Montserrat';
   font-weight: 700;
   padding: 6px;
@@ -275,7 +272,7 @@ color: #666666;
 }
 
 
-.buttonStyleB{
+.bILPbuttonStyleB{
   border: none;
   color: #0457C8;
   background-color: white;
@@ -283,7 +280,7 @@ color: #666666;
   font-weight: 700;
 }
 
-.buttonStyleB:hover{
+.bILPbuttonStyleB:hover{
   border: none;
   color: #0457C8;
   background-color: white;
@@ -292,7 +289,7 @@ color: #666666;
   text-decoration: underline;
 }
 
-#ReviewCommentSection{
+#bILPReviewCommentSection{
   /* border: 2px solid orange; */
   width: 80%;
   margin-left: 6%;
@@ -310,14 +307,14 @@ color: #666666;
 
 /* -------------------------------- */
 /* Footer */
-#FooterSection{
+#bILPFooterSection{
   display: flex;
   flex-direction: row;
   /* border: 2px solid black; */
   align-items: center;
 }
 
-#FooterMain {
+#bILPFooterMain {
   display: flex;
   flex-direction: row;
   /* border: 2px solid black; */
@@ -326,7 +323,7 @@ color: #666666;
   margin-right: 40%;
 }
 
-#ShowMoreBTN{
+#bILPShowMoreBTN{
   margin-right: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -338,7 +335,7 @@ color: #666666;
   display: inline-block;
 }
 
-#ShowMoreBTN:hover {
+#bILPShowMoreBTN:hover {
   margin-right: 5px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -351,7 +348,7 @@ color: #666666;
   transition-duration: 0.5s;
 }
 
-#WriteAReviewBTN{
+#bILPWriteAReviewBTN{
   margin-left: 5px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
@@ -362,7 +359,7 @@ color: #666666;
   border-radius: 2px;
   display: inline-block
 }
-#WriteAReviewBTN:hover {
+#bILPWriteAReviewBTN:hover {
   margin-left: 5px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;

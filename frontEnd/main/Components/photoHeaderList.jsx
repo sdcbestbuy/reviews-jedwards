@@ -5,9 +5,9 @@ import Photos from './SubComponents/Photos.jsx'
 
 const PhotoHeaderList = (props) =>{
     return (
-      <div id='PhotoSection'>
-        <h4 id='CustomerImagesLine'>Customer images</h4>
-        <div id='LineofPhotos'>
+      <div id='bILPPhotoSection'>
+        <h4 id='bILPCustomerImagesLine'>Customer images</h4>
+        <div id='bILPLineofPhotos'>
         <Photos elPhoto={props.thisProductsData[0]}/>
         <Photos elPhoto={props.thisProductsData[0]}/>
         <Photos elPhoto={props.thisProductsData[0]}/>

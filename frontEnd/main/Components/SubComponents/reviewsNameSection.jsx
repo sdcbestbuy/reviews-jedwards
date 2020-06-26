@@ -21,7 +21,7 @@ function generateName(){
 const ReviewsNameArea = (props) =>{
   return(
     <div>
-      <h4 id='CustomerName'>{generateName()}</h4>
+      <h4 id='bILPCustomerName'>{generateName()}</h4>
     </div>
   )
 }

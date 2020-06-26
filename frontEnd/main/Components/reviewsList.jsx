@@ -4,7 +4,7 @@ import Review from './SubComponents/reviews.jsx'
 
 const ReviewsList = (props) => {
   return (
-    <div id='AllReviewsSection'>
+    <div id='bILPAllReviewsSection'>
       <p>Showing <strong>5</strong> of 5 reviews of {Math.round(Math.random()*1000)} reviews</p>
       <Review thisProductsData={props}/>
       <Review thisProductsData={props}/>

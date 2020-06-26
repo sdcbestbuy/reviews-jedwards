@@ -56,22 +56,22 @@ function generateCommentTitle() {
 
 const ReviewsCommentArea = (props) => {
   return (
-    <div id='ReviewMain'>
-      <div id='CommentHeader'>
-        <ul id='CommentHeaderStars'></ul><span id='CommentHeaderTitleText'>{generateCommentTitle()}</span>
+    <div id='bILPReviewMain'>
+      <div id='bILPCommentHeader'>
+        <ul id='bILPCommentHeaderStars'></ul><span id='bILPCommentHeaderTitleText'>{generateCommentTitle()}</span>
       </div>
       
-      <div id='CommentSubHeader'>
-        <span>&#9745;</span><span id='VerifiedServer'>Verified Purchase  |</span><span id='CommentSubHeaderGrayText'> Posted {Math.round(Math.random() * 5)} week(s) ago. Owned for {Math.round(Math.random() * 3)} month(s) when reviewed.</span>
+      <div id='bILPCommentSubHeader'>
+        <span>&#9745;</span><span id='bILPVerifiedServer'>Verified Purchase  |</span><span id='bILPCommentSubHeaderGrayText'> Posted {Math.round(Math.random() * 5)} week(s) ago. Owned for {Math.round(Math.random() * 3)} month(s) when reviewed.</span>
       </div>
-      <div id='Comment'>
-        <p id='CommentP'>{generateComment()}</p>
+      <div id='bILPComment'>
+        <p id='bILPCommentP'>{generateComment()}</p>
       </div>
-      <div id='CommentThumbnailImage'>
+      <div id='bILPCommentThumbnailImage'>
         <img src={props.elprops.thisProductsData.thisProductsData[0].thumbnailImage}></img>
       </div>
-      <div id='CommentButtons'>
-        <button id='buttonStyleA'>Helpful ({Math.round(Math.random() * 10)})</button> <button className='buttonStyleB'>Unhelpful ({Math.round(Math.random() * 10)})</button> | <button className='buttonStyleB'>Report</button> | <button className='buttonStyleB'>Post Comment</button>
+      <div id='bILPCommentButtons'>
+        <button id='bILPbuttonStyleA'>Helpful ({Math.round(Math.random() * 10)})</button> <button className='bILPbuttonStyleB'>Unhelpful ({Math.round(Math.random() * 10)})</button> | <button className='bILPbuttonStyleB'>Report</button> | <button className='bILPbuttonStyleB'>Post Comment</button>
       </div>
     </div>
   )

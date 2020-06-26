@@ -7,17 +7,17 @@ import Recommendation from './SubComponents/recommendation.jsx';
 
 const SummaryMain = (props)=>{
     return (
-      <div className='SummaryMain'>
-        <div id='CustomerRatingSection'>
+      <div className='bILPSummaryMain'>
+        <div id='bILPCustomerRatingSection'>
           {/* Customer rating is mostly done */}
           {/* Needs stars underneath customer rating  */}
           <CustomerRating ratings={props.thisProductsData}/>
         </div>
-        <div id='CustomerRatingVisualizerSection'>
+        <div id='bILPCustomerRatingVisualizerSection'>
           {/* */}
           <CustomerRatingVisualizer ratings={props.thisProductsData}/>
         </div>
-        <div id='RecommendationSection'>
+        <div id='bILPRecommendationSection'>
           <Recommendation ratings={props.thisProductsData}/>
         </div>
       </div>

@@ -57,7 +57,7 @@ class App extends React.Component {
     if (this.state.clicked === false) {
       return (
         <div onClick={()=>this.expand()}>
-          <span id='Main'><h2><strong>Reviews</strong></h2><p className='StarsMain'>&#9734;&#9734;&#9734;&#9734;&#9734;</p> <p id='customerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
+          <span id='bILPMain'><h2><strong>Reviews</strong></h2><p className='bILPStarsMain'>&#9734;&#9734;&#9734;&#9734;&#9734;</p> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
     } else {
@@ -65,19 +65,19 @@ class App extends React.Component {
         return (
           <div>
             <div onClick={()=>this.expand()}>
-              <span id='Main'><h2><strong>Reviews</strong></h2></span>
+              <span id='bILPMain'><h2><strong>Reviews</strong></h2></span>
             </div>
-            <div id='SummaryMainSection'>
+            <div id='bILPSummaryMainSection'>
               <SummaryMain thisProductsData={this.state.reviewsData} />
             </div>
-            <div id='PhotoSection'>
+            <div id='bILPPhotoSection'>
               <PhotoHeaderList thisProductsData={this.state.reviewsData} />
             </div>
-            <div id='MainReviewsSection'>
+            <div id='bILPMainReviewsSection'>
               <ReviewsList thisProductsData={this.state.reviewsData} />
             </div>
             <div>
-              <Footer id='FooterSection' />
+              <Footer id='bILPFooterSection' />
             </div>
           </div>
         )

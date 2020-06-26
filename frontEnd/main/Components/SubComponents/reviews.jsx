@@ -5,11 +5,11 @@ import ReviewsCommentArea from './reviewsCommentSection.jsx'
 
 const Review = (props) => {
   return (
-    <div id='OneReview'>
-      <div id='ReviewNamesSection'>
+    <div id='bILPOneReview'>
+      <div id='bILPReviewNamesSection'>
         <ReviewsNameArea />
       </div>
-      <div id='ReviewCommentSection'>
+      <div id='bILPReviewCommentSection'>
         < ReviewsCommentArea elprops={props}/>
       </div>
     </div>
