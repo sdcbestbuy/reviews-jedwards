@@ -1,16 +1,12 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 6969;
 const dbquery = require ('../db/queries')
-const { createProxyMiddleware } = require('http-proxy-middleware');
 // REVIEWS COMPONENT
-
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json())
-
-
 
 
 app.get('/api/getReviews',(req,res)=>{
@@ -24,9 +20,6 @@ app.get('/api/getReviews',(req,res)=>{
     }
   })
 })
-
-// Need to move server compiled into same folder as server
-
 
 app.listen(PORT, () => {
   console.log(`server is CONNECTED on PORT:${PORT}`);

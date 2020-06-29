@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.compiled.js",
-    "start-webpack": "webpack -p -w",
+    "start-webpack": "webpack --watch --mode development --inline --progress",
     "build": "babel server/server.js --out-file server/server.compiled.js"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "author": "Benjamin P.",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "core-util-is": "^1.0.2",

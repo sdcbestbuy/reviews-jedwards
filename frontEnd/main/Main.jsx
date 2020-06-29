@@ -14,7 +14,7 @@ class App extends React.Component {
       clicked: false
     }
     this.getCurrentProductReview = this.getCurrentProductReview.bind(this)
-    this.expand = this.expand.bind(this)
+    this.expand = this.expand.bind(this);
   }
 
   componentDidMount() {
@@ -33,21 +33,18 @@ class App extends React.Component {
       .catch((error) => {
         console.log('Error with getReviews Axios Get APP.JS', error);
       })
-      .finally(() => {
-
-      })
   }
 
-  expand(){
+  expand() {
     this.setState({
-      clicked: !this.state.clicked
+      clicked: !this.state.clicked,
     })
   }
 
   render() {
     if (this.state.reviewsData.length === 0) {
       return (
-        <div>
+        <div className="bILPStandby">
           <h1>
             Standby
         </h1>
@@ -56,28 +53,30 @@ class App extends React.Component {
     }
     if (this.state.clicked === false) {
       return (
-        <div onClick={()=>this.expand()}>
+        <div onClick={() => this.expand()}>
           <span id='bILPMain'><h2><strong>Reviews</strong></h2><p className='bILPStarsMain'>&#9734;&#9734;&#9734;&#9734;&#9734;</p> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
     } else {
-       if (this.state.clicked === true) {
+      if (this.state.clicked === true) {
         return (
           <div>
-            <div onClick={()=>this.expand()}>
-              <span id='bILPMain'><h2><strong>Reviews</strong></h2></span>
-            </div>
-            <div id='bILPSummaryMainSection'>
-              <SummaryMain thisProductsData={this.state.reviewsData} />
-            </div>
-            <div id='bILPPhotoSection'>
-              <PhotoHeaderList thisProductsData={this.state.reviewsData} />
-            </div>
-            <div id='bILPMainReviewsSection'>
-              <ReviewsList thisProductsData={this.state.reviewsData} />
-            </div>
-            <div>
-              <Footer id='bILPFooterSection' />
+            <div className="bILPStandby">
+              <div onClick={() => this.expand()}>
+                <span id='bILPMain'><h2><strong>Reviews</strong></h2></span>
+              </div>
+              <div id='bILPSummaryMainSection'>
+                <SummaryMain thisProductsData={this.state.reviewsData} />
+              </div>
+              <div id='bILPPhotoSection'>
+                <PhotoHeaderList thisProductsData={this.state.reviewsData} />
+              </div>
+              <div id='bILPMainReviewsSection'>
+                <ReviewsList thisProductsData={this.state.reviewsData} />
+              </div>
+              <div>
+                <Footer id='bILPFooterSection' />
+              </div>
             </div>
           </div>
         )
