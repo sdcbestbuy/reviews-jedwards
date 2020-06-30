@@ -11,14 +11,21 @@ class App extends React.Component {
     super(props)
     this.state = {
       reviewsData: [],
-      clicked: false
+      clicked: false,
+      currentId: window.id || 11,
     }
     this.getCurrentProductReview = this.getCurrentProductReview.bind(this)
     this.expand = this.expand.bind(this);
   }
 
+  // getId(event) {
+  //   window.id = event;
+  //   console.log('Here is the window id', window.id);
+  // }
+
   componentDidMount() {
-    this.getCurrentProductReview(11);
+    this.getCurrentProductReview(this.state.currentId);
+    // window.addEventListener(load,)
   }
 
   getCurrentProductReview(productID) {

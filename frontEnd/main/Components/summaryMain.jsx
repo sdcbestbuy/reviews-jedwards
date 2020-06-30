@@ -17,6 +17,7 @@ const SummaryMain = (props)=>{
           {/* */}
           <CustomerRatingVisualizer ratings={props.thisProductsData}/>
         </div>
+        <div id="bILPBumper"></div>
         <div id='bILPRecommendationSection'>
           <Recommendation ratings={props.thisProductsData}/>
         </div>

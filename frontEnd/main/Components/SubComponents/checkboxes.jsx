@@ -2,12 +2,12 @@ import React from 'react';
 
 const Checkbox = cb => {
   return (
-    <div type="compare">
+    <span className="insideMiniLi" type="compare">
       <label className="checkbox">
         <input type="checkbox"></input>
         <span></span>
       </label>
-    </div>
+    </span>
   )
 }
 export default Checkbox
