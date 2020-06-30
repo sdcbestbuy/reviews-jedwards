@@ -391,3 +391,69 @@ color: #666666;
   transition-duration: 0.5s;
 }
 
+.fa {
+  color: gold;
+}
+
+/* Added After */
+.compare {
+  grid-area: compare;
+  display: flex;
+  align-items: center;
+  color: #0046BE;
+}
+.checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+  transition: transform .1s ease-out,-webkit-transform .1s ease-out;
+  color: #0046BE;
+  content: "\f00c";
+  font-family: 'bbyicons';
+  display: inline-block;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: inherit;
+}
+.checkbox > span {
+  background-image: none;
+  background-color: #fff;
+}
+.checkbox > input {
+  content: "";
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: solid #55555A;
+  border-width: 1px 1px 2px;
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.3s;
+  background-image: -webkit-linear-gradient(315deg,#fff,#fff 50%,#E0E6EF 0,#E0E6EF);
+  background-image: linear-gradient(135deg,#fff,#fff 50%,#E0E6EF 0,#E0E6EF);
+  cursor: pointer;
+}
+.checkbox > input:hover {
+  background-image: none;
+  background-color: #fff;
+}
+.checkbox > input:checked{
+  background-image: none;
+  background-color: #fff;
+}
+.checkbox > input:checked + span::before {
+  content: "\f00c";
+  font-weight: 900;
+  display: block;
+  font-family: 'FontAwesome';
+  text-align: center;
+  color: #0046BE;
+  position: absolute;
+  line-height: 16px;
+  font-size: 17px;
+  left: 5px;
+  bottom: 8px
+}
