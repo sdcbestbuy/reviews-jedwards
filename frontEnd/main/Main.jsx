@@ -34,6 +34,19 @@ class App extends React.Component {
       }
       this.getCurrentProductReview(this.state.currentId);
     })
+    window.addEventListener('submit', (event) => {
+      if (event) {
+        console.log(event)
+        console.log('id is ', event.view.id)
+        if (event.view.id !== this.state.currentId && Number.isInteger(event.view.id)) {
+          this.setState({
+            currentId: event.view.id,
+            clicked: false
+          })
+        }
+      }
+      this.getCurrentProductReview(this.state.currentId);
+    })
   }
   //
   getCurrentProductReview(productID) {
