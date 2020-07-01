@@ -23,8 +23,9 @@ class App extends React.Component {
     //
     window.addEventListener('click', (event) => {
       if (event) {
+        console.log(event)
         console.log('id is ', event.view.id)
-        if (event.view.id !== this.state.currentId) {
+        if (event.view.id !== this.state.currentId && Number.isInteger(event.view.id)) {
           this.setState({
             currentId: event.view.id,
             clicked: false
