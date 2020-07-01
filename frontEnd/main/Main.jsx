@@ -20,7 +20,15 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getCurrentProductReview(this.state.currentId);
-    // window.addEventListener(load,)
+    //
+    window.addEventListener('click',(event)=>{
+      if (event) {
+        console.log(event)
+      }
+      
+    })
+
+    //
   }
 
   getCurrentProductReview(productID) {
