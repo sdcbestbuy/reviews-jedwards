@@ -26,9 +26,11 @@ class App extends React.Component {
         console.log('id is ', event.view.id)
         if (event.view.id !== this.state.currentId) {
           this.setState({
-            currentId: event.view.id
+            currentId: event.view.id,
+            clicked: false
           })
         }
+        this.getCurrentProductReview(this.state.currentId);
       }
     })
   }
