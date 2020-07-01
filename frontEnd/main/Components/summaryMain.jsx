@@ -3,26 +3,76 @@ import CustomerRating from './SubComponents/customerRating.jsx';
 import CustomerRatingVisualizer from './SubComponents/customerRatingVisualizer.jsx';
 import Recommendation from './SubComponents/recommendation.jsx';
 
+const buildReviewNumbers = (props) => {
+  let amtOfReviews = props.thisProductsData[0].customerReviewCount;
+  let avgOfReviews = props.thisProductsData[0].customer_review_AVG;
 
+  return buildSomeNums(avgOfReviews, amtOfReviews);
 
-const SummaryMain = (props)=>{
-    return (
-      <div className='bILPSummaryMain'>
-        <div id='bILPCustomerRatingSection'>
-          {/* Customer rating is mostly done */}
-          {/* Needs stars underneath customer rating  */}
-          <CustomerRating ratings={props.thisProductsData}/>
-        </div>
-        <div id='bILPCustomerRatingVisualizerSection'>
-          {/* */}
-          <CustomerRatingVisualizer ratings={props.thisProductsData}/>
-        </div>
-        <div id="bILPBumper"></div>
-        <div id='bILPRecommendationSection'>
-          <Recommendation ratings={props.thisProductsData}/>
-        </div>
-      </div>
-    )
+}
+function buildSomeNums(avg, numberofvotes) {
+  avg = Math.round(avg);
+  let votes = {
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
   }
+  let percentageOfVote = numberofvotes / 100;
+  if (numberofvotes <= 4) {
+    votes[avg] = 100;
+    return votes;
+  }
+  if (numberofvotes > 4) {
+    // -------------- Handling Averages ----------
+    //1 or 5
+    if (avg === 1 || avg === 5) {
+      votes[avg] = numberofvotes / percentageOfVote;
+      return votes;
+    }
+    //2
+    if (avg === 2) {
+      votes[1] = (Math.round(numberofvotes * .20) / percentageOfVote);
+      votes[avg] = (Math.round(numberofvotes * .60) / percentageOfVote);
+      votes[3] = (Math.round(numberofvotes * .15) / percentageOfVote);
+      votes[4] = (Math.round(numberofvotes * .05) / percentageOfVote);
+    }
+    //3
+    if (avg === 3) {
+      votes[1] = (Math.round(numberofvotes * .05) / percentageOfVote);
+      votes[2] = (Math.round(numberofvotes * .15) / percentageOfVote);
+      votes[avg] = (Math.round(numberofvotes * .60) / percentageOfVote);
+      votes[4] = (Math.round(numberofvotes * .15) / percentageOfVote);
+      votes[5] = (Math.round(numberofvotes * .05) / percentageOfVote);
+    }
+    //4
+    if (avg === 4) {
+      votes[2] = (Math.round(numberofvotes * .05) / percentageOfVote);
+      votes[3] = (Math.round(numberofvotes * .15) / percentageOfVote);
+      votes[avg] = (Math.round(numberofvotes * .60) / percentageOfVote);
+      votes[5] = (Math.round(numberofvotes * .20) / percentageOfVote);
+    }
+    return votes;
+  }
+}
+
+const SummaryMain = (props) => {
+  console.log(props)
+  return (
+    <div className='bILPSummaryMain'>
+      <div id='bILPCustomerRatingSection'>
+        <CustomerRating rating={props.thisProductsData} />
+      </div>
+      <div id='bILPCustomerRatingVisualizerSection'>
+        <CustomerRatingVisualizer starRatings={buildReviewNumbers(props)} ratings={props.thisProductsData} />
+      </div>
+      <div id="bILPBumper"></div>
+      <div id='bILPRecommendationSection'>
+        <Recommendation ratings={props.thisProductsData} />
+      </div>
+    </div>
+  )
+}
 
 export default SummaryMain;

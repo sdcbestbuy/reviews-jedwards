@@ -1,10 +1,10 @@
 import React from 'react';
 import Axios from 'axios';
+import StarRating from './Components/SubComponents/MainStarHeader.jsx';
 import SummaryMain from './Components/summaryMain.jsx';
 import PhotoHeaderList from './Components/photoHeaderList.jsx';
 import ReviewsList from './Components/reviewsList.jsx';
 import Footer from './Components/footer.jsx';
-// import '../dist/Styles.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ class App extends React.Component {
       return (
         <div className="bILPStandby">
           <h1>
-            Standby
+            Standby Getting Data
         </h1>
         </div>
       )
@@ -61,7 +61,7 @@ class App extends React.Component {
     if (this.state.clicked === false) {
       return (
         <div onClick={() => this.expand()}>
-          <span id='bILPMain'><h2><strong>Reviews</strong></h2><p className='bILPStarsMain'>&#9734;&#9734;&#9734;&#9734;&#9734;</p> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
+          <span id='bILPMain'><h2><strong>Reviews</strong></h2><StarRating rating={this.state.reviewsData}/> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
     } else {

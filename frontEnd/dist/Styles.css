@@ -14,6 +14,7 @@ html {
   font-weight: 500;
   margin: 0;
   position: relative;
+  align-items: center;
 }
 
 .bILPStarsMain {
@@ -30,6 +31,10 @@ html {
 .bILPchecked {
   color: orange;
 }
+
+/* .bILPlevelOut{
+  align-items: center;
+} */
 
 #bILPcustomerCount {
   font-size: 15px;
@@ -60,7 +65,7 @@ html {
 /* -----------Sub Section 1----------- */
 #bILPCustomerRatingSection{
   /* border: 2px solid orangered; */
-  padding-right: 5%;
+  margin-right: 5%;
   text-align: inherit;
 }
 
@@ -85,12 +90,13 @@ html {
   font-weight: 100;
   font-size: 38px;
   margin-bottom: 0;
-  margin-top: 9px;
+  clear: left;
 }
 
 #bILPCustomerStars{
   font-size: 25px;
   margin-bottom: 0;
+  align-items: center;
 }
 
 #bILPCustomerAmtOfReviews{
@@ -105,11 +111,11 @@ html {
 }
 /* -----------Sub Section 2----------- */
 #bILPCustomerRatingVisualizerSection{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   /* margin-right: 40px; */
   /* width: 40%; */
   height: 100%;
-  width: 250px;
+  width: 330px;
 }
 
 #bILPcustomerRatingVisualization{
@@ -126,14 +132,23 @@ html {
 
 .miniLI{
   /* margin: 0; */
-  display: block;
-  border: 2px solid black;
-  /* width: 100%; */
+  display: inline-flex;
+  /* border: 2px solid black; */
+  width: 100%;
+  align-items: center;
+}
+
+.miniLIProgressBar{
+  /* margin: 0; */
+  display: inline-block;
+  /* border: 2px solid black; */
+  width: 70%;
 }
 
 .insideMiniLi{
   display: inline-block;
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
+  width: 10%;
 }
 
 /* ----------Sub Section 3------------ */
@@ -146,7 +161,6 @@ html {
 }
 /* Outer most Div */
 #bILPRecommendedCircleOuter{
-  padding-top: 20%;
   position: absolute;
   display: flex;
   flex-direction: column;
