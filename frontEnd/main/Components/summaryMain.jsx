@@ -6,7 +6,6 @@ import Recommendation from './SubComponents/recommendation.jsx';
 const buildReviewNumbers = (props) => {
   let amtOfReviews = props.thisProductsData[0].customerReviewCount;
   let avgOfReviews = props.thisProductsData[0].customer_review_AVG;
-
   return buildSomeNums(avgOfReviews, amtOfReviews);
 
 }
@@ -58,7 +57,6 @@ function buildSomeNums(avg, numberofvotes) {
 }
 
 const SummaryMain = (props) => {
-  console.log(props)
   return (
     <div className='bILPSummaryMain'>
       <div id='bILPCustomerRatingSection'>

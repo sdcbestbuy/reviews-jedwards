@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       reviewsData: [],
       clicked: false,
-      currentId: window.id || 11,
+      currentId: window.id || 14,
     }
     this.getCurrentProductReview = this.getCurrentProductReview.bind(this)
     this.expand = this.expand.bind(this);
