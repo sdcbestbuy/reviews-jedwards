@@ -38,7 +38,7 @@ class App extends React.Component {
       if (event) {
         console.log(event)
         console.log('id is ', window.id)
-        if (window !== this.state.currentId && Number.isInteger(event.view.id)) {
+        if (window.id !== this.state.currentId && Number.isInteger(event.view.id)) {
           this.setState({
             currentId: window.id,
             clicked: false
