@@ -1,9 +1,5 @@
 
 /* Main App Component */
-html {
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
 #bILPMain {
   display: flex;
