@@ -21,16 +21,18 @@ class App extends React.Component {
   componentDidMount() {
     this.getCurrentProductReview(this.state.currentId);
     //
-    window.addEventListener('click',(event)=>{
+    window.addEventListener('click', (event) => {
       if (event) {
-        console.log(event)
+        console.log('id is ', event.view.id)
+        if (event.view.id !== this.state.currentId) {
+          this.setState({
+            currentId: event.view.id
+          })
+        }
       }
-      
     })
-
-    //
   }
-
+  //
   getCurrentProductReview(productID) {
     Axios.get('/api/getReviews', {
       params: { id: productID }
@@ -64,7 +66,7 @@ class App extends React.Component {
     if (this.state.clicked === false) {
       return (
         <div onClick={() => this.expand()}>
-          <span id='bILPMain'><h2><strong>Reviews</strong></h2><span className="mainStars"><StarRating rating={this.state.reviewsData}/></span> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
+          <span id='bILPMain'><h2><strong>Reviews</strong></h2><span className="mainStars"><StarRating rating={this.state.reviewsData} /></span> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
     } else {
