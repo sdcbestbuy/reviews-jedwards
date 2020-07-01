@@ -1,0 +1,66 @@
+.bILPSpecsTitleMain {
+  display: flex;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  line-height: normal;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  align-items: center;
+  border-top: 1px solid #d3d3d3;
+}
+
+.bILPSpecsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.bILPSpecsmain-category {
+  display: -webkit-box;
+  flex-direction: row;
+  border-top: 1px solid #d3d3d3;
+}
+
+.bILPSpecsmainCategoryName{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+}
+
+.bILPSpecsmainCategoryDescriptions{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 65%;
+}
+
+.bILPSpecsAdditionalComponentMain{
+  display: inline-flex;
+  /* flex-direction: row; */
+  align-items: center;
+  margin-top: 2px;
+}
+
+.bILPSpecssubCategoriesName {
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+  width: 60%;
+  align-content: flex-start;
+}
+
+.bILPSpecssubCategoriesAnswers{
+  font-family: "Montserrat",Arial,Helvetica,sans-serif;
+  font-size: 13px;
+  display: inline-block;
+  align-content: flex-start;
+  max-width: 30%;
+}
+
+
+/* this doesnt work for some reason */

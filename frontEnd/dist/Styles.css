@@ -4,13 +4,13 @@
 #bILPMain {
   display: flex;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 0;
+  padding-bottom: 20px;
   line-height: normal;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 17px;
   margin: 0;
   position: relative;
   align-items: center;
+  border-top: 1px solid gray;
 }
 
 .bILPStarsMain {
