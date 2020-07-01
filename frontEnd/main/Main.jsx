@@ -18,11 +18,6 @@ class App extends React.Component {
     this.expand = this.expand.bind(this);
   }
 
-  // getId(event) {
-  //   window.id = event;
-  //   console.log('Here is the window id', window.id);
-  // }
-
   componentDidMount() {
     this.getCurrentProductReview(this.state.currentId);
     // window.addEventListener(load,)
@@ -61,7 +56,7 @@ class App extends React.Component {
     if (this.state.clicked === false) {
       return (
         <div onClick={() => this.expand()}>
-          <span id='bILPMain'><h2><strong>Reviews</strong></h2><StarRating rating={this.state.reviewsData}/> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
+          <span id='bILPMain'><h2><strong>Reviews</strong></h2><span className="mainStars"><StarRating rating={this.state.reviewsData}/></span> <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
     } else {

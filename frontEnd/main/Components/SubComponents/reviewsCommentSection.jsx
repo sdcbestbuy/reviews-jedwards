@@ -37,7 +37,7 @@ const ReviewsCommentArea = (props) => {
         <p id='bILPCommentP'>{generateComment()}</p>
       </div>
       <div id='bILPCommentThumbnailImage'>
-        <img src={props.elprops.thisProductsData.thisProductsData[0].thumbnailImage}></img>
+        <img className="bILPImageThumbnail" src={props.elprops.thisProductsData.thisProductsData[0].thumbnailImage}></img>
       </div>
       <div id='bILPCommentButtons'>
         <button id='bILPbuttonStyleA'>Helpful ({Math.round(Math.random() * 10)})</button> <button className='bILPbuttonStyleB'>Unhelpful ({Math.round(Math.random() * 10)})</button> | <button className='bILPbuttonStyleB'>Report</button> | <button className='bILPbuttonStyleB'>Post Comment</button>
