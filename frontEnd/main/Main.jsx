@@ -30,8 +30,8 @@ class App extends React.Component {
             clicked: false
           })
         }
-        this.getCurrentProductReview(this.state.currentId);
       }
+      this.getCurrentProductReview(this.state.currentId);
     })
   }
   //
