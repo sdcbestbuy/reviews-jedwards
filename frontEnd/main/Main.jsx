@@ -21,7 +21,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getCurrentProductReview(this.state.currentId);
     //
-    window.addEventListener('click', (event) => {
+    Window.addEventListener('click', (event) => {
       if (event) {
         console.log(event)
         console.log('id is ', event.view.id)
@@ -34,13 +34,13 @@ class App extends React.Component {
       }
       this.getCurrentProductReview(this.state.currentId);
     })
-    window.addEventListener('submit', (event) => {
+    Window.addEventListener('submit', (event) => {
       if (event) {
         console.log(event)
-        console.log('id is ', window.id)
-        if (window.id !== this.state.currentId && Number.isInteger(event.view.id)) {
+        console.log('id is ', Window.id)
+        if (Window.id !== this.state.currentId && Number.isInteger(Window.id)) {
           this.setState({
-            currentId: window.id,
+            currentId: Window.id,
             clicked: false
           })
         }
