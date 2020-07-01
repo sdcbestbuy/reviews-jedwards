@@ -21,31 +21,11 @@ class App extends React.Component {
   componentDidMount() {
     this.getCurrentProductReview(this.state.currentId);
     //
-    Window.addEventListener('click', (event) => {
-      if (event) {
-        console.log(event)
-        console.log('id is ', event.view.id)
-        if (event.view.id !== this.state.currentId && Number.isInteger(event.view.id)) {
-          this.setState({
-            currentId: event.view.id,
-            clicked: false
-          })
-        }
-      }
-      this.getCurrentProductReview(this.state.currentId);
+    window.addEventListener('click', (event) => {
+      this.updateTheProduct('click',event.view.id)
     })
-    Window.addEventListener('submit', (event) => {
-      if (event) {
-        console.log(event)
-        console.log('id is ', Window.id)
-        if (Window.id !== this.state.currentId && Number.isInteger(Window.id)) {
-          this.setState({
-            currentId: Window.id,
-            clicked: false
-          })
-        }
-      }
-      this.getCurrentProductReview(this.state.currentId);
+    window.addEventListener('submit', () => {
+      this.updateTheProduct('submit',window.id)
     })
   }
   //
@@ -68,6 +48,30 @@ class App extends React.Component {
       clicked: !this.state.clicked,
     })
   }
+
+  updateTheProduct(type,id){
+    console.log('From Reviews Component, a ',type,' Event has occured with the id of', id);
+    if (type === 'submit'){
+      if (id !== this.state.currentId && Number.isInteger(id)) {
+        this.setState({
+          currentId: id,
+          clicked: false
+        })
+      }
+    }
+    if (type === 'click'){
+      if (id !== this.state.currentId && Number.isInteger(id)) {
+        this.setState({
+          currentId: id,
+          clicked: false
+        })
+      }
+    }
+    this.getCurrentProductReview(this.state.currentId);
+  }
+
+
+
 
   render() {
     if (this.state.reviewsData.length === 0) {
