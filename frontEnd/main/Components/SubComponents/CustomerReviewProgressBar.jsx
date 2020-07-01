@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
+// This functional component was imported from material UI
+// https://material-ui.com/components/progress/
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
     height: 10,

@@ -1,10 +1,12 @@
 import React from 'react';
 import StarRating from './MainStarHeader.jsx';
 
+// Function that returns a random integer based on a max and min
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// A function that will make a new comment based on these three categories. (Think about it as Opening, Mid-Sentence, Closer)
 function generateComment() {
   var line1 = ['I absolutely love this', 'I did not enjoy using this', 'I enjoyed using this', 'I did not like how this was built', 'Just when I thought life could get any better, I started using this', 'If I could drown this, I would', 'It\'s alright'];
   var line2 = ['I would play with this all the time', 'I would use this wherever I go', 'I tried to use this wherever I went', 'Even though it fights back', 'It even tried to grow a third arm', 'It made a weird satanic circle on the ground', 'It would refer to me as the Creator', 'Although I would have feelings towards it that i’ve never felt before', 'It asked me out on a date', 'It proposed to me on the second use… I said Yes', 'At one point, it freaked out in the middle of the night and decided that, at that point, it was a good time to put peanut butter on its skin', 'It makes very good animal impressions, even platypus tail slaps', 'Our arm wrestling matches were very close', 'It worried me when however, when it wanted me to explain the birds and the bee’s to my toaster', 'My child says that it would fart while I was away, which is… impossible', 'Although I wouldn\'t recommend holding onto the \’on\’ button unless you want to hear some interesting sounds', 'It tried to convert me into a Velociraptor'];
@@ -15,6 +17,7 @@ function generateComment() {
 
 }
 
+// A function that generates a random title for the comment
 function generateCommentTitle() {
   var title1 = ['Best of the Best', 'Worst of the worst', 'Could\'ve been better', 'Could\'ve been worse', 'A Big eye opener', 'Wow!', 'This thing is cRAAAAZZZZZyy', 'My Favorite', 'Now Im Complete', 'I still dont know how...', 'I give it an A!'];
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Simple Checkbox functional component
 const Checkbox = cb => {
   return (
     <span className="insideMiniLi" type="compare">

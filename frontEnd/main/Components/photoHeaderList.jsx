@@ -2,7 +2,8 @@ import React from 'react';
 import Photos from './SubComponents/Photos.jsx'
 
 
-
+// Photo Section Underneath Summary Main
+// If you are reading this I meant to map over a number of photos but this was a quick ugly fix at the time (I'll fix this if we end up using more photos per product)
 const PhotoHeaderList = (props) =>{
     return (
       <div id='bILPPhotoSection'>

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// This is the star rating component
+// Renders the amount of stars based on the customer average and then will render empty stars otherwise
+// Stars imported from Font Awesome : https://fontawesome.com/v4.7.0/icon/star
 const StarRating = (props) => {
 let reviewAvg = Math.round(props.rating[0].customer_review_AVG);
 if (reviewAvg === 1){return (<span><span className="fa fa-star"></span><span className="fa fa-star-o"></span><span className="fa fa-star-o"></span><span className="fa fa-star-o"></span><span className="fa fa-star-o"></span></span>)}

@@ -3,12 +3,15 @@ import CustomerRating from './SubComponents/customerRating.jsx';
 import CustomerRatingVisualizer from './SubComponents/customerRatingVisualizer.jsx';
 import Recommendation from './SubComponents/recommendation.jsx';
 
+// Function that will pass down number of ratings and average rating to next function
 const buildReviewNumbers = (props) => {
   let amtOfReviews = props.thisProductsData[0].customerReviewCount;
   let avgOfReviews = props.thisProductsData[0].customer_review_AVG;
   return buildSomeNums(avgOfReviews, amtOfReviews);
 
 }
+
+// Function that builds a number of votes based on review average and number of votes
 function buildSomeNums(avg, numberofvotes) {
   avg = Math.round(avg);
   let votes = {
@@ -18,6 +21,7 @@ function buildSomeNums(avg, numberofvotes) {
     4: 0,
     5: 0,
   }
+  //percentageOfVote aka each votes is worth ___% of the bar graph
   let percentageOfVote = numberofvotes / 100;
   if (numberofvotes <= 4) {
     votes[avg] = 100;

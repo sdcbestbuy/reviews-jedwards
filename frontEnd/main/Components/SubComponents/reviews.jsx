@@ -2,7 +2,7 @@ import React from 'react';
 import ReviewsNameArea from './reviewsNameSection.jsx'
 import ReviewsCommentArea from './reviewsCommentSection.jsx'
 
-
+// Reviews Component broken down in to the Name area and the Comment Area
 const Review = (props) => {
   return (
     <div id='bILPOneReview'>

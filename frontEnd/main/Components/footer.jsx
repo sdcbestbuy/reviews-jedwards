@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// Footer Section with Two Buttons
 const Footer = (props) =>{
   return (
     <div id='bILPFooterMain'>

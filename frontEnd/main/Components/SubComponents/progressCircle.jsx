@@ -3,6 +3,8 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
+//This functional component was imported from material UI
+// https://material-ui.com/components/progress/
 function CircularProgressWithLabel(props) {
   return (
     <Box position="relative" display="inline-flex">
@@ -26,16 +28,6 @@ function CircularProgressWithLabel(props) {
 }
 
 export default function CircularStatic({value}) {
-  const [progress, setProgress] = React.useState(10);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-    }, 800);
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
 
   return <CircularProgressWithLabel variant="static" size="80px" value={value} />;
 }

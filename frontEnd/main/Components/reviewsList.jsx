@@ -1,7 +1,7 @@
 import React from 'react';
 import Review from './SubComponents/reviews.jsx'
 
-
+// This is the List of reviews, it only shows 5 Reviews.
 const ReviewsList = (props) => {
   return (
     <div id='bILPAllReviewsSection'>
