@@ -317,6 +317,10 @@ color: #666666;
   padding-bottom: 12px;
 }
 
+.bILPImageThumbnail{
+  border: 2px solid white;
+}
+
 .bILPImageThumbnail:hover{
   border: 2px solid #0457C8;;
 }
