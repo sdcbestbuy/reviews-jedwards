@@ -81,24 +81,94 @@
 .bILPOverviewTitleContents{
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+}
+
+.bILPGrayBar{
+  border-top: 1px solid #d3d3d3;
+  margin-top: 17px;
 }
 
 .bILPDescriptionMain{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   display: -webkit-box;
   width: 100%;
 }
 
 .bILPDescriptionTitle{
+  font-size: 19px;
   width: 30%;
+}
+
+.bILPDescriptionDescription{
+  font-size: 13px;
+  width: 60%;
 }
 
 .bILPFeaturesSubCategories{
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
 .bILPFeaturesSubCategoriesTitle{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  width: 30%;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.bILPFeaturesSubCategoriesObjects{
+  width: 60%;
+}
+
+.bILPFeaturesEachCat{
+
+}
+
+.bILPFeaturesEachSubCat{
+  margin-bottom: 25px;
+}
+
+.bILPFeaturesEachSubCatName{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.bILPFeaturesEachSubAnswer{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-size: 13px;
+  margin-top: 5px;
+  line-height: 20px;
+}
+
+.bILPWhatsIncludedMain{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  display: -webkit-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bILPWhatsIncludedMainName{
+  font-size: 19px;
   width: 30%;
 }
+
+.bILPWhatsIncludedMainDescriptorContainer{
+  width: 60%;
+  line-height: 20px;
+}
+
+.bILPWhatsIncludedMainDescriptor{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
 
 
 /* QnA */

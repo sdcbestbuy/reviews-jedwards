@@ -35,10 +35,10 @@ class Overview extends React.Component {
           <div>
             <Description data={this.state.overviewData.dummydataDescription}/>
           </div>
-          <div>
+          <div className="bILPGrayBar">
             <Features data={this.state.overviewData.dummydataFeatures}/>
           </div>
-          <div>
+          <div className="bILPGrayBar">
             <WhatsIncluded data={this.state.overviewData.dummydataWhatsIncluded}/>
           </div>
           </div>

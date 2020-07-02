@@ -6,7 +6,9 @@ const Features = (props) => (
     return (
       <div className='bILPFeaturesSubCategories'>
         <div className='bILPFeaturesSubCategoriesTitle'>{props.data[0].categoryName}</div>
+        <div className='bILPFeaturesSubCategoriesObjects'>
         <FeaturesSubCats subDes={subCategory} />
+        </div>
       </div>
     )
   })
