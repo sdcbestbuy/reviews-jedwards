@@ -9,6 +9,7 @@ class Specs extends React.Component {
       data: dummydata,
       touched: false,
     }
+    this.expand = this.expand.bind(this)
   }
 
   expand() {

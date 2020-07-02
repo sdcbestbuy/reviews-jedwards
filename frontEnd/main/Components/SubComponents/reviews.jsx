@@ -10,7 +10,7 @@ const Review = (props) => {
         <ReviewsNameArea />
       </div>
       <div id='bILPReviewCommentSection'>
-        < ReviewsCommentArea elprops={props}/>
+        < ReviewsCommentArea elprops={props} />
       </div>
     </div>
   )
@@ -19,6 +19,9 @@ const Review = (props) => {
 export default Review;
 
 /*
+To be used later
+
+
 In the Stars
 
 <ul className="review">

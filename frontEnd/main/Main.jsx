@@ -23,10 +23,10 @@ class App extends React.Component {
     this.getCurrentProductReview(this.state.currentId);
     //
     window.addEventListener('click', (event) => {
-      this.updateTheProduct('click',event.view.id)
+      this.updateTheProduct('click', event.view.id)
     })
     window.addEventListener('submit', () => {
-      this.updateTheProduct('submit',window.id)
+      this.updateTheProduct('submit', window.id)
     })
   }
   // Axios Get function to get certain product based on ID
@@ -50,10 +50,10 @@ class App extends React.Component {
       clicked: !this.state.clicked,
     })
   }
-// Function that is fired from window event listener, this changes product number
-  updateTheProduct(type,id){
-    console.log('From Reviews Component, a ',type,' Event has occured with the id of', id);
-    if (type === 'submit'){
+  // Function that is fired from window event listener, this changes product number
+  updateTheProduct(type, id) {
+    console.log('From Reviews Component, a ', type, ' Event has occured with the id of', id);
+    if (type === 'submit') {
       if (id !== this.state.currentId && Number.isInteger(id)) {
         this.setState({
           currentId: id,
@@ -61,7 +61,7 @@ class App extends React.Component {
         })
       }
     }
-    if (type === 'click'){
+    if (type === 'click') {
       if (id !== this.state.currentId && Number.isInteger(id)) {
         this.setState({
           currentId: id,

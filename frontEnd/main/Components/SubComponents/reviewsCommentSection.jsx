@@ -30,11 +30,11 @@ const ReviewsCommentArea = (props) => {
   return (
     <div id='bILPReviewMain'>
       <div id='bILPCommentHeader'>
-        <ul id='bILPCommentHeaderStars'></ul>< StarRating rating={props.elprops.thisProductsData.thisProductsData}/><span id='bILPCommentHeaderTitleText'>{generateCommentTitle()}</span>
+        <ul id='bILPCommentHeaderStars'></ul>< StarRating rating={props.elprops.thisProductsData.thisProductsData} /><span id='bILPCommentHeaderTitleText'>{generateCommentTitle()}</span>
       </div>
-      
+
       <div id='bILPCommentSubHeader'>
-        <span style={{color:'#1d252c', paddingRight:'5px'}} className="fa fa-check-circle-o"></span><span id='bILPVerifiedServer'>Verified Purchase  |</span><span id='bILPCommentSubHeaderGrayText'> Posted {Math.round(Math.random() * 5)} week(s) ago. Owned for {Math.round(Math.random() * 3)} month(s) when reviewed.</span>
+        <span style={{ color: '#1d252c', paddingRight: '5px' }} className="fa fa-check-circle-o"></span><span id='bILPVerifiedServer'>Verified Purchase  |</span><span id='bILPCommentSubHeaderGrayText'> Posted {Math.round(Math.random() * 5)} week(s) ago. Owned for {Math.round(Math.random() * 3)} month(s) when reviewed.</span>
       </div>
       <div id='bILPComment'>
         <p id='bILPCommentP'>{generateComment()}</p>

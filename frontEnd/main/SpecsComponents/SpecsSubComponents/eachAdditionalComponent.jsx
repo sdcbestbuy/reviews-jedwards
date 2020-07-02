@@ -7,9 +7,9 @@ const AdditionalComponents = (props) => (
       <div className="bILPSpecsAdditionalComponentMain">
         <div className="bILPSpecssubCategoriesName">
           <p>{eachSubCategory.descriptionName}</p>
-          </div>
-          <div className="bILPSpecssubCategoriesAnswers">
-        <SubCategories answers={eachSubCategory.descriptionAnswers}/>
+        </div>
+        <div className="bILPSpecssubCategoriesAnswers">
+          <SubCategories answers={eachSubCategory.descriptionAnswers} />
         </div>
       </div>
     )
