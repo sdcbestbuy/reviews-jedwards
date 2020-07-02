@@ -36,7 +36,6 @@ class Specs extends React.Component {
           </div>
         </div>
       )
-
     }
   }
 }

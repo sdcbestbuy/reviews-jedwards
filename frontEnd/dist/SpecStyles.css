@@ -1,3 +1,4 @@
+/* Specs */
 .bILPSpecsTitleMain {
   display: flex;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
@@ -62,5 +63,42 @@
   max-width: 30%;
 }
 
+/* Overview */
+.bILPOverviewTitleMain{
+  display: flex;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  line-height: normal;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  align-items: center;
+  border-top: 1px solid #d3d3d3;
+}
 
-/* this doesnt work for some reason */
+.bILPOverviewTitleContents{
+  display: flex;
+  flex-direction: column;
+}
+
+.bILPDescriptionMain{
+  display: -webkit-box;
+  width: 100%;
+}
+
+.bILPDescriptionTitle{
+  width: 30%;
+}
+
+.bILPFeaturesSubCategories{
+  width: 100%;
+}
+
+.bILPFeaturesSubCategoriesTitle{
+  width: 30%;
+}
+
+
+/* QnA */
