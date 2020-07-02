@@ -76,7 +76,7 @@ class App extends React.Component {
     if (this.state.clicked === false) {
       return (
         <div onClick={() => this.expand()}>
-          <span id='bILPMain'><h2><strong>Reviews</strong></h2><span className="mainStars"><StarRating rating={this.state.reviewsData} /></span>
+          <span id='bILPMain'><strong>Reviews</strong><span className="mainStars"><StarRating rating={this.state.reviewsData} /></span>
            <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
         </div>
       )
@@ -87,7 +87,7 @@ class App extends React.Component {
           <div>
             <div className="bILPStandby">
               <div onClick={() => this.expand()}>
-                <span id='bILPMain'><h2><strong>Reviews</strong></h2></span>
+                <span id='bILPMain'><strong>Reviews</strong></span>
               </div>
               <div id='bILPSummaryMainSection'>
                 <SummaryMain thisProductsData={this.state.reviewsData} />

@@ -5,13 +5,17 @@
   display: flex;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   padding-bottom: 20px;
+  padding-top: 20px;
   line-height: normal;
-  font-size: 17px;
+  font-size: 25px;
+  font-weight: 500;
   margin: 0;
   position: relative;
   align-items: center;
   border-top: 1px solid #d3d3d3;
 }
+
+
 
 .bILPStarsMain {
   font-size: 15px;
@@ -26,6 +30,7 @@
 
 .mainStars {
   margin-left: 12px;
+  font-size: medium;
 }
 
 .bILPchecked {

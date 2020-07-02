@@ -1,4 +1,7 @@
 import React from 'react';
+import QnAHeader from './QnAComponents/QnAHeader.jsx'
+import QnAMain from './QnAComponents/QnAMain.jsx'
+import QnAFooter from './QnAComponents/QnAFooter.jsx'
 
 class QnA extends React.Component {
   constructor(props) {
@@ -20,13 +23,22 @@ class QnA extends React.Component {
     if (this.state.opened === false) {
       return (
         <div onClick={() => this.expand()}>
-          <span className="QnATitleMain"><p>Questions and Answers</p></span>
+          <span className="bILPQnATitleMain"><strong>Questions and Answers</strong></span>
         </div>
       )
     } else {
       return (
         <div onClick={() => this.expand()}>
-          <span className="QnATitleMain"><p>Questions and Answers</p></span>
+          <span className="bILPQnATitleMain"><strong>Questions and Answers</strong></span>
+          <div>
+            <QnAHeader />
+          </div>
+          <div>
+            <QnAMain />
+          </div>
+          <div>
+            <QnAFooter />
+          </div>
         </div>
       )
     }
