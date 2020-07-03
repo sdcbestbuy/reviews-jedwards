@@ -1,7 +1,7 @@
 # Reviews_Polancich
-##<h2>This is the Reviews Module</h2>
+<h2>This is the Reviews Module</h2>
 
-#####<h5>The Reviews Module Consists of Four Main Sub Modules:</h5>
+<h5>The Reviews Module Consists of Four Main Sub Modules:</h5>
 - Overview
 - Specifications
 - Reviews
@@ -19,4 +19,5 @@ Below you can find a Diagram of the structure of the Reviews Module.
 
 Here is a Video of the Module in Action.
 
+https://imgur.com/RFIFeSY - automatic!
 ![Video Of Module in Action](https://imgur.com/RFIFeSY)
