@@ -1,7 +1,7 @@
 # Reviews_Polancich
-<h2>This is the Reviews Module</h2>
+##<h2>This is the Reviews Module</h2>
 
-<h5>The Reviews Module Consists of Four Main Sub Modules:</h5>
+#####<h5>The Reviews Module Consists of Four Main Sub Modules:</h5>
 - Overview
 - Specifications
 - Reviews
@@ -15,10 +15,8 @@ The purpose of this project was to build a dynamic Component that is hosted on A
 
 Below you can find a Diagram of the structure of the Reviews Module.
 
-![Image of Mind Map of Reviews Module]
-(https://ibb.co/SNsNKY2)
+![Image of Mind Map of Reviews Module](https://ibb.co/SNsNKY2)
 
 Here is a Video of the Module in Action.
 
-![Video Of Module in Action]
-(https://imgur.com/RFIFeSY)
+![Video Of Module in Action](https://imgur.com/RFIFeSY)
