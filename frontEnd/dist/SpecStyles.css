@@ -1,4 +1,10 @@
 /* Specs */
+.bILPSpecsMainHeadContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .bILPSpecsTitleMain {
   display: flex;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;

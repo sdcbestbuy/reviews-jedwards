@@ -22,14 +22,14 @@ class Specs extends React.Component {
     if (this.state.touched === false) {
       return (
         <div onClick={() => this.expand()}>
-          <h2 className='bILPSpecsTitleMain'><strong>Specifications</strong></h2>
+          <span className='bILPSpecsTitleMain'><strong>Specifications</strong></span>
         </div>
       )
     } else {
       return (
-        <div>
+        <div className="bILPSpecsMainHeadContainer">
           <div onClick={() => this.expand()}>
-            <h2 className='bILPSpecsTitleMain'><strong>Specifications</strong></h2>
+            <span className='bILPSpecsTitleMain'><strong>Specifications</strong></span>
           </div>
           <div className="bILPSpecsContainer">
             <ComponentList component={this.state.data} />
