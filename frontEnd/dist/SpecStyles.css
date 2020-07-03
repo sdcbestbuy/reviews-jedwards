@@ -44,6 +44,11 @@
   flex-direction: column;
   align-self: flex-start;
   width: 65%;
+  line-height: 10px;
+}
+
+.bILPSpecssubdescriptors{
+  line-height: 15px;
 }
 
 .bILPSpecsAdditionalComponentMain{
