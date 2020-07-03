@@ -30,8 +30,8 @@ class QnA extends React.Component {
       );
     } else {
       return (
-        <div onClick={() => this.expand()}>
-          <span className="bILPQnATitleMain">
+        <div>
+          <span onClick={() => this.expand()} className="bILPQnATitleMain">
             <strong>Questions and Answers</strong>
           </span>
           <div className="bILPQnAHoldContainer">

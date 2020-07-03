@@ -50,6 +50,7 @@ class App extends React.Component {
   }
   // Function that is fired from window event listener, this changes product number
   updateTheProduct(type, id) {
+    console.log('Update the product Firing')
     if (type === 'submit' || type === 'click') {
       if (id !== this.state.currentId && Number.isInteger(id)) {
         this.setState({
@@ -85,7 +86,7 @@ class App extends React.Component {
       if (this.state.clicked === true) {
         return (
           <div>
-            <div className="bILPStandby">
+            <div>
               <div onClick={() => this.expand()}>
                 <span id='bILPMain'><strong>Reviews</strong></span>
               </div>
