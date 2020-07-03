@@ -1,8 +1,10 @@
 import React from 'react';
 import Overviewdata from '../overviewDummyData';
-import Description from './OverviewComponents/Description.jsx'
-import Features from './OverviewComponents/Features.jsx'
-import WhatsIncluded from './OverviewComponents/WhatsIncluded.jsx'
+import Description from './OverviewComponents/Description.jsx';
+import Features from './OverviewComponents/Features.jsx';
+import WhatsIncluded from './OverviewComponents/WhatsIncluded.jsx';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 class Overview extends React.Component {
   constructor(props) {
@@ -24,13 +26,13 @@ class Overview extends React.Component {
     if (this.state.opened === false) {
       return (
         <div onClick={() => this.expand()}>
-          <span className="bILPOverviewTitleMain"><strong>Overview</strong></span>
+          <span className="bILPOverviewTitleMain"><strong>Overview</strong><span className="bILPArrowIcon">{<ExpandMoreIcon style={{fontSize:'xxx-large'}} />}</span></span>
         </div>
       )
     } else {
       return (
         <div onClick={() => this.expand()}>
-          <span className="bILPOverviewTitleMain"><strong>Overview</strong></span>
+          <span className="bILPOverviewTitleMain"><strong>Overview</strong><span className="bILPArrowIcon">{<ExpandLessIcon style={{fontSize:'xxx-large'}} />}</span></span>
           <div className="bILPOverviewTitleContents">
           <div>
             <Description data={this.state.overviewData.dummydataDescription}/>

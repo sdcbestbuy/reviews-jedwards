@@ -8,8 +8,8 @@
 .bILPSpecsTitleMain {
   display: flex !important;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
   line-height: normal !important;
   font-size: 25px !important;
   font-weight: 500 !important;
@@ -79,8 +79,8 @@
 .bILPOverviewTitleMain{
   display: flex !important;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
   line-height: normal !important;
   font-size: 25px !important;
   font-weight: 500 !important;
@@ -182,8 +182,8 @@
 .bILPQnATitleMain{
   display: flex !important;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
   line-height: normal !important;
   font-size: 25px !important;
   font-weight: 500 !important;
@@ -191,6 +191,10 @@
   position: relative !important;
   align-items: center !important;
   border-top: 1px solid #d3d3d3 !important;
+}
+
+.bILPQnATitleMainText{
+  
 }
 
 .bILPQnAHoldContainer{

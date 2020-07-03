@@ -4,8 +4,8 @@
 #bILPMain {
   display: flex !important;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
-  padding-bottom: 20px !important;
-  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
   line-height: normal !important;
   font-size: 25px !important;
   font-weight: 500 !important;
@@ -30,6 +30,11 @@
 .mainStars {
   margin-left: 12px !important;
   font-size: medium !important;
+}
+
+.bILPArrowIcon{
+  font-size: large;
+  margin-left: auto;
 }
 
 .bILPchecked {

@@ -5,6 +5,8 @@ import SummaryMain from './Components/summaryMain.jsx';
 import PhotoHeaderList from './Components/photoHeaderList.jsx';
 import ReviewsList from './Components/reviewsList.jsx';
 import Footer from './Components/footer.jsx';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 // Main App where State is held
 class App extends React.Component {
@@ -80,7 +82,7 @@ class App extends React.Component {
       return (
         <div onClick={() => this.expand()}>
           <span id='bILPMain'><strong>Reviews</strong><span className="mainStars"><StarRating rating={this.state.reviewsData} /></span>
-           <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p></span>
+      <p id='bILPcustomerCount'>({this.state.reviewsData[0].customerReviewCount})</p><span className="bILPArrowIcon">{<ExpandMoreIcon style={{fontSize:'xxx-large'}} />}</span></span>
         </div>
       )
     } else {
@@ -90,7 +92,7 @@ class App extends React.Component {
           <div>
             <div>
               <div onClick={() => this.expand()}>
-                <span id='bILPMain'><strong>Reviews</strong></span>
+                <span id='bILPMain'><strong>Reviews</strong><span className="bILPArrowIcon">{<ExpandLessIcon style={{fontSize:'xxx-large'}} />}</span></span>
               </div>
               <div id='bILPSummaryMainSection'>
                 <SummaryMain thisProductsData={this.state.reviewsData} />
