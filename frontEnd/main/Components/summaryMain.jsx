@@ -69,7 +69,7 @@ const SummaryMain = (props) => {
       <div id='bILPCustomerRatingVisualizerSection'>
         <CustomerRatingVisualizer starRatings={buildReviewNumbers(props)} ratings={props.thisProductsData} />
       </div>
-      <div id="bILPBumper"></div>
+      <div id='bILPBumper'></div>
       <div id='bILPRecommendationSection'>
         <Recommendation ratings={props.thisProductsData} />
       </div>

@@ -19,7 +19,7 @@ connection.connect((err)=>{
 
 const getTheReviews = (id,cb) =>{
   console.log('Quering DB FOR ID',id)
-  connection.query("SELECT * FROM product WHERE id=?",[id],(error,results)=>{
+  connection.query('SELECT * FROM product WHERE id=?',[id],(error,results)=>{
     if (error){
       console.log('Error with getTheReviews QUERY',error);
       cb(error,null)

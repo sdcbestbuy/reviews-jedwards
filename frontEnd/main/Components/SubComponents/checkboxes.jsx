@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 // Simple Checkbox functional component
-const Checkbox = cb => {
+const Checkbox = (cb) => {
   return (
     <span className="insideMiniLi" type="compare">
       <label className="checkbox">
@@ -9,6 +9,6 @@ const Checkbox = cb => {
         <span></span>
       </label>
     </span>
-  )
-}
-export default Checkbox
+  );
+};
+export default Checkbox;

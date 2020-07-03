@@ -2,8 +2,8 @@ import React from "react";
 import QnAHeader from "./QnAComponents/QnAHeader.jsx";
 import QnAMain from "./QnAComponents/QnAMain.jsx";
 import QnAFooter from "./QnAComponents/QnAFooter.jsx";
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
 class QnA extends React.Component {
   constructor(props) {
@@ -26,7 +26,12 @@ class QnA extends React.Component {
       return (
         <div onClick={() => this.expand()}>
           <span className="bILPQnATitleMain">
-          <span className="bILPQnATitleMainText"><strong>Questions and Answers</strong></span><span className="bILPArrowIcon">{<ExpandMoreIcon style={{fontSize:'xxx-large'}} />}</span>
+            <span className="bILPQnATitleMainText">
+              <strong>Questions and Answers</strong>
+            </span>
+            <span className="bILPArrowIcon">
+              {<ExpandMoreIcon style={{ fontSize: "xxx-large" }} />}
+            </span>
           </span>
         </div>
       );
@@ -34,7 +39,12 @@ class QnA extends React.Component {
       return (
         <div>
           <span onClick={() => this.expand()} className="bILPQnATitleMain">
-          <span className="bILPQnATitleMainText"><strong>Questions and Answers</strong></span><span className="bILPArrowIcon">{<ExpandLessIcon style={{fontSize:'xxx-large'}} />}</span>
+            <span className="bILPQnATitleMainText">
+              <strong>Questions and Answers</strong>
+            </span>
+            <span className="bILPArrowIcon">
+              {<ExpandLessIcon style={{ fontSize: "xxx-large" }} />}
+            </span>
           </span>
           <div className="bILPQnAHoldContainer">
             <div className="bILPQnAHeaderContainer">

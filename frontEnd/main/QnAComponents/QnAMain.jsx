@@ -1,9 +1,9 @@
-import React from 'react';
-import QnALeftBar from './QnASubComponents/QnALeftBar.jsx'
-import QnAQuestionAndAnswers from './QnASubComponents/QnAQuestionAndAnswers.jsx'
+import React from "react";
+import QnALeftBar from "./QnASubComponents/QnALeftBar.jsx";
+import QnAQuestionAndAnswers from "./QnASubComponents/QnAQuestionAndAnswers.jsx";
 
-const QnAMain = props =>{
-  return(
+const QnAMain = (props) => {
+  return (
     <div className="QnAMainContainer">
       <div className="QnALeftBarMain">
         <QnALeftBar />
@@ -12,7 +12,7 @@ const QnAMain = props =>{
         <QnAQuestionAndAnswers />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default QnAMain;

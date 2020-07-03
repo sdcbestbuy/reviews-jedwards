@@ -73,6 +73,7 @@
   display: inline-block !important;
   align-content: flex-start !important;
   max-width: 30% !important;
+  line-height: 20px;
 }
 
 /* Overview */

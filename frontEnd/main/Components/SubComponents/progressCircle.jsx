@@ -1,7 +1,7 @@
-import React from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 //This functional component was imported from material UI
 // https://material-ui.com/components/progress/
@@ -19,15 +19,18 @@ function CircularProgressWithLabel(props) {
         alignItems="center"
         justifyContent="center"
       >
-        <Typography variant="h6" component="div" fontWeight="600">{`${Math.round(
-          props.value,
-        )}%`}</Typography>
+        <Typography
+          variant="h6"
+          component="div"
+          fontWeight="600"
+        >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>
   );
 }
 
 export default function CircularStatic({ value }) {
-
-  return <CircularProgressWithLabel variant="static" size="80px" value={value} />;
+  return (
+    <CircularProgressWithLabel variant="static" size="80px" value={value} />
+  );
 }
