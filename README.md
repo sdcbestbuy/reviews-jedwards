@@ -15,9 +15,8 @@ The purpose of this project was to build a dynamic Component that is hosted on A
 
 Below you can find a Diagram of the structure of the Reviews Module.
 
-![Image of Mind Map of Reviews Module](https://ibb.co/SNsNKY2)
+[Imgur](https://i.imgur.com/agCEwZ2.png)
 
 Here is a Video of the Module in Action.
 
-https://imgur.com/RFIFeSY - automatic!
-![Video Of Module in Action](https://imgur.com/RFIFeSY)
+[Imgur](https://i.imgur.com/U7jBtbn.mp4)
