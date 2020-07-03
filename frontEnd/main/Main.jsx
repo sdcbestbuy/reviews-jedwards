@@ -24,7 +24,9 @@ class App extends React.Component {
     
     window.addEventListener('click', (event) => {
       console.log('Click Firing',event)
+      if (window.target.className === 'itemName'){
       this.updateTheProduct('click', event.view.id)
+      }
     });
     window.addEventListener('submit', () => {
       this.updateTheProduct('submit', window.id)
