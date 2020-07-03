@@ -332,7 +332,7 @@ color: #666666;
 #bILPbuttonStyleA{
   border-radius: 4px;
   border-width: thin;
-  border-color: #666666;
+  border-color: #c5cbd5;
   padding: 6px;
   background-color: white;
   color: #0457C8;
@@ -414,6 +414,7 @@ color: #666666;
   background-color: white;
   border-radius: 5px;
   display: inline-block;
+  border-width: thin;
 }
 
 #bILPShowMoreBTN:hover {
@@ -427,6 +428,7 @@ color: #666666;
   border-radius: 5px;
   display: inline-block;
   transition-duration: 0.5s;
+  border-width: thin;
 }
 
 #bILPWriteAReviewBTN{
@@ -438,7 +440,8 @@ color: #666666;
   color: white;
   border-color: #0457C8;
   border-radius: 5px;
-  display: inline-block
+  display: inline-block;
+  border-width: thin;
 }
 #bILPWriteAReviewBTN:hover {
   margin-left: 5px;
@@ -451,6 +454,7 @@ color: #666666;
   border-radius: 5px;
   display: inline-block;
   transition-duration: 0.5s;
+  border-width: thin;
 }
 
 .fa {

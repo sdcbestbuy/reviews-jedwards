@@ -13,7 +13,6 @@ function generateName() {
 
   var name = name1[getRandomInt(0, name1.length)] + ' ' + name2[getRandomInt(0, name2.length)];
   return name;
-
 }
 
 const ReviewsNameArea = (props) => {

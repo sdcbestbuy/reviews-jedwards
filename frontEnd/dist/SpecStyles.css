@@ -184,44 +184,36 @@
 .bILPQnAHoldContainer{
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
 }
+
 /* Header */
 .bILPQnAHeaderContainer{
   width: 100%;
   height: 5%;
-  border: 1px solid red;
+  padding: 10px 0px 25px 0px;
 }
 
-.QnAHeaderQuestions{
-  border: 1px solid orange;
-}
 /* Main */
 .bILPQnAMainMainContainer{
-  border: 1px solid yellow;
   display: flex;
   flex-direction: row;
 }
 
 .QnAMainContainer{
-  border: 1px dashed greenyellow;
   width: 100%;
   display: flex;
 }
 /* Main Left */
 .QnALeftBarMain{
-  border: 1px solid blue;
   width: 30%;
 }
 
 .QnALeftBarHolder{
-  border: 1px solid purple;
   display: flex;
   flex-direction: column;
 }
 
 .QnALeftBarHolderPeopleAsking{
-  border: 1px solid pink;
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
@@ -230,13 +222,12 @@
 /* QnA People Asking */
 
 .QnALeftBarHolderQuestionBtns{
-  border: 1px solid brown;
   display: flex;
   flex-direction: column;
 }
 
 .QnAPeopleAskingMain{
-  border: 1px solid cyan;
+  margin-bottom: 35px;
   height: 15%;
   width: 100%;
 }
@@ -244,55 +235,157 @@
 .QnAPeopleAskingText{
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .QnAPeopleAskingBtns{
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #d3d3d3;
-
+  margin-top: 5px;
 }
 
 .QnAIndivBtns{
   width: fit-content;
   background-color: white;
   border-radius: 4px;
-  border-color: #d3d3d3;
+  border-color: #c5cbd5;
   font-size: 12px;
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   padding: 7px 12px;
   color: #0046Be;
-  border-width: 1px;
+  border-width: thin;
   margin-bottom: 6px;
   margin-top: 6px;
   box-shadow: none;
   letter-spacing: 0px;
 }
 
-/* QnA Question Btns */
-.QnAQuestionBtnsMain{
-  border: 1px solid skyblue;
+.QnAIndivBtns:hover{
+  width: fit-content;
+  background-color: rgb(0, 0, 99);
+  border-radius: 4px;
+  border-color: rgb(0, 0, 99);
+  font-size: 12px;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  padding: 7px 12px;
+  color: white;
+  border-width: thin;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  box-shadow: none;
+  letter-spacing: 0px;
+  transition-duration: 0.5s;
 }
 
 /* QnA Question And Answers */
 .QnAQuestionAndAnswersMain{
-  border: 1px solid lightcoral;
   display: flex;
   flex-direction: column;
   width: 70%;
   height: 100%;
+  padding: 0px 15px;
 }
 
 .QnAQuestionsMain{
-  border: 1px dashed fuchsia;
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
 }
 
 .QnAQuestionsSection{
-  border: 1px solid navy;
-
+  margin-top: 15px;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  display: flex;
+  flex-direction: column;
 }
+
+.QnAQuestionsSectionQuestion{
+  font-size: 17px;
+  color: #0046Be;
+  font-weight: bold;
+}
+
+.QnAQuestionsSectionTimes{
+  font-size: 14px;
+  color: #55555A;
+  padding: 6px 0px 0px;
+}
+
+.QnAbigA{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.QnAQuestionsSectionAnswer{
+  padding: 21px 0px 9px;
+  font-size: 15px;
+}
+
+.QnAQuestionsSectionBtns{
+  margin: 24px 0px 0px;
+  margin-bottom: 35px;
+}
+
 /* Footer */
 .bILPQnAFooterContainer{
-  border: 1px solid gold;
+  border-top: 1px solid lightgray;
+}
 
+/* QnA Question Btns */
+.QnAQuestionBtnsMain{
+  line-height: 3;
+}
+
+.QnAAskAQuestionBtn{
+  font-weight: bold;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  padding: 7px 10%;
+  background-color: #0457C8;
+  color: white;
+  border-color: #0457C8;
+  border-radius: 5px;
+  display: inline-block;
+  width: 95%;
+  border-width: thin;
+}
+
+.QnAAskAQuestionBtn:hover{
+  font-weight: bold;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  padding: 7px 10%;
+  background-color: rgb(0, 0, 99);
+  color: white;
+  border-color: rgb(0, 0, 99);
+  border-radius: 5px;
+  display: inline-block;
+  width: 95%;
+  border-width: thin;
+  transition-duration: 0.5s;
+}
+
+.QnASeeAllBtn{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  padding: 7px 10%;
+  border-color: #0457C8;
+  color: #0457C8;
+  background-color: white;
+  border-radius: 5px;
+  display: inline-block;
+  width: 95%;
+  border-width: thin;
+}
+
+.QnASeeAllBtn:hover{
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  padding: 7px 10%;
+  border-color: rgb(0, 0, 99);
+  color: white;
+  background-color: rgb(0, 0, 99);
+  border-radius: 5px;
+  display: inline-block;
+  width: 95%;
+  border-width: thin;
+  transition-duration: 0.5s;
 }
