@@ -2,10 +2,10 @@
 <h2>This is the Reviews Module</h2>
 
 <h5>The Reviews Module Consists of Four Main Sub Modules:</h5>
-- Overview
-- Specifications
-- Reviews
-- Questions and Answers
+  - Overview 
+  - Specifications
+  - Reviews
+  - Questions and Answers
 
 The Reviews Module was the Primary focus as it has a Backend interface, that consist of endpoints for various Server routes that query an Amazon RDS database for imformation and then dynamically changes its contents for that certain queried product. 
 
