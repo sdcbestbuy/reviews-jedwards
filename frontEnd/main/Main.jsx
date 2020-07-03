@@ -24,7 +24,7 @@ class App extends React.Component {
     
     window.addEventListener('click', (event) => {
       console.log('Click Firing',event)
-      if (window.target.className === 'itemName'){
+      if (event.target.className === 'itemName'){
       this.updateTheProduct('click', event.view.id)
       }
     });
