@@ -16,8 +16,6 @@
   width: 100%;
 }
 
-
-
 .bILPStarsMain {
   font-size: 15px;
   display: flex;
@@ -73,6 +71,11 @@
   /* border: 2px solid orangered; */
   margin-right: 5%;
   text-align: inherit;
+}
+
+.bILPCustomerContainer{
+  display: flex;
+  flex-direction: column;
 }
 
 #bILPCustomerName{

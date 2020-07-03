@@ -5,7 +5,7 @@ import StarRating from './MainStarHeader.jsx'
 // The upper left of best buy reviews
 const CustomerRating = (props) => {
   return (
-    <div>
+    <div className="bILPCustomerContainer">
       {/* Title */}
       <h5 id='bILPCustomerRatingTag'>Customer rating</h5>
       {/* Average Rating */}
