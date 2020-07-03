@@ -2,38 +2,38 @@
 /* Main App Component */
 
 #bILPMain {
-  display: flex;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  line-height: normal;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0;
-  position: relative;
-  align-items: center;
-  border-top: 1px solid #d3d3d3;
-  width: 100%;
+  display: flex !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  line-height: normal !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  position: relative !important;
+  align-items: center !important;
+  border-top: 1px solid #d3d3d3 !important;
+  width: 100% !important;
 }
 
 .bILPStarsMain {
-  font-size: 15px;
-  display: flex;
-  position: relative;
-  top: 50%;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
+  font-size: 15px !important;
+  display: flex !important;
+  position: relative !important;
+  top: 50% !important;
+  margin: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 10px !important;
 }
 
 .mainStars {
-  margin-left: 12px;
-  font-size: medium;
+  margin-left: 12px !important;
+  font-size: medium !important;
 }
 
 .bILPchecked {
-  color: orange;
+  color: orange !important;
 }
 
 /* .bILPlevelOut{
@@ -41,171 +41,171 @@
 } */
 
 #bILPcustomerCount {
-  font-size: 15px;
-  display: flex;
-  position: relative;
-  top: 50%;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  margin-left: 5px;
+  font-size: 15px !important;
+  display: flex !important;
+  position: relative !important;
+  top: 50% !important;
+  margin: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 5px !important;
 }
 /* Has 4 Sub Components */
 /* -------------------------------- */
 #bILPSummaryMainSection {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border-bottom: 1px solid #d3d3d3;
-  flex-direction: row;
+  display: flex !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-bottom: 1px solid #d3d3d3 !important;
+  flex-direction: row !important;
   
 }
 .bILPSummaryMain {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100% !important;
 }
 
 /* -----------Sub Section 1----------- */
 #bILPCustomerRatingSection{
   /* border: 2px solid orangered; */
-  margin-right: 5%;
-  text-align: inherit;
+  margin-right: 5% !important;
+  text-align: inherit !important;
 }
 
 .bILPCustomerContainer{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 #bILPCustomerName{
-  white-space: nowrap;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  color: #0457C8;
+  white-space: nowrap !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  color: #0457C8 !important;
 }
 
 #bILPCustomerName:hover{
-  white-space: nowrap;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  color:rgb(0, 0, 99);
+  white-space: nowrap !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  color:rgb(0, 0, 99) !important;
 }
 
 #bILPCustomerRatingTag{
-  margin-top: 9px;
-  margin-bottom: 5px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 0.2px;
-  display: inline-block;
+  margin-top: 9px !important;
+  margin-bottom: 5px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.2px !important;
+  display: inline-block !important;
 }
 #bILPCustomerRatingNum{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 100;
-  font-size: 38px;
-  margin-bottom: 0;
-  clear: left;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: 100 !important;
+  font-size: 38px !important;
+  margin-bottom: 0 !important;
+  clear: left !important;
 }
 
 #bILPCustomerStars{
-  font-size: 25px;
-  margin-bottom: 0;
-  align-items: center;
+  font-size: 25px !important;
+  margin-bottom: 0 !important;
+  align-items: center !important;
 }
 
 #bILPCustomerAmtOfReviews{
-  margin: 0%;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 13px;
+  margin: 0% !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 13px !important;
 }
 #bILPCustomerSeeAll{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 12px;
-  color:#0457C8;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 12px !important;
+  color:#0457C8 !important;
 }
 
 #bILPCustomerSeeAll:hover{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 12px;
-  color:#0457C8;
-  text-decoration: underline;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 12px !important;
+  color:#0457C8 !important;
+  text-decoration: underline !important;
 }
 /* -----------Sub Section 2----------- */
 #bILPCustomerRatingVisualizerSection{
   /* border: 2px solid blue; */
   /* margin-right: 40px; */
   /* width: 40%; */
-  height: 100%;
-  width: 330px;
+  height: 100% !important;
+  width: 330px !important;
 }
 
 #bILPcustomerRatingVisualization{
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
   /* margin-left: 20px; */
   /* padding-top: 10px; */
-  margin-top: 15px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 0;
+  margin-top: 15px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 0 !important;
 }
 
 .miniLI{
   /* margin: 0; */
-  display: inline-flex;
+  display: inline-flex !important;
   /* border: 2px solid black; */
-  width: 100%;
-  align-items: center;
+  width: 100% !important;
+  align-items: center !important;
 }
 
 .miniLIProgressBar{
   /* margin: 0; */
-  display: inline-block;
+  display: inline-block !important;
   /* border: 2px solid black; */
-  width: 70%;
-  margin-left: 5px;
-  margin-right: 10px;
+  width: 70% !important;
+  margin-left: 5px !important;
+  margin-right: 10px !important;
 }
 
 .insideMiniLi{
-  display: inline-block;
+  display: inline-block !important;
   /* border: 2px solid greenyellow; */
-  width: 10%;
+  width: 10% !important;
 }
 
 .bILPMinorPadding{
-  margin-right: 5px;
-  padding-left: 5px;
+  margin-right: 5px !important;
+  padding-left: 5px !important;
 }
 
 /* ----------Sub Section 3------------ */
 /* Main Section for Circle */
 #bILPRecommendationSection{
-  width: 45%;
-  height: 97%;
-  position: relative;
-  margin: 20px;
+  width: 45% !important;
+  height: 97% !important;
+  position: relative !important;
+  margin: 20px !important;
 }
 /* Outer most Div */
 #bILPRecommendedCircleOuter{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
+  position: absolute !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 /* Wrapping the Circle */
 #bILPRecommendedCircleInner{
-  align-self: center;
+  align-self: center !important;
 
 }
 
 #bILPRecommendComment{
-  display: flex;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 13px;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 13px !important;
+  justify-content: center !important;
+  align-items: center !important;
 
 
 }
@@ -219,40 +219,40 @@
 /* -------------------------------- */
 /* PhotoHeaderList */
 #bILPPhotoSection {
-  display: flex;
+  display: flex !important;
   /* border: 2px solid pink; */
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3 !important;
   /* border-top: 1px solid gray; */
-  margin-top: 10px;
-  width: 100%;
-  flex-direction: row;
+  margin-top: 10px !important;
+  width: 100% !important;
+  flex-direction: row !important;
 }
 #bILPCustomerImagesLine{
-  display: flex;
-  justify-self: start;
-  margin: 0%;
-  padding: 0%;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  display: flex !important;
+  justify-self: start !important;
+  margin: 0% !important;
+  padding: 0% !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
 }
 
 /* Has 1 sub Component */
 #bILPLineofPhotos{
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row; 
-  width: 80%;
-  justify-content: center;
-  margin-bottom: 1.5%;
+  margin-top: 30px !important;
+  display: flex !important;
+  flex-direction: row !important; 
+  width: 80% !important;
+  justify-content: center !important;
+  margin-bottom: 1.5% !important;
 }
 
 #bILPindivPhoto{
   /* border: 2px solid orange; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
   /* align-items: center; */
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
 
 }
 /* Photos */
@@ -261,128 +261,127 @@
 /* -------------------------------- */
 /* ReviewsList */
 #bILPMainReviewsSection{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   /* border: 2px solid black; */
 }
 #bILPReviewNamesSection{
   /* border: 2px solid skyblue; */
-  padding-top: 3%;
-  float: left;
-  width: 20%;
+  padding-top: 3% !important;
+  float: left !important;
+  width: 20% !important;
 }
 #bILPReviewMain{
-  display: flex;
-  padding-top: 3%;
-  padding-bottom: 2%;
-  flex-direction: column;
-  
-  float: right;
+  display: flex !important;
+  padding-top: 3% !important;
+  padding-bottom: 2% !important;
+  flex-direction: column !important;
+  float: right !important;
 }
 
 #bILPOneReview{
   /* border: 2px solid salmon; */
-  display: inline-block;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #d3d3d3;
+  display: inline-block !important;
+  flex-direction: row !important;
+  position: relative !important;
+  width: 100% !important;
+  border-bottom: 1px solid #d3d3d3 !important;
 }
 #bILPCommentHeaderStars{
-  padding-bottom: 3px;
-  font-size: 16px;
+  padding-bottom: 3px !important;
+  font-size: 16px !important;
 }
 #bILPCommentHeaderTitleText{
-  padding-left: 4px;
-  font-weight: 600;
-  font-family: sans-serif;
-  font-size: 16px;
+  padding-left: 4px !important;
+  font-weight: 600 !important;
+  font-family: sans-serif !important;
+  font-size: 16px !important;
 }
 
 #bILPCommentSubHeader{
-  padding-top: 9px;
+  padding-top: 9px !important;
 }
 
 #bILPCommentSubHeaderGrayText{
-font-family: sans-serif;
-font-size: 13px;
-color: #666666;
+font-family: sans-serif !important;
+font-size: 13px !important;
+color: #666666 !important;
 }
 #bILPVerifiedServer{
-  font-weight: 700;
-  font-size: 14px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
 }
 
 
 #bILPCommentP{
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 10px;
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif !important;
+  margin-top: 10px !important;
+  font-size: 14px !important;
 }
 
 #bILPCommentThumbnailImage{
-  padding-bottom: 12px;
+  padding-bottom: 12px !important;
 }
 
 .bILPImageThumbnail{
-  border: 2px solid white;
+  border: 2px solid white !important;
 }
 
 .bILPImageThumbnail:hover{
-  border: 2px solid #0457C8;;
+  border: 2px solid #0457C8 !important;
 }
 
 #bILPbuttonStyleA{
-  border-radius: 4px;
-  border-width: thin;
-  border-color: #c5cbd5;
-  padding: 6px;
-  background-color: white;
-  color: #0457C8;
-  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 700;
+  border-radius: 4px !important;
+  border-width: thin !important;
+  border-color: #c5cbd5 !important;
+  padding: 6px !important;
+  background-color: white !important;
+  color: #0457C8 !important;
+  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: 700 !important;
 }
 
 #bILPbuttonStyleA:hover {
-  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 700;
-  padding: 6px;
-  border-color: rgb(0, 0, 99);
-  color: white;
-  background-color: rgb(0, 0, 99);
-  border-radius: 4px;
-  border-width: thin;
-  display: inline-block;
-  transition-duration: 0.5s;
+  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: 700 !important;
+  padding: 6px !important;
+  border-color: rgb(0, 0, 99) !important;
+  color: white !important;
+  background-color: rgb(0, 0, 99) !important;
+  border-radius: 4px !important;
+  border-width: thin !important;
+  display: inline-block !important;
+  transition-duration: 0.5s !important;
 }
 
 
 .bILPbuttonStyleB{
-  border: none;
-  color: #0457C8;
-  background-color: white;
-  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 700;
+  border: none !important;
+  color: #0457C8 !important;
+  background-color: white !important;
+  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: 700 !important;
 }
 
 .bILPbuttonStyleB:hover{
-  border: none;
-  color: #0457C8;
-  background-color: white;
-  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 700;
-  text-decoration: underline;
+  border: none !important;
+  color: #0457C8 !important;
+  background-color: white !important;
+  font-family: 'Montserrat',Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
 }
 
 #bILPReviewCommentSection{
   /* border: 2px solid orange; */
-  width: 80%;
-  margin-left: 6%;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  width: auto;
+  width: 80% !important;
+  margin-left: 6% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-content: flex-start !important;
+  width: auto !important;
 }
 /* Has 1 Sub Component */
 /* Review */
@@ -394,136 +393,136 @@ color: #666666;
 /* -------------------------------- */
 /* Footer */
 #bILPFooterSection{
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
   /* border: 2px solid black; */
-  align-items: center;
+  align-items: center !important;
 }
 
 #bILPFooterMain {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 2%;
-  margin-bottom: 3%;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  margin-top: 2% !important;
+  margin-bottom: 3% !important;
 }
 
 #bILPShowMoreBTN{
-  margin-right: 5px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: bold;
-  padding: 7px 10%;
-  border-color: #0457C8;
-  color: #0457C8;
-  background-color: white;
-  border-radius: 5px;
-  display: inline-block;
-  border-width: thin;
+  margin-right: 5px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: bold !important;
+  padding: 7px 10% !important;
+  border-color: #0457C8 !important;
+  color: #0457C8 !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  border-width: thin !important;
 }
 
 #bILPShowMoreBTN:hover {
-  margin-right: 5px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: bold;
-  padding: 7px 10%;
-  border-color: rgb(0, 0, 99);
-  color: white;
-  background-color: rgb(0, 0, 99);
-  border-radius: 5px;
-  display: inline-block;
-  transition-duration: 0.5s;
-  border-width: thin;
+  margin-right: 5px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: bold !important;
+  padding: 7px 10% !important;
+  border-color: rgb(0, 0, 99) !important;
+  color: white !important;
+  background-color: rgb(0, 0, 99) !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  transition-duration: 0.5s !important;
+  border-width: thin !important;
 }
 
 #bILPWriteAReviewBTN{
-  margin-left: 5px;
-  font-weight: bold;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 7px 10%;
-  background-color: #0457C8;
-  color: white;
-  border-color: #0457C8;
-  border-radius: 5px;
+  margin-left: 5px !important;
+  font-weight: bold !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 7px 10% !important;
+  background-color: #0457C8 !important;
+  color: white !important;
+  border-color: #0457C8 !important;
+  border-radius: 5px !important;
   display: inline-block;
-  border-width: thin;
+  border-width: thin !important;
 }
 #bILPWriteAReviewBTN:hover {
-  margin-left: 5px;
-  font-weight: bold;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 7px 10%;
-  background-color:rgb(0, 0, 99);
-  color: white;
-  border-color: rgb(0, 0, 99);
-  border-radius: 5px;
-  display: inline-block;
-  transition-duration: 0.5s;
-  border-width: thin;
+  margin-left: 5px !important;
+  font-weight: bold !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 7px 10% !important;
+  background-color:rgb(0, 0, 99) !important;
+  color: white !important;
+  border-color: rgb(0, 0, 99) !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  transition-duration: 0.5s !important;
+  border-width: thin !important;
 }
 
 .fa {
-  color: gold;
+  color: gold !important;
 }
 
 /* Added After */
 .compare {
-  grid-area: compare;
-  display: flex;
-  align-items: center;
-  color: #0046BE;
+  grid-area: compare !important;
+  display: flex !important;
+  align-items: center !important;
+  color: #0046BE !important;
 }
 .checkbox {
-  display: inline-flex;
-  cursor: pointer;
-  position: relative;
-  transition: transform .1s ease-out,-webkit-transform .1s ease-out;
-  color: #0046BE;
-  content: "\f00c";
-  font-family: 'bbyicons';
-  display: inline-block;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: inherit;
+  display: inline-flex !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: transform .1s ease-out,-webkit-transform .1s ease-out !important;
+  color: #0046BE !important;
+  content: "\f00c" !important;
+  font-family: 'bbyicons' !important;
+  display: inline-block !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-decoration: inherit !important;
 }
 .checkbox > span {
-  background-image: none;
-  background-color: #fff;
+  background-image: none !important;
+  background-color: #fff !important;
 }
 .checkbox > input {
-  content: "";
-  height: 16px;
-  width: 16px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  border: solid #55555A;
-  border-width: 1px 1px 2px;
-  border-radius: 4px;
-  outline: none;
-  transition-duration: 0.3s;
-  background-image: -webkit-linear-gradient(315deg,#fff,#fff 50%,#E0E6EF 0,#E0E6EF);
-  background-image: linear-gradient(135deg,#fff,#fff 50%,#E0E6EF 0,#E0E6EF);
-  cursor: pointer;
+  content: "" !important;
+  height: 16px !important;
+  width: 16px !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -o-appearance: none !important;
+  appearance: none !important;
+  border: solid #55555A !important;
+  border-width: 1px 1px 2px !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  transition-duration: 0.3s !important;
+  background-image: -webkit-linear-gradient(315deg,#fff,#fff 50%,#E0E6EF 0,#E0E6EF) !important;
+  background-image: linear-gradient(135deg,#fff,#fff 50%,#E0E6EF 0,#E0E6EF) !important;
+  cursor: pointer !important;
 }
 .checkbox > input:hover {
-  background-image: none;
-  background-color: #fff;
+  background-image: none !important;
+  background-color: #fff !important;
 }
 .checkbox > input:checked{
-  background-image: none;
-  background-color: #fff;
+  background-image: none !important;
+  background-color: #fff !important;
 }
 .checkbox > input:checked + span::before {
-  content: "\f00c";
-  font-weight: 900;
-  display: block;
-  font-family: 'FontAwesome';
-  text-align: center;
-  color: #0046BE;
-  position: absolute;
-  line-height: 16px;
-  font-size: 17px;
-  left: 5px;
-  bottom: 8px
+  content: "\f00c" !important;
+  font-weight: 900 !important;
+  display: block !important;
+  font-family: 'FontAwesome' !important;
+  text-align: center !important;
+  color: #0046BE !important;
+  position: absolute !important;
+  line-height: 16px !important;
+  font-size: 17px !important;
+  left: 5px !important;
+  bottom: 8px !important;
 }

@@ -1,403 +1,403 @@
 /* Specs */
 .bILPSpecsMainHeadContainer{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 
 .bILPSpecsTitleMain {
-  display: flex;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  line-height: normal;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0;
-  width: 100%;
-  position: relative;
-  align-items: center;
-  border-top: 1px solid #d3d3d3;
+  display: flex !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  line-height: normal !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  position: relative !important;
+  align-items: center !important;
+  border-top: 1px solid #d3d3d3 !important;
 }
 
 .bILPSpecsContainer{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .bILPSpecsmain-category {
-  display: -webkit-box;
-  flex-direction: row;
-  border-top: 1px solid #d3d3d3;
+  display: -webkit-box !important;
+  flex-direction: row !important;
+  border-top: 1px solid #d3d3d3 !important;
 }
 
 .bILPSpecsmainCategoryName{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  width: 30%;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 20px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 30% !important;
 }
 
 .bILPSpecsmainCategoryDescriptions{
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  width: 65%;
-  line-height: 10px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-self: flex-start !important;
+  width: 65% !important;
+  line-height: 10px !important;
 }
 
 .bILPSpecssubdescriptors{
-  line-height: 15px;
+  line-height: 15px !important;
 }
 
 .bILPSpecsAdditionalComponentMain{
-  display: inline-flex;
+  display: inline-flex !important;
   /* flex-direction: row; */
-  align-items: center;
-  margin-top: 2px;
+  align-items: center !important;
+  margin-top: 2px !important;
 }
 
 .bILPSpecssubCategoriesName {
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-block;
-  width: 60%;
-  align-content: flex-start;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  display: inline-block !important;
+  width: 60% !important;
+  align-content: flex-start !important;
 }
 
 .bILPSpecssubCategoriesAnswers{
-  font-family: "Montserrat",Arial,Helvetica,sans-serif;
-  font-size: 13px;
-  display: inline-block;
-  align-content: flex-start;
-  max-width: 30%;
+  font-family: "Montserrat",Arial,Helvetica,sans-serif !important;
+  font-size: 13px !important;
+  display: inline-block !important;
+  align-content: flex-start !important;
+  max-width: 30% !important;
 }
 
 /* Overview */
 .bILPOverviewTitleMain{
-  display: flex;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  line-height: normal;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0;
-  position: relative;
-  align-items: center;
-  border-top: 1px solid #d3d3d3;
+  display: flex !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  line-height: normal !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  position: relative !important;
+  align-items: center !important;
+  border-top: 1px solid #d3d3d3 !important;
 }
 
 .bILPOverviewTitleContents{
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 20px !important;
 }
 
 .bILPGrayBar{
-  border-top: 1px solid #d3d3d3;
-  margin-top: 17px;
+  border-top: 1px solid #d3d3d3 !important;
+  margin-top: 17px !important;
 }
 
 .bILPDescriptionMain{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  display: -webkit-box;
-  width: 100%;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  display: -webkit-box !important;
+  width: 100% !important;
 }
 
 .bILPDescriptionTitle{
-  font-size: 19px;
-  width: 30%;
+  font-size: 19px !important;
+  width: 30% !important;
 }
 
 .bILPDescriptionDescription{
-  font-size: 13px;
-  width: 60%;
+  font-size: 13px !important;
+  width: 60% !important;
 }
 
 .bILPFeaturesSubCategories{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  margin-top: 20px !important;
 }
 
 .bILPFeaturesSubCategoriesTitle{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 19px;
-  font-weight: 500;
-  width: 30%;
-  display: inline-flex;
-  flex-direction: column;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  width: 30% !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
 }
 
 .bILPFeaturesSubCategoriesObjects{
-  width: 60%;
+  width: 60% !important;
 }
 
 .bILPFeaturesEachSubCat{
-  margin-bottom: 25px;
+  margin-bottom: 25px !important;
 }
 
 .bILPFeaturesEachSubCatName{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: bold;
-  font-size: 13px;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
 }
 
 .bILPFeaturesEachSubAnswer{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-size: 13px;
-  margin-top: 5px;
-  line-height: 20px;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-size: 13px !important;
+  margin-top: 5px !important;
+  line-height: 20px !important;
 }
 
 .bILPWhatsIncludedMain{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  display: -webkit-box;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  display: -webkit-box !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 
 .bILPWhatsIncludedMainName{
-  font-size: 19px;
-  width: 30%;
+  font-size: 19px !important;
+  width: 30% !important;
 }
 
 .bILPWhatsIncludedMainDescriptorContainer{
-  width: 60%;
-  line-height: 20px;
+  width: 60% !important;
+  line-height: 20px !important;
 }
 
 .bILPWhatsIncludedMainDescriptor{
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 13px !important;
+  font-weight: bold !important;
 }
 
 /* QnA */
 
 
 .bILPQnATitleMain{
-  display: flex;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  line-height: normal;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0;
-  position: relative;
-  align-items: center;
-  border-top: 1px solid #d3d3d3;
+  display: flex !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding-bottom: 20px !important;
+  padding-top: 20px !important;
+  line-height: normal !important;
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  position: relative !important;
+  align-items: center !important;
+  border-top: 1px solid #d3d3d3 !important;
 }
 
 .bILPQnAHoldContainer{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 /* Header */
 .bILPQnAHeaderContainer{
-  width: 100%;
-  height: 5%;
-  padding: 10px 0px 25px 0px;
+  width: 100% !important;
+  height: 5% !important;
+  padding: 10px 0px 25px 0px !important;
 }
 
 /* Main */
 .bILPQnAMainMainContainer{
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
 }
 
 .QnAMainContainer{
-  width: 100%;
-  display: flex;
+  width: 100% !important;
+  display: flex !important;
 }
 /* Main Left */
 .QnALeftBarMain{
-  width: 30%;
+  width: 30% !important;
 }
 
 .QnALeftBarHolder{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .QnALeftBarHolderPeopleAsking{
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #d3d3d3;
+  display: flex !important;
+  flex-direction: row !important;
+  margin-bottom: 30px !important;
+  border-bottom: 1px solid #d3d3d3 !important;
 }
 /* QnA People Asking */
 
 .QnALeftBarHolderQuestionBtns{
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .QnAPeopleAskingMain{
-  margin-bottom: 35px;
-  height: 15%;
-  width: 100%;
+  margin-bottom: 35px !important;
+  height: 15% !important;
+  width: 100% !important;
 }
 
 .QnAPeopleAskingText{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 16px;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  margin-bottom: 5px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
 }
 
 .QnAPeopleAskingBtns{
-  display: flex;
-  flex-direction: column;
-  margin-top: 5px;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-top: 5px !important;
 }
 
 .QnAIndivBtns{
-  width: fit-content;
-  background-color: white;
-  border-radius: 4px;
-  border-color: #c5cbd5;
-  font-size: 12px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 7px 12px;
-  color: #0046Be;
-  border-width: thin;
-  margin-bottom: 6px;
-  margin-top: 6px;
-  box-shadow: none;
-  letter-spacing: 0px;
+  width: fit-content !important;
+  background-color: white !important;
+  border-radius: 4px !important;
+  border-color: #c5cbd5 !important;
+  font-size: 12px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 7px 12px !important;
+  color: #0046Be !important;
+  border-width: thin !important;
+  margin-bottom: 6px !important;
+  margin-top: 6px !important;
+  box-shadow: none !important;
+  letter-spacing: 0px !important;
 }
 
 .QnAIndivBtns:hover{
-  width: fit-content;
-  background-color: rgb(0, 0, 99);
-  border-radius: 4px;
-  border-color: rgb(0, 0, 99);
-  font-size: 12px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 7px 12px;
-  color: white;
-  border-width: thin;
-  margin-bottom: 6px;
-  margin-top: 6px;
-  box-shadow: none;
-  letter-spacing: 0px;
-  transition-duration: 0.5s;
+  width: fit-content !important;
+  background-color: rgb(0, 0, 99) !important;
+  border-radius: 4px !important;
+  border-color: rgb(0, 0, 99) !important;
+  font-size: 12px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 7px 12px !important;
+  color: white !important;
+  border-width: thin !important;
+  margin-bottom: 6px !important;
+  margin-top: 6px !important;
+  box-shadow: none !important;
+  letter-spacing: 0px !important;
+  transition-duration: 0.5s !important;
 }
 
 /* QnA Question And Answers */
 .QnAQuestionAndAnswersMain{
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  height: 100%;
-  padding: 0px 15px;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 70% !important;
+  height: 100% !important;
+  padding: 0px 15px !important;
 }
 
 .QnAQuestionsMain{
-  margin-bottom: 20px;
-  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px !important;
+  border-bottom: 1px solid lightgrey !important;
 }
 
 .QnAQuestionsSection{
-  margin-top: 15px;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  display: flex;
-  flex-direction: column;
+  margin-top: 15px !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 .QnAQuestionsSectionQuestion{
-  font-size: 17px;
-  color: #0046Be;
-  font-weight: bold;
+  font-size: 17px !important;
+  color: #0046Be !important;
+  font-weight: bold !important;
 }
 
 .QnAQuestionsSectionTimes{
-  font-size: 14px;
-  color: #55555A;
-  padding: 6px 0px 0px;
+  font-size: 14px !important;
+  color: #55555A !important;
+  padding: 6px 0px 0px !important;
 }
 
 .QnAbigA{
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 16px !important;
+  font-weight: bold !important;
 }
 
 .QnAQuestionsSectionAnswer{
-  padding: 21px 0px 9px;
-  font-size: 15px;
+  padding: 21px 0px 9px !important;
+  font-size: 15px !important;
 }
 
 .QnAQuestionsSectionBtns{
-  margin: 24px 0px 0px;
-  margin-bottom: 35px;
+  margin: 24px 0px 0px !important;
+  margin-bottom: 35px !important;
 }
 
 /* Footer */
 .bILPQnAFooterContainer{
-  border-top: 1px solid lightgray;
+  border-top: 1px solid lightgray !important;
 }
 
 /* QnA Question Btns */
 .QnAQuestionBtnsMain{
-  line-height: 3;
+  line-height: 3 !important;
 }
 
 .QnAAskAQuestionBtn{
-  font-weight: bold;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 7px 10%;
-  background-color: #0457C8;
-  color: white;
-  border-color: #0457C8;
-  border-radius: 5px;
-  display: inline-block;
-  width: 95%;
-  border-width: thin;
+  font-weight: bold !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 7px 10% !important;
+  background-color: #0457C8 !important;
+  color: white !important;
+  border-color: #0457C8 !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  width: 95% !important;
+  border-width: thin !important;
 }
 
 .QnAAskAQuestionBtn:hover{
-  font-weight: bold;
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  padding: 7px 10%;
-  background-color: rgb(0, 0, 99);
-  color: white;
-  border-color: rgb(0, 0, 99);
-  border-radius: 5px;
-  display: inline-block;
-  width: 95%;
-  border-width: thin;
-  transition-duration: 0.5s;
+  font-weight: bold !important;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  padding: 7px 10% !important;
+  background-color: rgb(0, 0, 99) !important;
+  color: white !important;
+  border-color: rgb(0, 0, 99) !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  width: 95% !important;
+  border-width: thin !important;
+  transition-duration: 0.5s !important;
 }
 
 .QnASeeAllBtn{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: bold;
-  padding: 7px 10%;
-  border-color: #0457C8;
-  color: #0457C8;
-  background-color: white;
-  border-radius: 5px;
-  display: inline-block;
-  width: 95%;
-  border-width: thin;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: bold !important;
+  padding: 7px 10% !important;
+  border-color: #0457C8 !important;
+  color: #0457C8 !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  width: 95% !important;
+  border-width: thin !important;
 }
 
 .QnASeeAllBtn:hover{
-  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
-  font-weight: bold;
-  padding: 7px 10%;
-  border-color: rgb(0, 0, 99);
-  color: white;
-  background-color: rgb(0, 0, 99);
-  border-radius: 5px;
-  display: inline-block;
-  width: 95%;
-  border-width: thin;
-  transition-duration: 0.5s;
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif !important;
+  font-weight: bold !important;
+  padding: 7px 10% !important;
+  border-color: rgb(0, 0, 99) !important;
+  color: white !important;
+  background-color: rgb(0, 0, 99) !important;
+  border-radius: 5px !important;
+  display: inline-block !important;
+  width: 95% !important;
+  border-width: thin !important;
+  transition-duration: 0.5s !important;
 }
