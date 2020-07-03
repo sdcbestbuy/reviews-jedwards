@@ -2,7 +2,7 @@ import React from 'react';
 
 const QnAQuestionBtns = props =>{
   return(
-    <div>
+    <div className="QnAQuestionBtnsMain">
       null
     </div>
   )

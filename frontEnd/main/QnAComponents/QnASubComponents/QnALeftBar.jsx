@@ -4,11 +4,11 @@ import QnAQuestionBtns from './QnAQuestionBtns.jsx'
 
 const QnALeftBar = props =>{
   return(
-    <div>
-      <div>
+    <div className="QnALeftBarHolder">
+      <div className="QnALeftBarHolderPeopleAsking">
         <QnAPeopleAsking />
       </div>
-      <div>
+      <div className="QnALeftBarHolderQuestionBtns">
         <QnAQuestionBtns />
       </div>
     </div>

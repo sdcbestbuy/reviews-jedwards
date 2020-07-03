@@ -2,8 +2,8 @@ import React from 'react';
 
 const QnAQuestions = props =>{
   return(
-    <div>
-      null
+    <div className="QnAQuestionsSection">
+      test
     </div>
   )
 }
