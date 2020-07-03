@@ -23,6 +23,7 @@ class App extends React.Component {
     this.getCurrentProductReview(this.state.currentId);
     
     window.addEventListener('click', (event) => {
+      console.log('Click Firing',event)
       this.updateTheProduct('click', event.view.id)
     });
     window.addEventListener('submit', () => {
@@ -50,7 +51,6 @@ class App extends React.Component {
   }
   // Function that is fired from window event listener, this changes product number
   updateTheProduct(type, id) {
-    console.log('Update the product Firing')
     if (type === 'submit' || type === 'click') {
       if (id !== this.state.currentId && Number.isInteger(id)) {
         this.setState({
