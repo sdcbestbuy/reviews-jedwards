@@ -1,7 +1,6 @@
 import React from "react";
 
 const WhatsIncluded = (props) => {
-  console.log(props);
   return (
     <div className="bILPWhatsIncludedMain">
       <div className="bILPWhatsIncludedMainName">

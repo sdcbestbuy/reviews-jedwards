@@ -30,7 +30,6 @@ class App extends React.Component {
     this.getListOfRealProducts();
 
     window.addEventListener("click", (event) => {
-      console.log("Click Firing", event);
       if (event.target.className === "itemName") {
         this.updateTheProduct("click", event.view.id);
       }
@@ -60,6 +59,7 @@ class App extends React.Component {
       })
   }
 
+  //Axios Get request that gets a list of Real products from DB
   getListOfRealProducts(){
     Axios.get("/api/getListOfRealProducts")
       .then((productResults) => {
@@ -75,6 +75,7 @@ class App extends React.Component {
       })
   }
 
+  //Axios Get request that gets all the images of a certain product
   getThumbnailImagesofRealProduct(productId){
     Axios.get("/api/getListOfRealProductsThumbnails", { params: { id: productId} })
       .then((thumbnails) => {

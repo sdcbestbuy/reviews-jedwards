@@ -39,9 +39,9 @@ function generateName() {
 }
 
 const QnAQuestionAndAnswers = (props) => {
-  return questionAndAnswers.map((oneQuestionAndAnswer) => {
+  return questionAndAnswers.map((oneQuestionAndAnswer,i) => {
     return (
-      <div className="QnAQuestionsMain">
+      <div key={i} className="QnAQuestionsMain">
         <QnAQuestions
           questionAsker={generateName()}
           answerTeller={generateName()}

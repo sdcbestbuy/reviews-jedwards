@@ -1,7 +1,6 @@
 import React from "react";
 
 const QnAQuestions = (props) => {
-  console.log(props);
   return (
     <div className="QnAQuestionsSection">
       <div className="QnAQuestionsSectionQuestion">Q:{props.data.Question}</div>
