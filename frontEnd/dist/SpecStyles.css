@@ -192,10 +192,7 @@
   position: relative !important;
   align-items: center !important;
   border-top: 1px solid #d3d3d3 !important;
-}
-
-.bILPQnATitleMainText{
-  
+  border-bottom: 1px solid #d3d3d3 !important;
 }
 
 .bILPQnAHoldContainer{
