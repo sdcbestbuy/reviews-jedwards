@@ -438,6 +438,7 @@ color: #666666 !important;
   justify-content: center !important;
   margin-top: 2% !important;
   margin-bottom: 3% !important;
+  width: 100%;
 }
 
 #bILPShowMoreBTN{
@@ -451,6 +452,8 @@ color: #666666 !important;
   border-radius: 5px !important;
   display: inline-block !important;
   border-width: thin !important;
+  width: fit-content;
+  height: fit-content;
 }
 
 #bILPShowMoreBTN:hover {
@@ -465,6 +468,8 @@ color: #666666 !important;
   display: inline-block !important;
   transition-duration: 0.5s !important;
   border-width: thin !important;
+  width: fit-content;
+  height: fit-content;
 }
 
 #bILPWriteAReviewBTN{
@@ -478,6 +483,8 @@ color: #666666 !important;
   border-radius: 5px !important;
   display: inline-block;
   border-width: thin !important;
+  width: fit-content;
+  height: fit-content;
 }
 #bILPWriteAReviewBTN:hover {
   margin-left: 5px !important;
@@ -491,6 +498,8 @@ color: #666666 !important;
   display: inline-block !important;
   transition-duration: 0.5s !important;
   border-width: thin !important;
+  width: fit-content;
+  height: fit-content;
 }
 
 .fa {
