@@ -6,21 +6,14 @@ import Photos from "./SubComponents/Photos.jsx";
 const PhotoHeaderList = (props) => {
   //if state says this is a real product
   if (props.realProduct) {
-    let results = [];
-    // we need to get the thumbnail image out
-    for (var key in props.thumbnailImages[0]) {
-      if (!Number.isInteger(props.thumbnailImages[0][key])) {
-        results.push(props.thumbnailImages[0][key]);
-      }
-    }
-    console.log('Is results otay?',results)
     //map over the results of the filtering of for in loop
-    results.map((indivPhotos,i) => {
-      console.log('from in indivphots',indivPhotos)
+    return props.thumbnailImages.map((indivPhotos,i) => {
       return (
         <div key={i} id="bILPPhotoSection">
-            <Photos elPhoto={indivPhotos} />
-         </div>
+          <div id="bILPLineofPhotos">
+            <Photos elPhoto={indivPhotos} index={i} />
+          </div>
+        </div>
       )
     })
   } else {

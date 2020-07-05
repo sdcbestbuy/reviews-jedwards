@@ -145,7 +145,7 @@ INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnail
 -- Product Table
 INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (4.5,27,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9511/9511432_sa.jpg;maxHeight=640;maxWidth=550','Left For Dead',19.99,'A mysterious outbreak has left most of the population in the form of ravenous, mindless zombies. You are one of a mere handful of survivors, but in this environment, that survival is tenuous at best. Get ready to fight for your life.','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9511/9511432_sa.jpg;maxHeight=120;maxWidth=120','https://www.bestbuy.com/site/left-4-dead-2-xbox-360/9511432.p?skuId=9511432');
 -- Thumbnail Table
-INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (101,'https://bit.ly/2YUlQdX','https://bit.ly/31O9JBf','https://bit.ly/2D2quhr','https://bit.ly/3dUxFFf','https://bit.ly/3eYX2qS','https://bit.ly/31UlTsn','https://bit.ly/31OUwj0','https://bit.ly/3ipnH2a','https://bit.ly/3f1hrM6');
+INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (101,'https://bit.ly/2YUlQdX','https://bit.ly/3iBYulo','https://bit.ly/3gt3bfb','https://bit.ly/3e1Iq8T','https://bit.ly/2VPuCIj','https://bit.ly/31UlTsn','https://bit.ly/31OUwj0','https://bit.ly/3ipnH2a','https://bit.ly/3f1hrM6');
 
 -- 102
 -- Refurbished Compaq PC

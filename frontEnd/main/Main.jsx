@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       reviewsData: [],
       clicked: false,
-      currentProduct: 100,
+      currentProduct: 101,
       liveProductNums: [],
       realProduct: false,
       thumbnailImagesData: [],
@@ -46,15 +46,13 @@ class App extends React.Component {
     for (var i = 0; i < this.state.liveProductNums.length; i++){
       if (this.state.liveProductNums[i].product_id === productID){
         this.getThumbnailImagesofRealProduct(productID)
-        this.setState({
-          realProduct: true
-        })
       }
     }
     Axios.get("/api/getReviews", { params: { id: productID} })
       .then((results) => {
         this.setState({
           reviewsData: results.data,
+          realProduct: true
         });
       })
       .catch((error) => {
@@ -63,7 +61,6 @@ class App extends React.Component {
   }
 
   getListOfRealProducts(){
-    console.log('getListOfRealProducts Being Fired')
     Axios.get("/api/getListOfRealProducts")
       .then((productResults) => {
         this.setState({
@@ -81,9 +78,14 @@ class App extends React.Component {
   getThumbnailImagesofRealProduct(productId){
     Axios.get("/api/getListOfRealProductsThumbnails", { params: { id: productId} })
       .then((thumbnails) => {
-        console.log('from getThumbnailImagesofRealProduct',thumbnails)
+        const results = [];
+        for (var key in thumbnails.data[0]) {
+          if (!Number.isInteger(thumbnails.data[0][key])) {
+            results.push(thumbnails.data[0][key]);
+          }
+        }
         this.setState({
-          thumbnailImagesData: thumbnails.data,
+          thumbnailImagesData: results,
         });
       })
       .catch((error) => {
@@ -154,11 +156,14 @@ class App extends React.Component {
               <div id="bILPSummaryMainSection">
                 <SummaryMain thisProductsData={this.state.reviewsData} />
               </div>
-              <div id="bILPPhotoSection">
+              <div id="bILPPhotoSectionContainer">
+                <div id='bILPPhotoTitle'><span>Customer images</span></div>
+                <div id="bILPPhotoListContainer">
                 <PhotoHeaderList realProduct={this.state.realProduct} thumbnailImages={this.state.thumbnailImagesData} thisProductsData={this.state.reviewsData} />
+                </div>
               </div>
               <div id="bILPMainReviewsSection">
-                <ReviewsList thisProductsData={this.state.reviewsData} />
+                <ReviewsList thisProductsData={this.state.reviewsData} thumbnailImages={this.state.thumbnailImagesData} />
               </div>
               <div>
                 <Footer id="bILPFooterSection" />

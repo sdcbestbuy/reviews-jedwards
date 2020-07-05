@@ -10,7 +10,7 @@ const Review = (props) => {
         <ReviewsNameArea />
       </div>
       <div id="bILPReviewCommentSection">
-        <ReviewsCommentArea elprops={props} />
+        <ReviewsCommentArea elprops={props} img={props.img} />
       </div>
     </div>
   );

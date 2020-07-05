@@ -38,7 +38,7 @@ function generateName() {
   return name;
 }
 
-const QnAQuestionAndAnswers = (props) =>
+const QnAQuestionAndAnswers = (props) => {
   questionAndAnswers.map((oneQuestionAndAnswer) => {
     return (
       <div className="QnAQuestionsMain">
@@ -50,5 +50,5 @@ const QnAQuestionAndAnswers = (props) =>
       </div>
     );
   });
-
+}
 export default QnAQuestionAndAnswers;

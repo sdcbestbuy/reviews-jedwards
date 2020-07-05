@@ -103,7 +103,7 @@ const ReviewsCommentArea = (props) => {
         <img
           className="bILPImageThumbnail"
           src={
-            props.elprops.thisProductsData.thisProductsData[0].thumbnailImage
+            props.img
           }
         ></img>
       </div>

@@ -42,7 +42,7 @@ const StarRating = (props) => {
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
-        <span className="faB fa-star-o"></span>
+        <span className="fa fa-star-o"></span>
       </span>
     );
   } else if (reviewAvg === 5) {
