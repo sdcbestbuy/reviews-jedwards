@@ -10,10 +10,24 @@ CREATE TABLE product(
   customerReviewCount INT,
   product_image VARCHAR(255),
   product_name VARCHAR(255),
-  regularPrice INT,
+  regularPrice FLOAT,
   shortDescription VARCHAR(255),
   thumbnailImage VARCHAR(255),
-  product_url VARCHAR(255),
+  product_url VARCHAR(255)
+);
+
+CREATE TABLE thumbnailImages(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  product_id INT, 
+  thumbnailImage1 VARCHAR(255),
+  thumbnailImage2 VARCHAR(255),
+  thumbnailImage3 VARCHAR(255),
+  thumbnailImage4 VARCHAR(255),
+  thumbnailImage5 VARCHAR(255),
+  thumbnailImage6 VARCHAR(255),
+  thumbnailImage7 VARCHAR(255),
+  thumbnailImage8 VARCHAR(255),
+  thumbnailImage9 VARCHAR(255)
 );
 
 INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (1,2,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5956/5956026_sa.jpg','Lenovo - Refurbished Desktop - Intel Core i5 - 8GB Memory - 500GB Hard Drive - Black',254.99,'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermen','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/5956/5956026_s.gif','https://api.bestbuy.com/click/-/5956026/pdp');
@@ -117,3 +131,42 @@ INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, pro
 INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (4.6,105,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6373/6373025_sa.jpg','Dell - Inspiron 27\' Touch-Screen All-In-One - Intel Core i7 - 12GB Memory - 512GB Solid State Drive - Silver',1379.99,'Windows 10 Home 64-bitTechnical details: 10th Gen Intel&#174; Core&#8482; i7 processor; 12GB memory; 512GB solid-state driveSpecial features: Built-in wireless networking; Bluetooth; HDMI output; wireless keyboard and mouseNote: DVD/CD drive not included','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6373/6373025_s.gif','https://api.bestbuy.com/click/-/6373025/pdp');
 INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (4.6,7,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6395/6395381_ra.jpg','HP - Refurbished EliteDesk Desktop - Intel Core i7 - 16GB Memory - 512GB Solid State Drive - Black',509.99,'RefurbishedWindows 10 Pro 64-bitTechnical details: 4th Gen Intel&#174; Core&#8482; i7-4770 processor; 16GB memory; 512GB solid-state drive','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6395/6395381_r.gif','https://api.bestbuy.com/click/-/6395381/pdp');
 
+
+-- Showcase Products
+-- 100
+-- The Last Of Us
+-- Product Table
+INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (3.9,139,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6255/6255399_sd.jpg;maxHeight=640;maxWidth=550','The Last Of Us',59.99,'Five years after their dangerous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming. Living amongst a thriving community of survivors has allowed them peace and stability. Will they soon fall?','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6255/6255399_sd.jpg;maxHeight=120;maxWidth=120','https://www.bestbuy.com/site/the-last-of-us-part-ii-standard-edition-playstation-4/6255399.p?skuId=6255399');
+-- Thumbnail Table
+INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (100,'https://bit.ly/2AwKiJ8','https://bit.ly/2VFyawE','https://bit.ly/3dYtlVm','https://bit.ly/2BZSIsO','https://bit.ly/3gBcjPd','https://bit.ly/38qDYzf','https://bit.ly/31EjdyR','https://bit.ly/2NVhk8E','https://bit.ly/2BEkB9Q');
+
+-- 101
+-- Left For Dead
+-- Product Table
+INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (4.5,27,'https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9511/9511432_sa.jpg;maxHeight=640;maxWidth=550','Left For Dead',19.99,'A mysterious outbreak has left most of the population in the form of ravenous, mindless zombies. You are one of a mere handful of survivors, but in this environment, that survival is tenuous at best. Get ready to fight for your life.','https://pisces.bbystatic.com/image2/BestBuy_US/images/products/9511/9511432_sa.jpg;maxHeight=120;maxWidth=120','https://www.bestbuy.com/site/left-4-dead-2-xbox-360/9511432.p?skuId=9511432');
+-- Thumbnail Table
+INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (101,'https://bit.ly/2YUlQdX','https://bit.ly/31O9JBf','https://bit.ly/2D2quhr','https://bit.ly/3dUxFFf','https://bit.ly/3eYX2qS','https://bit.ly/31UlTsn','https://bit.ly/31OUwj0','https://bit.ly/3ipnH2a','https://bit.ly/3f1hrM6');
+
+-- 102
+-- Refurbished Compaq PC
+-- Product Table
+INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (4,2,'https://i.ebayimg.com/images/g/eKoAAOSweIRdn5wA/s-l500.jpg','Refurbished Compaq PC',250,'Vintage Compaq Prosignia P450+/M1 Pentium III P3 450 mhz 320 MB RAM Desktop','https://i.ebayimg.com/images/g/eKoAAOSweIRdn5wA/s-l500.jpg;maxHeight=120;maxWidth=120','https://www.ebay.com/itm/Vintage-Compaq-Prosignia-P450-M1-Pentium-III-P3-450-mhz-320-MB-RAM-Desktop/153680242589?hash=item23c80e679d:g:eKoAAOSweIRdn5wA');
+
+-- Thumbnail Table
+INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (102,'https://bit.ly/3gq6iod','https://bit.ly/2VITGRi','https://bit.ly/2BElcbA','https://bit.ly/2YZz5KB','https://bit.ly/2VKGwDh','https://bit.ly/3f111Da','https://bit.ly/2NQh9vq','https://bit.ly/3ivEn84','https://bit.ly/3eYm49n');
+
+-- 103
+-- RCA Projection TV
+-- Product Table
+INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (3,31,'https://i.ebayimg.com/images/g/eKoAAOSweIRdn5wA/s-l500.jpg','RCA Projection TV',135,'Older tv, but works perfectly. The top half can be taken off for easier moving.','https://bit.ly/2NQpwat','https://ebay.to/2YWUl3F');
+
+-- Thumbnail Table
+INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (103,'https://bit.ly/2BqLwGl','https://bit.ly/2NTu0wW','https://bit.ly/2ZyyQoN','https://bit.ly/2ZBcNO5','https://bit.ly/3glPnDe','https://bit.ly/2ZvzXWe','https://bit.ly/3gpNZj8','https://bit.ly/3dZ5iFQ','https://bit.ly/2Bz5rmg');
+
+-- 104
+-- NOKIA N-Gage
+-- Product Table
+INSERT INTO product(customer_review_AVG, customerReviewCount, product_image, product_name, regularPrice, shortDescription, thumbnailImage, product_url) VALUES (4,65,'https://i.ebayimg.com/images/g/qMIAAOSw7Rde3JnI/s-l500.jpg','Nokia N-Gage',399.99,'Original Nokia N-gage with Original Box and plastic insert, Sonic, Moto GP, Tomb Raider, 128mb sim card','https://i.ebayimg.com/images/g/qMIAAOSw7Rde3JnI/s-l64.jpg','https://ebay.to/3iuYUcT');
+
+-- Thumbnail Table
+INSERT INTO thumbnailImages(product_id,thumbnailImage1,thumbnailImage2,thumbnailImage3,thumbnailImage4,thumbnailImage5,thumbnailImage6,thumbnailImage7,thumbnailImage8,thumbnailImage9) VALUES (104,'https://bit.ly/2YWRw2o','https://bit.ly/31Jye2i','https://bit.ly/2C5uKw8','https://bit.ly/38oMHlD','https://bit.ly/2ZE1TYd','https://bit.ly/2ZyNAUK','https://bit.ly/2YUnY5A','https://bit.ly/3eWloBu','https://bit.ly/2C3zmD4');

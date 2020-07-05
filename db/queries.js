@@ -29,9 +29,34 @@ const getTheReviews = (id,cb) =>{
   })
 }
 
+const getTheListOfRealProducts = cb =>{
+  console.log('Querying DB for list of real products');
+  connection.query('SELECT product_id FROM thumbnailImages',(error,results)=>{
+    if (error){
+      console.log('Error with getTheListOfRealProducts QUERY',error);
+      cb(error,null)
+    } else {
+      cb (null,results)
+    }
+  })
+}
+
+const getImagesforProduct = (id,cb) =>{
+  console.log('Quering DB FOR Product images of ID',id)
+  connection.query('SELECT * FROM thumbnailImages WHERE product_id=?',[id],(error,results)=>{
+    if (error){
+      console.log('Error with getImagesforProduct QUERY',error);
+      cb(error,null)
+    } else {
+      cb (null,results)
+    }
+  })
+}
 
 
 
 module.exports ={
-  getTheReviews
+  getTheReviews,
+  getTheListOfRealProducts,
+  getImagesforProduct
 }

@@ -53,7 +53,6 @@ const StarRating = (props) => {
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
-        <span className="fa fa-star"></span>
       </span>
     );
   }
