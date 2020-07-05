@@ -24,4 +24,4 @@ Below you can find a Diagram of the structure of the Reviews Module.
 
 Here is a Video of the Module in Action.
 
-[Imgur](https://i.imgur.com/U7jBtbn.mp4)
+[Imgur](https://imgur.com/a/gdjq60t.mp4)
