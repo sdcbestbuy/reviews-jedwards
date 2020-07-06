@@ -98,10 +98,10 @@ const ReviewsCommentArea = (props) => {
       </div>
 
       <div id="bILPCommentSubHeader">
-        <span
+        <i
           style={{ color: "#1d252c", paddingRight: "5px" }}
-          className="fa fa-check-circle-o"
-        ></span>
+          className="fa fa-check-circle-o" aria-hidden="true"
+        ></i>
         <span id="bILPVerifiedServer">Verified Purchase |</span>
         <span id="bILPCommentSubHeaderGrayText">
           {" "}
