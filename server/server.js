@@ -8,9 +8,8 @@ const dbquery = require ('../db/queries')
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json())
 
-
+// server route to get a review for a certain product
 app.get('/api/getReviews',(req,res)=>{
-  console.log('Got a get req for id',req.query.id)
   dbquery.getTheReviews(req.query.id,(error,results)=>{
     if (error){
       console.log('ERROR IN SERVER getTheReviews',error);
@@ -21,8 +20,8 @@ app.get('/api/getReviews',(req,res)=>{
   })
 })
 
+// server route to get a list of all real product ids
 app.get("/api/getListOfRealProducts",(req,res)=>{
-  console.log('Getting list of real products');
   dbquery.getTheListOfRealProducts((error,results)=>{
     if(error){
       console.log('ERROR IN SERVER getTheListOfRealProducts',error)
@@ -33,8 +32,8 @@ app.get("/api/getListOfRealProducts",(req,res)=>{
   })
 })
 
+// server route that gets all the thumbnails of a certain product
 app.get("/api/getListOfRealProductsThumbnails",(req,res)=>{
-  console.log('Getting Images from product number',req.query.id)
   dbquery.getImagesforProduct(req.query.id,(error,results)=>{
     if(error){
       console.log('ERROR IN SERVER getImagesforProduct',error)
@@ -44,10 +43,6 @@ app.get("/api/getListOfRealProductsThumbnails",(req,res)=>{
     }
   })
 })
-
-
-
-
 
 app.listen(PORT, () => {
   console.log(`server is CONNECTED on PORT:${PORT}`);

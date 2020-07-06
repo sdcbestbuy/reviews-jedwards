@@ -16,12 +16,20 @@ function generateComment() {
     "Just when I thought life could get any better, I started using this",
     "If I could drown this, I would",
     "It's alright",
+    "This thing is Sweet!",
+    "This is the third one I've bought",
+    "This is definitely a better version than the target brand",
+    "This is genius",
   ];
   var line2 = [
     "I would play with this all the time",
     "I would use this wherever I go",
     "I tried to use this wherever I went",
     "Even though it fights back",
+    "A girl with long black hair covering her face came out of the screen",
+    "It has the tendancy for spontaneous combustion",
+    "The harddrive can randomly catch on fire",
+    "It tried to upsell me on some black beans",
     "It even tried to grow a third arm",
     "It made a weird satanic circle on the ground",
     "It would refer to me as the Creator",
@@ -31,7 +39,7 @@ function generateComment() {
     "At one point, it freaked out in the middle of the night and decided that, at that point, it was a good time to put peanut butter on its skin",
     "It makes very good animal impressions, even platypus tail slaps",
     "Our arm wrestling matches were very close",
-    "It worried me when however, when it wanted me to explain the birds and the bee’s to my toaster",
+    "It worried me however, when it wanted me to explain the birds and the bee’s to my toaster",
     "My child says that it would fart while I was away, which is… impossible",
     "Although I wouldn't recommend holding onto the ’on’ button unless you want to hear some interesting sounds",
     "It tried to convert me into a Velociraptor",
@@ -43,6 +51,11 @@ function generateComment() {
     "I'm going to send this to my mom",
     "I'm going to send this to my dad",
     "I'm going to tell my friends about this",
+    "I wonder what would happen if I bought another",
+    "This is definitely better then the one I bought at Target",
+    "This is waaayyy better then the one I bought at Target",
+    "ehh, its alright",
+    "I still, dont know how I feel about this..."
   ];
 
   var newComment =
@@ -100,12 +113,7 @@ const ReviewsCommentArea = (props) => {
         <p id="bILPCommentP">{generateComment()}</p>
       </div>
       <div id="bILPCommentThumbnailImage">
-        <img
-          className="bILPImageThumbnail"
-          src={
-            props.img
-          }
-        ></img>
+        <img className="bILPImageThumbnail" src={props.img}></img>
       </div>
       <div id="bILPCommentButtons">
         <button id="bILPbuttonStyleA">

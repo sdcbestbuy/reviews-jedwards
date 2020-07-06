@@ -7,6 +7,7 @@ const connection = mysql.createConnection({
   port: process.env.RDS_PORT || 3306,
 });
 
+//proof of db connection
 connection.connect((err)=>{
   if (err){
     console.log('DB CONNECTION FAILED',err)
@@ -15,10 +16,9 @@ connection.connect((err)=>{
   console.log('Connected to DB')
 });
 
-//to do sanitize queries
 
+// query to get review for certain Id
 const getTheReviews = (id,cb) =>{
-  console.log('Quering DB FOR ID',id)
   connection.query('SELECT * FROM product WHERE id=?',[id],(error,results)=>{
     if (error){
       console.log('Error with getTheReviews QUERY',error);
@@ -29,8 +29,8 @@ const getTheReviews = (id,cb) =>{
   })
 }
 
+// query to get list of real products
 const getTheListOfRealProducts = cb =>{
-  console.log('Querying DB for list of real products');
   connection.query('SELECT product_id FROM thumbnailImages',(error,results)=>{
     if (error){
       console.log('Error with getTheListOfRealProducts QUERY',error);
@@ -41,8 +41,8 @@ const getTheListOfRealProducts = cb =>{
   })
 }
 
+// query to get list of thumbnail images 
 const getImagesforProduct = (id,cb) =>{
-  console.log('Quering DB FOR Product images of ID',id)
   connection.query('SELECT * FROM thumbnailImages WHERE product_id=?',[id],(error,results)=>{
     if (error){
       console.log('Error with getImagesforProduct QUERY',error);

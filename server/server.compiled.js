@@ -12,9 +12,9 @@ var dbquery = require('../db/queries'); // REVIEWS COMPONENT
 
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
-app.use(express.json());
+app.use(express.json()); // server route to get a review for a certain product
+
 app.get('/api/getReviews', function (req, res) {
-  console.log('Got a get req for id', req.query.id);
   dbquery.getTheReviews(req.query.id, function (error, results) {
     if (error) {
       console.log('ERROR IN SERVER getTheReviews', error);
@@ -23,9 +23,9 @@ app.get('/api/getReviews', function (req, res) {
       res.status(200).send(results);
     }
   });
-});
+}); // server route to get a list of all real product ids
+
 app.get("/api/getListOfRealProducts", function (req, res) {
-  console.log('Getting list of real products');
   dbquery.getTheListOfRealProducts(function (error, results) {
     if (error) {
       console.log('ERROR IN SERVER getTheListOfRealProducts', error);
@@ -34,9 +34,9 @@ app.get("/api/getListOfRealProducts", function (req, res) {
       res.status(200).send(results);
     }
   });
-});
+}); // server route that gets all the thumbnails of a certain product
+
 app.get("/api/getListOfRealProductsThumbnails", function (req, res) {
-  console.log('Getting Images from product number', req.query.id);
   dbquery.getImagesforProduct(req.query.id, function (error, results) {
     if (error) {
       console.log('ERROR IN SERVER getImagesforProduct', error);

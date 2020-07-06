@@ -1,8 +1,9 @@
 import React from "react";
 import SubCategories from "./subcategories.jsx";
 
+// Maps through the information of this Catgory
 const AdditionalComponents = (props) =>
-  props.categoryDescriptions.map((eachSubCategory,i) => {
+  props.categoryDescriptions.map((eachSubCategory, i) => {
     return (
       <div key={i} className="bILPSpecsAdditionalComponentMain">
         <div className="bILPSpecssubCategoriesName">

@@ -1,5 +1,16 @@
 import React from "react";
 
+/*
+[COMPONENT] Whats Included 
+[INFO] It diplays a list of included items of the current product
+
+Component Structure:
+Whats Included
+
+note:
+This was not my focus component, its static, and renders the same information everytime.
+The code inside may not be... Factored properly
+*/
 const WhatsIncluded = (props) => {
   return (
     <div className="bILPWhatsIncludedMain">

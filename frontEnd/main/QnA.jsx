@@ -15,6 +15,7 @@ class QnA extends React.Component {
     this.expand = this.expand.bind(this);
   }
 
+  //function that opens the container of QnA
   expand() {
     this.setState({
       opened: !this.state.opened,

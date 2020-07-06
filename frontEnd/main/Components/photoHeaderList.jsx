@@ -1,21 +1,30 @@
 import React from "react";
 import Photos from "./SubComponents/Photos.jsx";
 
-// Photo Section Underneath Summary Main
-// If you are reading this I meant to map over a number of photos but this was a quick ugly fix at the time (I'll fix this if we end up using more photos per product)
+/*
+[COMPONENT] Photo List
+[INFO] Maps through an Array of *real data* or displays the same img 9 times with 9 of the same component due to *fake data*.
+
+Component Structure:
+Review List
+  -> Review
+    -> Reviews Name Area
+    -> Reviews Comment Area
+      -> Star Rating
+*/
 const PhotoHeaderList = (props) => {
   //if state says this is a real product
   if (props.realProduct) {
     //map over the results of the filtering of for in loop
-    return props.thumbnailImages.map((indivPhotos,i) => {
+    return props.thumbnailImages.map((indivPhotos, i) => {
       return (
         <div key={i} id="bILPPhotoSection">
           <div id="bILPLineofPhotos">
             <Photos elPhoto={indivPhotos} index={i} />
           </div>
         </div>
-      )
-    })
+      );
+    });
   } else {
     return (
       <div id="bILPPhotoSection">
@@ -32,7 +41,7 @@ const PhotoHeaderList = (props) => {
           <Photos elPhoto={props.thisProductsData[0]} />
         </div>
       </div>
-    )
+    );
   }
 };
 

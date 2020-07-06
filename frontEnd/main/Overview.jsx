@@ -6,6 +6,7 @@ import WhatsIncluded from "./OverviewComponents/WhatsIncluded.jsx";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
+//Overview has main components (Description, Features, Whats Included)
 class Overview extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,7 @@ class Overview extends React.Component {
     this.expand = this.expand.bind(this);
   }
 
+  //function that changes state when main div is clicked (i.e. Open this container)
   expand() {
     this.setState({
       opened: !this.state.opened,

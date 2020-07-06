@@ -14,6 +14,7 @@ class Specs extends React.Component {
     this.expand = this.expand.bind(this);
   }
 
+  // function that expands the container when main div is clicked
   expand() {
     this.setState({
       touched: !this.state.touched,

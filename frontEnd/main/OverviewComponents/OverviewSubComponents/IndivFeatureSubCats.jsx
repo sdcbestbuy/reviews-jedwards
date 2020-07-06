@@ -1,5 +1,6 @@
 import React from "react";
 
+//This components purpose is to display the features title and a short description
 const IndivFeatureSubCats = (props) => {
   return (
     <div className="bILPFeaturesEachSubCat">

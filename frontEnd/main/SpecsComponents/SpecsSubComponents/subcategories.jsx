@@ -1,5 +1,6 @@
 import React from "react";
 
+// Display the information of this category
 const SubCategories = (props) => {
   return (
     <div className="bILPSpecssub-descriptors">

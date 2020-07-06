@@ -1,5 +1,7 @@
 import React from "react";
 
+// QnA Questions Holds the Question, When the question was asked, The Answer, when the answer was occured, and 4 buttons
+// (Helpful, Unhelpful, Report, and Answer this Question)
 const QnAQuestions = (props) => {
   return (
     <div className="QnAQuestionsSection">

@@ -4,9 +4,9 @@ import React from "react";
 const Photos = (props) => {
   return (
     <div id="bILPindivPhoto">
-      <img id='bILPindivPhotoPhoto' src={props.elPhoto}></img>
+      <img id="bILPindivPhotoPhoto" src={props.elPhoto}></img>
     </div>
-  )
+  );
 };
 
 export default Photos;

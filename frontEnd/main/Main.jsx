@@ -9,6 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
 // Main App where State is held
+// 4 main sub components, in order (Summary Main, Photo Header List, Reviews List, Footer)
 class App extends React.Component {
   constructor(props) {
     super(props);
