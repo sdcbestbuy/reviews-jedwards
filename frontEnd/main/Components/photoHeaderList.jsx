@@ -20,7 +20,7 @@ const PhotoHeaderList = (props) => {
       return (
         <div key={i} id="bILPPhotoSection">
           <div id="bILPLineofPhotos">
-            <Photos elPhoto={indivPhotos} index={i} />
+            <Photos real={props.realProduct} elPhoto={indivPhotos} index={i} />
           </div>
         </div>
       );
@@ -28,17 +28,16 @@ const PhotoHeaderList = (props) => {
   } else {
     return (
       <div id="bILPPhotoSection">
-        <h4 id="bILPCustomerImagesLine">Customer images</h4>
         <div id="bILPLineofPhotos">
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
-          <Photos elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
+          <Photos real={props.realProduct} elPhoto={props.thisProductsData[0]} />
         </div>
       </div>
     );
