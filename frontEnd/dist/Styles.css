@@ -30,6 +30,11 @@
 .mainStars {
   margin-left: 12px !important;
   font-size: medium !important;
+  color: gold;
+}
+
+.justStars{
+  color: gold;
 }
 
 .bILPArrowIcon{
@@ -115,6 +120,7 @@
   font-size: 25px !important;
   margin-bottom: 0 !important;
   align-items: center !important;
+  color: gold;
 }
 
 #bILPCustomerAmtOfReviews{

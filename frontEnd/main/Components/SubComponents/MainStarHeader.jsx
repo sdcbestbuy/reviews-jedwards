@@ -7,7 +7,7 @@ const StarRating = (props) => {
   let reviewAvg = Math.round(props.rating[0].customer_review_AVG);
   if (reviewAvg === 1) {
     return (
-      <span>
+      <span className='justStars'>
         <span className="fa fa-star"></span>
         <span className="fa fa-star-o"></span>
         <span className="fa fa-star-o"></span>
@@ -17,7 +17,7 @@ const StarRating = (props) => {
     );
   } else if (reviewAvg === 2) {
     return (
-      <span>
+      <span className='justStars'>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
         <span className="fa fa-star-o"></span>
@@ -27,7 +27,7 @@ const StarRating = (props) => {
     );
   } else if (reviewAvg === 3) {
     return (
-      <span>
+      <span className='justStars'>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
@@ -37,7 +37,7 @@ const StarRating = (props) => {
     );
   } else if (reviewAvg === 4) {
     return (
-      <span>
+      <span className='justStars'>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
@@ -47,7 +47,7 @@ const StarRating = (props) => {
     );
   } else if (reviewAvg === 5) {
     return (
-      <span>
+      <span className='justStars'>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
         <span className="fa fa-star"></span>
