@@ -16,7 +16,7 @@ class App extends React.Component {
     this.state = {
       reviewsData: [],
       clicked: false,
-      currentProduct: 88,
+      currentProduct: 100,
       liveProductNums: [],
       realProduct: false,
       thumbnailImagesData: [],
