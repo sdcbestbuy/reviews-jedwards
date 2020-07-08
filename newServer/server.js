@@ -2,7 +2,7 @@
 // !==================================
 
 const express = require('express');
-const add = express();
+const app = express();
 const path = require('path');
 const PORT = 8008;
 
@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 
 app.get('/getReviews', ((req, res) => {
-    review.find({}, function(error, result) {
+    review.find({ user: 'jack mama'}, function(error, result) {
         if (error) {
             console.log('item got items'); 
             console.error(error);
@@ -25,7 +25,7 @@ app.get('/getReviews', ((req, res) => {
 // Movie.find({ year: { $gte: 1980, $lte: 1989 } }, function(err, arr) {});
 
 app.post('/postReviews', ((req, res) => {
-    review.insertMany({}, function(error, result) {
+    review.insertMany({ user: 'jack mama' }, function(error, result) {
         if (error) {
         console.error(error);
         } else {
@@ -36,19 +36,19 @@ app.post('/postReviews', ((req, res) => {
 }));
 
 app.delete('/deleteReviews', ((req, res) => {
-    review.deleteMany({}, function(error, result) {
+    review.deleteMany({ user: 'jack mama' }, function(error, result) {
         if (error) {
-          console.error(error);
+            console.error(error);
         } else {
-          console.log('item deleted');  
-          res.json(result);
+            console.log('item deleted');  
+            res.json(result);
         }
-      });
+        });
 }));
 // Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }, callback)
 // Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }).then(next)
 
-app.update('/updateReviews', ((req, res) => {
+app.put('/updateReviews', ((req, res) => {
     review.updateMany({}, function(error, result) {
         if (error) {
             console.error(error);
