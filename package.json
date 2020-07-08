@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.compiled.js",
     "start-webpack": "webpack --watch --mode development --inline --progress",
+    "mongo-start": "brew services start mongodb-community@4.2",
+    "mongo-stop": "brew services stop mongodb-community@4.2",
+    "start-mongod": "mongod --config /usr/local/etc/mongod.conf --fork",
     "build": "babel server/server.js --out-file server/server.compiled.js"
   },
   "repository": {
