@@ -9,40 +9,44 @@ const PORT = 8008;
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 
-app.get('/getReviews', ((error, result) => {
-    if(error) {
-        console.error(error);
-    } else {
-
-        console.log(result);
-    }
+app.get('/getReviews', ((req, res) => {
+    review.find({}, function(error, result) {
+        if (error) {
+          console.error(error);
+        } else {
+          res.json(result);
+        }
+      });
 }));
 
-app.post('/getReviews', ((error, result) => {
-    if(error) {
-        console.error(error);
-    } else {
-
-        console.log(result);
-    }
+app.post('/postReviews', ((req, res) => {
+    review.insertMany({}, function(error, result) {
+        if (error) {
+          console.error(error);
+        } else {
+          res.json(result);
+        }
+      });
 }));
 
-app.update('/getReviews', ((error, result) => {
-    if(error) {
-        console.error(error);
-    } else {
-
-        console.log(result);
-    }
+app.delete('/deleteReviews', ((req, res) => {
+    review.deleteMany({}, function(error, result) {
+        if (error) {
+          console.error(error);
+        } else {
+          res.json(result);
+        }
+      });
 }));
 
-app.delete('/getReviews', ((error, result) => {
-    if(error) {
-        console.error(error);
-    } else {
-
-        console.log(result);
-    }
+app.update('/updateReviews', ((req, res) => {
+    review.updateMany({}, function(error, result) {
+        if (error) {
+          console.error(error);
+        } else {
+          res.json(result);
+        }
+      });
 }));
 
 
