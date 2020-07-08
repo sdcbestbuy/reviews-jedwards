@@ -1,4 +1,4 @@
-# Reviews_Polancich
+# Reviews_Edwards
 <h2>This is the Reviews Module</h2>
 
 <h5>The Reviews Module Consists of Four Main Sub Modules:</h5>

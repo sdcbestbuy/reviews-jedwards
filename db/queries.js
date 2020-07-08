@@ -2,7 +2,7 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: process.env.RDS_HOSTNAME || 'localhost',
   user: process.env.RDS_USERNAME || 'root',
-  password: process.env.RDS_PASSWORD || 'Hamster94!',
+  password: process.env.RDS_PASSWORD || 'Unlucky1!',
   database: process.env.RDS_DB_NAME || 'bestBuyReviews',
   port: process.env.RDS_PORT || 3306,
 });
