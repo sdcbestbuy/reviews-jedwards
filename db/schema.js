@@ -19,27 +19,8 @@ const db = mongoose.connection;
 
 // this sets the "table" and it's "columns"
 const reviewSchema = new mongoose.Schema({
-    user: String
+    user: String,
+    review: String
 });
 
-// not sure what this is equivalent to in mySQL
-const Review = mongoose.model('Review', reviewSchema);
-
-const reviewDb = new Review({user: 'joe mama'});
-
-// convert to promise
-reviewDb.save()
-    .then( res => {
-        console.log('saved to database');
-    })
-    .catch( err => {
-        console.log('error saving data');
-        console.error(err);
-    })
-
-
-module.exports = {
-    Review,
-    reviewDb, 
-    db
-}
+module.exports = mongoose.model('Review', reviewSchema);

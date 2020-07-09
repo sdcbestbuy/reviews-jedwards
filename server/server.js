@@ -1,32 +1,25 @@
 // 'strict mode'
 const express = require('express');
 const app = express();
+const router = express.Router();
 const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
 const db = require('../db/schema');
-// const {Review} = require ('../db/queries');
-// const bodyParser = require('body-parser');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 // app.use(bodyParser.json());
 // app.use(express.urlencoded({ extended: true }));
 
-// app.get('/getReviews', (req, res) => {
-//     console.log('hit something');
-//     db.Review.find({})
-//         .then( res => {
-//             console.log('getting reviews');
-//         })
-//         .catch( err => {
-//             console.error(err);
-//         })
-// });
-// Using async/await
-// const arr = await Movie.find({ year: { $gte: 1980, $lte: 1989 } });
-// Using callbacks
-// Movie.find({ year: { $gte: 1980, $lte: 1989 } }, function(err, arr) {});
+router.get('/getReviews', async (req, res) => {
+
+    try {
+        const review = await
+    } catch() {
+
+    }
+});
 
 app.post('/postReviews', (req, res) => {
     console.log('hit');
@@ -49,30 +42,25 @@ app.post('/postReviews', (req, res) => {
         })
 });
 
-// app.delete('/deleteReviews', ((req, res) => {
-//     Review.deleteMany({ 'user': 'jack mama' })
-//         .then( res => {
-//             console.log('deleting reviews');
-//         })
-//         .catch( err => {
-//             console.error(err);
-//         })
-// }));
-// Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }, callback)
-// Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }).then(next)
+app.delete('/deleteReviews', ((req, res) => {
+    Review.deleteMany({ 'user': 'jack mama' })
+        .then( res => {
+            console.log('deleting reviews');
+        })
+        .catch( err => {
+            console.error(err);
+        })
+}));
 
-// app.put('/updateReviews', ((req, res) => {
-//     Review.updateMany()
-//         .then( res => {
-//             console.log('updating reviews');
-//         })
-//         .catch( err => {
-//             console.error(err);
-//         })
-// }));
-// const res = await Person.updateMany({ name: /Stark$/ }, { isDeleted: true });
-// res.n; // Number of documents matched
-// res.nModified; // Number of documents modified
+app.put('/updateReviews', ((req, res) => {
+    Review.updateMany()
+        .then( res => {
+            console.log('updating reviews');
+        })
+        .catch( err => {
+            console.error(err);
+        })
+}));
 
 // ?=================================
 // ?=================================
