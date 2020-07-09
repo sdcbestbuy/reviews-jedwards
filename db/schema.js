@@ -33,15 +33,15 @@ const generateData = () => {
     writer.pipe(fs.createWriteStream('data.csv'));
     for(let i = 0; i < 10000000; i++) {
         writer.write({
-            id: counter++,
             user: faker.internet.userName(),
-            review: faker.lorem.sentence()
+            review: faker.lorem.words()
         })
     }
     writer.end();
     console.log('I think I am done?');
-}
+};
 
-// generateData();
+generateData();
 
+// seedData();
 module.exports = mongoose.model('Review', reviewSchema);
