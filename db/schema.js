@@ -31,7 +31,7 @@ const reviewSchema = new mongoose.Schema({
 
 const generateData = () => {
     writer.pipe(fs.createWriteStream('data.csv'));
-    for(let i = 0; i < 1000; i++) {
+    for(let i = 0; i < 10000000; i++) {
         writer.write({
             id: counter++,
             user: faker.internet.userName(),
@@ -42,6 +42,6 @@ const generateData = () => {
     console.log('I think I am done?');
 }
 
-generateData();
+// generateData();
 
 module.exports = mongoose.model('Review', reviewSchema);
