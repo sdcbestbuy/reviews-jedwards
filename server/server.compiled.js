@@ -1,5 +1,11 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
 // 'strict mode'
 var express = require('express');
 
@@ -11,66 +17,101 @@ var PORT = 8008;
 
 var dbquery = require('../db/queries');
 
-var db = require('../db/schema'); // const {Review} = require ('../db/queries');
-// const bodyParser = require('body-parser');
-
+var Review = require('../db/schema');
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
-app.use(express.json()); // app.use(bodyParser.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.get('/getReviews', (req, res) => {
-//     console.log('hit something');
-//     db.Review.find({})
-//         .then( res => {
-//             console.log('getting reviews');
-//         })
-//         .catch( err => {
-//             console.error(err);
-//         })
-// });
-// Using async/await
-// const arr = await Movie.find({ year: { $gte: 1980, $lte: 1989 } });
-// Using callbacks
-// Movie.find({ year: { $gte: 1980, $lte: 1989 } }, function(err, arr) {});
+app.use(express.json());
+app.get('/getReviews', /*#__PURE__*/function () {
+  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
+    var review;
+    return _regenerator["default"].wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            _context.next = 3;
+            return Review.find();
 
-app.post('/postReviews', function (req, res) {
-  console.log('hit');
-  db.Review.insert().then(function (res) {
-    var review = new Review({
-      user: 'jack mama'
-    });
-    review.save().then(function (post) {
-      console.log('posting reviews');
-      res.json(201, post);
-    })["catch"](function (error) {
-      console.error(error);
-    });
-  })["catch"](function (err) {
-    console.error(err);
-  });
-}); // app.delete('/deleteReviews', ((req, res) => {
-//     Review.deleteMany({ 'user': 'jack mama' })
-//         .then( res => {
-//             console.log('deleting reviews');
-//         })
-//         .catch( err => {
-//             console.error(err);
-//         })
-// }));
-// Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }, callback)
-// Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }).then(next)
-// app.put('/updateReviews', ((req, res) => {
-//     Review.updateMany()
-//         .then( res => {
-//             console.log('updating reviews');
-//         })
-//         .catch( err => {
-//             console.error(err);
-//         })
-// }));
-// const res = await Person.updateMany({ name: /Stark$/ }, { isDeleted: true });
-// res.n; // Number of documents matched
-// res.nModified; // Number of documents modified
+          case 3:
+            review = _context.sent;
+            res.json(review);
+            _context.next = 10;
+            break;
+
+          case 7:
+            _context.prev = 7;
+            _context.t0 = _context["catch"](0);
+            res.status(500).json({
+              message: _context.t0.message
+            });
+
+          case 10:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 7]]);
+  }));
+
+  return function (_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}());
+app.post('/postReviews', /*#__PURE__*/function () {
+  var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
+    var review, newReview;
+    return _regenerator["default"].wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            review = new Review({
+              user: 'req.body.user',
+              review: 'req.body.review'
+            });
+            _context2.prev = 1;
+            _context2.next = 4;
+            return review.save();
+
+          case 4:
+            newReview = _context2.sent;
+            res.status(201).json(newReview);
+            _context2.next = 11;
+            break;
+
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](1);
+            res.status(400).json({
+              message: _context2.t0.message
+            });
+
+          case 11:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[1, 8]]);
+  }));
+
+  return function (_x3, _x4) {
+    return _ref2.apply(this, arguments);
+  };
+}()); // app.delete('/deleteReviews', async (req, res) => {
+//     // try {
+//     //     const newReview = await review.save()
+//     //     res.status(201).json(newReview)
+//     // } catch(err) {
+//     //     res.status(400).json({message: err.message});
+//     // }
+// });
+// app.put('/updateReviews', async (req, res) => {
+//     // try {
+//     //     const newReview = await review.save()
+//     //     res.status(201).json(newReview)
+//     // } catch(err) {
+//     //     res.status(400).json({message: err.message});
+//     // }
+// });
 // ?=================================
 // ?=================================
 // ?=================================

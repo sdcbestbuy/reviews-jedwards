@@ -1,16 +1,15 @@
 // 'strict mode'
 const express = require('express');
 const app = express();
-const router = express.Router();
 const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
-const {Review} = require('../db/schema');
+const Review = require('../db/schema');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 
-router.get('/getReviews', async (req, res) => {
+app.get('/getReviews', async (req, res) => {
 
     try {
         const review = await Review.find();
@@ -21,10 +20,11 @@ router.get('/getReviews', async (req, res) => {
 });
 
 app.post('/postReviews', async (req, res) => {
+    
 
     const review = new Review({
-        user: req.body.user,
-        review: req.body.review
+        user: 'req.body.user',
+        review: 'req.body.review'
     })
 
     try {
@@ -35,23 +35,23 @@ app.post('/postReviews', async (req, res) => {
     }
 });
 
-app.delete('/deleteReviews', async (req, res) => {
-    // try {
-    //     const newReview = await review.save()
-    //     res.status(201).json(newReview)
-    // } catch(err) {
-    //     res.status(400).json({message: err.message});
-    // }
-});
+// app.delete('/deleteReviews', async (req, res) => {
+//     // try {
+//     //     const newReview = await review.save()
+//     //     res.status(201).json(newReview)
+//     // } catch(err) {
+//     //     res.status(400).json({message: err.message});
+//     // }
+// });
 
-app.put('/updateReviews', async (req, res) => {
-    // try {
-    //     const newReview = await review.save()
-    //     res.status(201).json(newReview)
-    // } catch(err) {
-    //     res.status(400).json({message: err.message});
-    // }
-});
+// app.put('/updateReviews', async (req, res) => {
+//     // try {
+//     //     const newReview = await review.save()
+//     //     res.status(201).json(newReview)
+//     // } catch(err) {
+//     //     res.status(400).json({message: err.message});
+//     // }
+// });
 
 // ?=================================
 // ?=================================
