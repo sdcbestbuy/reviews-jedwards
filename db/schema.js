@@ -31,14 +31,14 @@ const reviewSchema = new mongoose.Schema({
 
 const generateData = () => {
     writer.pipe(fs.createWriteStream('data.csv'));
-    for(let i = 0; i < 10000000; i++) {
+    for(let i = 0; i < 1000; i++) {
         writer.write({
             id: counter++,
             user: faker.internet.userName(),
             review: faker.lorem.sentence()
         })
     }
-    writer.sendHeaders();
+    writer.end();
     console.log('I think I am done?');
 }
 
