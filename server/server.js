@@ -5,62 +5,53 @@ const router = express.Router();
 const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
-const db = require('../db/schema');
+const {Review} = require('../db/schema');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
-// app.use(bodyParser.json());
-// app.use(express.urlencoded({ extended: true }));
 
 router.get('/getReviews', async (req, res) => {
 
     try {
-        const review = await
-    } catch() {
-
+        const review = await Review.find();
+        res.json(review);
+    } catch(err) {
+        res.status(500).json({message: err.message});
     }
 });
 
-app.post('/postReviews', (req, res) => {
-    console.log('hit');
-    db.Review.insert()
-        .then( res => {
-            let review = new Review({
-                user: 'jack mama'
-            })
-            review.save()
-                .then( post => {
-                    console.log('posting reviews');
-                    res.json(201, post);
-                })
-                .catch( error => {
-                    console.error(error);
-                })
-        })
-        .catch( err => {
-            console.error(err);
-        })
+app.post('/postReviews', async (req, res) => {
+
+    const review = new Review({
+        user: req.body.user,
+        review: req.body.review
+    })
+
+    try {
+        const newReview = await review.save()
+        res.status(201).json(newReview)
+    } catch(err) {
+        res.status(400).json({message: err.message});
+    }
 });
 
-app.delete('/deleteReviews', ((req, res) => {
-    Review.deleteMany({ 'user': 'jack mama' })
-        .then( res => {
-            console.log('deleting reviews');
-        })
-        .catch( err => {
-            console.error(err);
-        })
-}));
+app.delete('/deleteReviews', async (req, res) => {
+    // try {
+    //     const newReview = await review.save()
+    //     res.status(201).json(newReview)
+    // } catch(err) {
+    //     res.status(400).json({message: err.message});
+    // }
+});
 
-app.put('/updateReviews', ((req, res) => {
-    Review.updateMany()
-        .then( res => {
-            console.log('updating reviews');
-        })
-        .catch( err => {
-            console.error(err);
-        })
-}));
+app.put('/updateReviews', async (req, res) => {
+    // try {
+    //     const newReview = await review.save()
+    //     res.status(201).json(newReview)
+    // } catch(err) {
+    //     res.status(400).json({message: err.message});
+    // }
+});
 
 // ?=================================
 // ?=================================
