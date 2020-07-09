@@ -1,0 +1,2 @@
+-- DROP DATABASE allReviews;
+CREATE SCHEMA [IF NOT EXISTS] allReviews;

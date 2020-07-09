@@ -10,7 +10,9 @@
     "mongo-start": "brew services start mongodb-community@4.2",
     "mongo-stop": "brew services stop mongodb-community@4.2",
     "start-mongod": "mongod --config /usr/local/etc/mongod.conf --fork",
-    "build": "babel server/server.js --out-file server/server.compiled.js"
+    "build": "babel server/server.js --out-file server/server.compiled.js",
+    "posgres": "pg_ctl -D /usr/local/var/postgres start",
+    "shutdown": "pg_ctl -D /usr/local/var/postgres stop"
   },
   "repository": {
     "type": "git",
