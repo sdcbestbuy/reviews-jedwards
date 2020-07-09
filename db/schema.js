@@ -1,4 +1,10 @@
 const mongoose = require('mongoose');
+const fs = require('fs');
+const csvWriter = require('csv-write-stream');
+const writer = csvWriter();
+const faker = require('faker');
+
+let counter = 0;
 // make all mongoose methods and functions compliant with ES6 promises
 mongoose.Promise = global.Promise;
 
@@ -22,5 +28,20 @@ const reviewSchema = new mongoose.Schema({
     user: String,
     review: String
 });
+
+const generateData = () => {
+    writer.pipe(fs.createWriteStream('data.csv'));
+    for(let i = 0; i < 10000000; i++) {
+        writer.write({
+            id: counter++,
+            user: faker.internet.userName(),
+            review: faker.lorem.sentence()
+        })
+    }
+    writer.sendHeaders();
+    console.log('I think I am done?');
+}
+
+generateData();
 
 module.exports = mongoose.model('Review', reviewSchema);
