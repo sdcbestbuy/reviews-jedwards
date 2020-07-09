@@ -1,6 +1,3 @@
-// !======= Query file for SDC =======
-// !==================================
-
 const mysql = require('mysql');
 const connection = mysql.createConnection({
     host: process.env.RDS_HOSTNAME || 'localhost',

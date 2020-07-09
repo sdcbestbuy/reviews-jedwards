@@ -1,6 +1,3 @@
-// !====== Schema file for SDC =======
-// !==================================
-
 const mongoose = require('mongoose');
 // make all mongoose methods and functions compliant with ES6 promises
 mongoose.Promise = global.Promise;
@@ -43,5 +40,6 @@ reviewDb.save()
 
 module.exports = {
     Review,
-    reviewDb
+    reviewDb, 
+    db
 }

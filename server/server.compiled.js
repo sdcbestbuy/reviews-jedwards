@@ -1,5 +1,6 @@
 "use strict";
 
+// 'strict mode'
 var express = require('express');
 
 var app = express();
@@ -10,63 +11,64 @@ var PORT = 8008;
 
 var dbquery = require('../db/queries');
 
-var _require = require('../db/queries'),
-    Review = _require.Review;
+var db = require('../db/schema'); // const {Review} = require ('../db/queries');
+// const bodyParser = require('body-parser');
 
-var bodyParser = require('body-parser');
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
-app.use(express.json());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-app.get('/getReviews', function (req, res) {
-  Review.find(function (error, reviews) {
-    if (error) {
-      return console.error(error);
-    } else {
-      console.log('It worked!');
-    }
-  });
-}); // Using async/await
+app.use(express.json()); // app.use(bodyParser.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.get('/getReviews', (req, res) => {
+//     console.log('hit something');
+//     db.Review.find({})
+//         .then( res => {
+//             console.log('getting reviews');
+//         })
+//         .catch( err => {
+//             console.error(err);
+//         })
+// });
+// Using async/await
 // const arr = await Movie.find({ year: { $gte: 1980, $lte: 1989 } });
 // Using callbacks
 // Movie.find({ year: { $gte: 1980, $lte: 1989 } }, function(err, arr) {});
 
 app.post('/postReviews', function (req, res) {
-  Review.insertMany({
-    user: 'jack mama'
-  }, function (error, result) {
-    if (error) {
+  console.log('hit');
+  db.Review.insert().then(function (res) {
+    var review = new Review({
+      user: 'jack mama'
+    });
+    review.save().then(function (post) {
+      console.log('posting reviews');
+      res.json(201, post);
+    })["catch"](function (error) {
       console.error(error);
-    } else {
-      console.log('item inserted'); // res.end()
-    }
+    });
+  })["catch"](function (err) {
+    console.error(err);
   });
-});
-app["delete"]('/deleteReviews', function (req, res) {
-  Review.deleteMany({
-    'user': 'jack mama'
-  }, function (error, result) {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log('item deleted'); // res.end()
-    }
-  });
-}); // Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }, callback)
+}); // app.delete('/deleteReviews', ((req, res) => {
+//     Review.deleteMany({ 'user': 'jack mama' })
+//         .then( res => {
+//             console.log('deleting reviews');
+//         })
+//         .catch( err => {
+//             console.error(err);
+//         })
+// }));
+// Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }, callback)
 // Character.deleteMany({ name: /Stark/, age: { $gte: 18 } }).then(next)
-
-app.put('/updateReviews', function (req, res) {
-  Review.updateMany({}, function (error, result) {
-    if (error) {
-      console.error(error);
-    } else {
-      console.log('item updated'); // res.end()
-    }
-  });
-}); // const res = await Person.updateMany({ name: /Stark$/ }, { isDeleted: true });
+// app.put('/updateReviews', ((req, res) => {
+//     Review.updateMany()
+//         .then( res => {
+//             console.log('updating reviews');
+//         })
+//         .catch( err => {
+//             console.error(err);
+//         })
+// }));
+// const res = await Person.updateMany({ name: /Stark$/ }, { isDeleted: true });
 // res.n; // Number of documents matched
 // res.nModified; // Number of documents modified
 // ?=================================
