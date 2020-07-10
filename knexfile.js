@@ -2,17 +2,19 @@ module.exports = {
     development: {
       client: 'postgresql',
       connection: {
-        database: 'allReviews',
+        host: '127.0.0.1',
         user:     'postgres',
-        password: 'Unlucky1!'
+        password: 'V3rdilith1!',
+        database: 'allReviews'
       }
       },
     staging: {
       client: 'postgresql',
       connection: {
-        database: 'allReviews',
+        host: '127.0.0.1',
         user:     'postgres',
-        password: 'Unlucky1!'
+        password: 'V3rdilith1!',
+        database: 'allReviews'
       },
       migrations: {
         tableName: 'knex_migrations'
@@ -21,9 +23,10 @@ module.exports = {
     production: {
       client: 'postgresql',
       connection: {
-        database: 'allReviews',
+        host: '127.0.0.1',
         user:     'postgres',
-        password: 'Unlucky1!'
+        password: 'V3rdilith1!',
+        database: 'allReviews'
       },
       pool: {
         min: 2,
