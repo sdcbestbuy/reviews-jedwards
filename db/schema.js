@@ -45,3 +45,6 @@ const generateData = () => {
 
 // seedData();
 module.exports = mongoose.model('Review', reviewSchema);
+ 
+
+// user, review count, review average, review, image

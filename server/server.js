@@ -9,10 +9,12 @@ const Review = require('../db/schema');
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 
+// ? MONGO ENDPOINTS =================================
 app.get('/getReviews', async (req, res) => {
 
     try {
-        const review = await Review.find();
+        console.log('GET REACHED')
+        const review = await Review.findById("5f078227a670cf41cdd1a299", function (err, thisReview) {});
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});
@@ -28,12 +30,33 @@ app.post('/postReviews', async (req, res) => {
     })
 
     try {
-        const newReview = await review.save()
+        const newReview = await review.save({
+
+            user: 'jack mama',
+            review: 'Hello Beavis'
+        })
         res.status(201).json(newReview)
     } catch(err) {
         res.status(400).json({message: err.message});
     }
 });
+
+// ? POSTGRES ENDPOINTS =================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ? =====================================================
 
 // app.delete('/deleteReviews', async (req, res) => {
 //     // try {
@@ -53,9 +76,11 @@ app.post('/postReviews', async (req, res) => {
 //     // }
 // });
 
-// ?=================================
-// ?=================================
-// ?=================================
+
+
+// ?============================================================
+// ?============================================================
+// ?============================================================
 
 // server route to get a review for a certain product
 app.get('/api/getReviews',(req,res)=>{

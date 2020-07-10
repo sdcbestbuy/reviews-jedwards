@@ -20,7 +20,8 @@ var dbquery = require('../db/queries');
 var Review = require('../db/schema');
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
-app.use(express.json());
+app.use(express.json()); // ? MONGO ENDPOINTS =================================
+
 app.get('/getReviews', /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
     var review;
@@ -29,28 +30,29 @@ app.get('/getReviews', /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            _context.next = 3;
-            return Review.find();
+            console.log('GET REACHED');
+            _context.next = 4;
+            return Review.findById("5f078227a670cf41cdd1a299", function (err, thisReview) {});
 
-          case 3:
+          case 4:
             review = _context.sent;
             res.json(review);
-            _context.next = 10;
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
+          case 8:
+            _context.prev = 8;
             _context.t0 = _context["catch"](0);
             res.status(500).json({
               message: _context.t0.message
             });
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[0, 8]]);
   }));
 
   return function (_x, _x2) {
@@ -70,7 +72,10 @@ app.post('/postReviews', /*#__PURE__*/function () {
             });
             _context2.prev = 1;
             _context2.next = 4;
-            return review.save();
+            return review.save({
+              user: 'jack mama',
+              review: 'Hello Beavis'
+            });
 
           case 4:
             newReview = _context2.sent;
@@ -96,7 +101,9 @@ app.post('/postReviews', /*#__PURE__*/function () {
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);
   };
-}()); // app.delete('/deleteReviews', async (req, res) => {
+}()); // ? POSTGRES ENDPOINTS =================================
+// ? =====================================================
+// app.delete('/deleteReviews', async (req, res) => {
 //     // try {
 //     //     const newReview = await review.save()
 //     //     res.status(201).json(newReview)
@@ -112,9 +119,9 @@ app.post('/postReviews', /*#__PURE__*/function () {
 //     //     res.status(400).json({message: err.message});
 //     // }
 // });
-// ?=================================
-// ?=================================
-// ?=================================
+// ?============================================================
+// ?============================================================
+// ?============================================================
 // server route to get a review for a certain product
 
 app.get('/api/getReviews', function (req, res) {
