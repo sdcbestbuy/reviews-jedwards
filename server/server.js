@@ -5,6 +5,7 @@ const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
 const Review = require('../db/schema');
+const {getReviews} = require('../db/knexQueries');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
@@ -40,7 +41,8 @@ app.post('/postReviews', async (req, res) => {
 app.get('/getReviewsPg', async (req, res) => {
 
     try {
-        console.log('hit postgres get endpoint')
+        let getAReview = await getReviews();
+        res.json(getAReview);
     } catch(err) {
         res.status(500).json({message: err.message});
     }
@@ -49,7 +51,8 @@ app.get('/getReviewsPg', async (req, res) => {
 app.post('/postReviewsPg', async (req, res) => {
     
     try {
-        console.log('hit postgres post endpoint')
+        let getAReview = await dbquery.getReviews(999000);
+        res.json(getAReview);
     } catch(err) {
         res.status(400).json({message: err.message});
     }

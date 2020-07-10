@@ -8,20 +8,36 @@ const connection = mysql.createConnection({
 });
 
 //proof of db connection
-connection.connect((err)=>{
-    if (err){
-        console.log('DB CONNECTION FAILED',err)
+connection.connect( error =>{
+    if (error){
+
+        console.log('DB CONNECTION FAILED', error)
         return;
     }
     console.log('Connected to DB')
 });
 
+async function getReviews() {
 
+    let response;
+
+    try {
+        response = await connection.query('SELECT * FROM reviews WHERE id= 8997650');
+    } catch (error) {
+        throw error;
+    }
+    
+    return response;
+}
+
+// ?============================================================
+// ?============================================================
+// ?============================================================
 // query to get review for certain Id
 const getTheReviews = (id,cb) =>{
-    connection.query('SELECT * FROM product WHERE id=?',[id],(error,results)=>{
+    connection.query('SELECT * FROM product WHERE id=?', [id], (error,results)=>{
         if (error){
-        console.log('Error with getTheReviews QUERY',error);
+        console.log('Error with getTheReviews QUERY', error);
         cb(error,null)
         } else {
         cb (null,results)
@@ -53,10 +69,8 @@ const getImagesforProduct = (id,cb) =>{
     })
 }
 
-
-
 module.exports ={
     getTheReviews,
     getTheListOfRealProducts,
-    getImagesforProduct
+    getImagesforProduct,
 }

@@ -19,6 +19,9 @@ var dbquery = require('../db/queries');
 
 var Review = require('../db/schema');
 
+var _require = require('../db/knexQueries'),
+    getReviews = _require.getReviews;
+
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json()); // ? MONGO ENDPOINTS =================================
 
@@ -101,24 +104,34 @@ app.post('/postReviews', /*#__PURE__*/function () {
 
 app.get('/getReviewsPg', /*#__PURE__*/function () {
   var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
+    var getAReview;
     return _regenerator["default"].wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            try {
-              console.log('hit postgres get endpoint');
-            } catch (err) {
-              res.status(500).json({
-                message: err.message
-              });
-            }
+            _context3.prev = 0;
+            _context3.next = 3;
+            return getReviews();
 
-          case 1:
+          case 3:
+            getAReview = _context3.sent;
+            res.json(getAReview);
+            _context3.next = 10;
+            break;
+
+          case 7:
+            _context3.prev = 7;
+            _context3.t0 = _context3["catch"](0);
+            res.status(500).json({
+              message: _context3.t0.message
+            });
+
+          case 10:
           case "end":
             return _context3.stop();
         }
       }
-    }, _callee3);
+    }, _callee3, null, [[0, 7]]);
   }));
 
   return function (_x5, _x6) {
@@ -127,24 +140,34 @@ app.get('/getReviewsPg', /*#__PURE__*/function () {
 }());
 app.post('/postReviewsPg', /*#__PURE__*/function () {
   var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res) {
+    var getAReview;
     return _regenerator["default"].wrap(function _callee4$(_context4) {
       while (1) {
         switch (_context4.prev = _context4.next) {
           case 0:
-            try {
-              console.log('hit postgres post endpoint');
-            } catch (err) {
-              res.status(400).json({
-                message: err.message
-              });
-            }
+            _context4.prev = 0;
+            _context4.next = 3;
+            return dbquery.getReviews(999000);
 
-          case 1:
+          case 3:
+            getAReview = _context4.sent;
+            res.json(getAReview);
+            _context4.next = 10;
+            break;
+
+          case 7:
+            _context4.prev = 7;
+            _context4.t0 = _context4["catch"](0);
+            res.status(400).json({
+              message: _context4.t0.message
+            });
+
+          case 10:
           case "end":
             return _context4.stop();
         }
       }
-    }, _callee4);
+    }, _callee4, null, [[0, 7]]);
   }));
 
   return function (_x7, _x8) {
