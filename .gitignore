@@ -1,5 +1,5 @@
 /node_modules
-/data.csv
+/Users/joshuaedwards/Desktop/sdc/reviews/ignore
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
