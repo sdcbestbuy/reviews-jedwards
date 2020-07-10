@@ -13,7 +13,8 @@ async function getReviews() {
     let response;
 
     try {
-        response = await knex.query('SELECT * FROM reviews WHERE id= 8997650');
+
+        response = await knex('Reviews').select('*').where('id', 9000000);
     } catch (error) {
         throw error;
     }
