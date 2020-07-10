@@ -6,3 +6,5 @@ CREATE TABLE reviews (
     user VARCHAR(255)
     review VARCHAR(255)
 )
+
+
