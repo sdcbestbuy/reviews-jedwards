@@ -1,8 +1,7 @@
 const faker = require('faker');
 
 const createReview = () => ({
-
-  id: faker.random.number,
+  // id: reviewId,
   name: faker.internet.userName(),
   review: faker.lorem.words()
 
@@ -10,17 +9,23 @@ const createReview = () => ({
 
 exports.seed = async function(knex, Promise) {
 
-  const reviewData = [];
-  const dataEntries = 10000;
-  for(i = 0; i < dataEntries; i++) {
+  var reviewData = [];
 
-    reviewData.push(createReview());
+  var dataEntries = 10000000;
+
+  for(let i = 1; i < dataEntries; i += 1) {
+    reviewData.push(createReview(i));
+    if(i % 1000 === 0) {
+      await knex('Reviews').insert(reviewData);
+      reviewData = [];
+    }
   }
-
-  await knex('reviews')
-    .insert(reviewData)
 };
 
-// COPY review("id", "name", "review")
-// FROM '/Users/joshuaedwards/Desktop/sdc/data.csv'
-// WITH DELIMITER ',' CSV HEADER;
+// for(i = 0; i < dataEntries; i++) {
+
+//   reviewData.push(createReview());
+// }
+
+// await knex('reviews')
+//   .insert(reviewData)

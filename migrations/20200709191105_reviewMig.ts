@@ -1,24 +1,20 @@
-import * as Knex from "knex";
 
 exports.up = async function(knex, Promise) {
-    await knex.schema.createTable('reviews', table => {
+    await knex.schema.createTable('Reviews', table => {
         table
             .increments('id')
             .unsigned()
             .primary();
         table
             .string('name')
-            .unique()
-            .notNullable();
         table
             .string('review')
-            .notNullable();
     })
 }
 
 
 exports.down = async function(knex, Promise) {
 
-    await knex.schema.dropTable('reviews');
+    await knex.schema.dropTable('Reviews');
 };
 
