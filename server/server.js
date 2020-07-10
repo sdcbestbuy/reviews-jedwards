@@ -13,7 +13,6 @@ app.use(express.json());
 app.get('/getReviews', async (req, res) => {
 
     try {
-        console.log('GET REACHED')
         const review = await Review.findById("5f078227a670cf41cdd1a299", function (err, thisReview) {});
         res.json(review);
     } catch(err) {
@@ -23,18 +22,13 @@ app.get('/getReviews', async (req, res) => {
 
 app.post('/postReviews', async (req, res) => {
     
-
     const review = new Review({
-        user: 'req.body.user',
-        review: 'req.body.review'
+        user: 'joe mama',
+        review: 'Hello Butthead'
     })
 
     try {
-        const newReview = await review.save({
-
-            user: 'jack mama',
-            review: 'Hello Beavis'
-        })
+        const newReview = await review.save()
         res.status(201).json(newReview)
     } catch(err) {
         res.status(400).json({message: err.message});
@@ -43,18 +37,23 @@ app.post('/postReviews', async (req, res) => {
 
 // ? POSTGRES ENDPOINTS =================================
 
+app.get('/getReviewsPg', async (req, res) => {
 
+    try {
+        console.log('hit postgres get endpoint')
+    } catch(err) {
+        res.status(500).json({message: err.message});
+    }
+});
 
-
-
-
-
-
-
-
-
-
-
+app.post('/postReviewsPg', async (req, res) => {
+    
+    try {
+        console.log('hit postgres post endpoint')
+    } catch(err) {
+        res.status(400).json({message: err.message});
+    }
+});
 
 // ? =====================================================
 

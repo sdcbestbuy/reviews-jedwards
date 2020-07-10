@@ -30,29 +30,28 @@ app.get('/getReviews', /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            console.log('GET REACHED');
-            _context.next = 4;
+            _context.next = 3;
             return Review.findById("5f078227a670cf41cdd1a299", function (err, thisReview) {});
 
-          case 4:
+          case 3:
             review = _context.sent;
             res.json(review);
-            _context.next = 11;
+            _context.next = 10;
             break;
 
-          case 8:
-            _context.prev = 8;
+          case 7:
+            _context.prev = 7;
             _context.t0 = _context["catch"](0);
             res.status(500).json({
               message: _context.t0.message
             });
 
-          case 11:
+          case 10:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 8]]);
+    }, _callee, null, [[0, 7]]);
   }));
 
   return function (_x, _x2) {
@@ -67,15 +66,12 @@ app.post('/postReviews', /*#__PURE__*/function () {
         switch (_context2.prev = _context2.next) {
           case 0:
             review = new Review({
-              user: 'req.body.user',
-              review: 'req.body.review'
+              user: 'joe mama',
+              review: 'Hello Butthead'
             });
             _context2.prev = 1;
             _context2.next = 4;
-            return review.save({
-              user: 'jack mama',
-              review: 'Hello Beavis'
-            });
+            return review.save();
 
           case 4:
             newReview = _context2.sent;
@@ -102,7 +98,59 @@ app.post('/postReviews', /*#__PURE__*/function () {
     return _ref2.apply(this, arguments);
   };
 }()); // ? POSTGRES ENDPOINTS =================================
-// ? =====================================================
+
+app.get('/getReviewsPg', /*#__PURE__*/function () {
+  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
+    return _regenerator["default"].wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            try {
+              console.log('hit postgres get endpoint');
+            } catch (err) {
+              res.status(500).json({
+                message: err.message
+              });
+            }
+
+          case 1:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+
+  return function (_x5, _x6) {
+    return _ref3.apply(this, arguments);
+  };
+}());
+app.post('/postReviewsPg', /*#__PURE__*/function () {
+  var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res) {
+    return _regenerator["default"].wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            try {
+              console.log('hit postgres post endpoint');
+            } catch (err) {
+              res.status(400).json({
+                message: err.message
+              });
+            }
+
+          case 1:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4);
+  }));
+
+  return function (_x7, _x8) {
+    return _ref4.apply(this, arguments);
+  };
+}()); // ? =====================================================
 // app.delete('/deleteReviews', async (req, res) => {
 //     // try {
 //     //     const newReview = await review.save()
