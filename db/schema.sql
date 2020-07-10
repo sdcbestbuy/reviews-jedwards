@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 -- DROP DATABASE IF EXISTS bestBuyReviews;
 
 -- CREATE DATABASE bestBuyReviews;

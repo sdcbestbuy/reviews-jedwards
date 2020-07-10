@@ -41,7 +41,7 @@ const generateData = () => {
     console.log('I think I am done?');
 };
 
-generateData();
+// generateData();
 
 // seedData();
 module.exports = mongoose.model('Review', reviewSchema);

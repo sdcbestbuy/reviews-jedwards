@@ -6,12 +6,8 @@ const PORT = 8008;
 const dbquery = require ('../db/queries');
 const Review = require('../db/schema');
 
-
-
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
-
-
 
 app.get('/getReviews', async (req, res) => {
 
