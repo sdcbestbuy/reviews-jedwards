@@ -55,8 +55,6 @@ const generateData = () => {
     console.log('I think I am done?');
 };
 
-const randomArray = connection.find().skip(9900000).limit(10000);
-
 // ? ========================================================
 // The database queries start here ==========================
 // TODO =====================================================
@@ -97,7 +95,6 @@ const collection = mongoose.model('reviews2', reviewSchema);
 module.exports = {
 
     collection, 
-    randomArray,
     getReviewData,
     createReviewData
 }

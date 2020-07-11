@@ -7,6 +7,8 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
 // 'strict mode'
+require('newrelic');
+
 var express = require('express');
 
 var app = express();
@@ -20,6 +22,7 @@ var dbquery = require('../db/queries');
 var _require = require('../db/schema'),
     getReviewData = _require.getReviewData,
     createReviewData = _require.createReviewData; // const {getReviews, postReviews} = require('../db/knexQueries');
+// const {randomArray} = require('../randomArray');
 
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
@@ -35,7 +38,7 @@ app.get('/getReviews', /*#__PURE__*/function () {
             _context.prev = 0;
             _context.next = 3;
             return getReviewData({
-              user: 'Lisa'
+              user: 'Johnathan'
             });
 
           case 3:

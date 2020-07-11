@@ -5,19 +5,20 @@ const app = express();
 const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
-const { getReviewData, createReviewData, randomArray } = require('../db/schema');
+const { getReviewData, createReviewData } = require('../db/schema');
 // const {getReviews, postReviews} = require('../db/knexQueries');
+// const {randomArray} = require('../randomArray');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 
 // ? MONGO ENDPOINTS =================================
 app.get('/getReviews', async (req, res) => {
-
-    let userName = randomArray[Math.floor(Math.random() * 10000)];
+    // const index = await Math.floor(Math.random() * 1000);
+    // const userName = await randomArray[index];
     try {
         // const review = await reviews2.findOne({user: 'Easton'});
-        const review = await getReviewData({user: userName});
+        const review = await getReviewData({user: 'Johnathan'});
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});
