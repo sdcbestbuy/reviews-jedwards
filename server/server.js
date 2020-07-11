@@ -15,10 +15,9 @@ app.use(express.json());
 // ? MONGO ENDPOINTS =================================
 app.get('/getReviews', async (req, res) => {
 
-    console.log('hello there');
     try {
         // const review = await reviews2.findOne({user: 'Easton'});
-        const review = await getReviewData('Easton');
+        const review = await getReviewData({user: 'Trever'});
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});
@@ -27,20 +26,20 @@ app.get('/getReviews', async (req, res) => {
 
 app.post('/postReviews', async (req, res) => {
     
-    // const review = new reviews2({
-    //     user: 'Jack',
-    //     revCount: 20,
-    //     revAvg: 3,
-    //     revTitle: 'total wackness',
-    //     review: 'This is wack'
-    // })
+    const reviewObj = {
+        user: 'Bob',
+        revCount: 99,
+        revAvg: 2.7,
+        revTitle: 'bob is the most wack',
+        review: 'This guy...'
+    }
 
-    // try {
-    //     const newReview = await review.save()
-    //     res.status(201).json(newReview)
-    // } catch(err) {
-    //     res.status(400).json({message: err.message});
-    // }
+    try {
+        const review = await createReviewData(reviewObj);
+        res.json(review);
+    } catch(err) {
+        res.status(500).json({message: err.message});
+    }
 });
 
 // ? POSTGRES ENDPOINTS =================================

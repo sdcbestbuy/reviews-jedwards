@@ -17,9 +17,6 @@ connection.connect( error =>{
     console.log('Connected to DB')
 });
 
-// ?============================================================
-// ?============================================================
-// ?============================================================
 // query to get review for certain Id
 const getTheReviews = (id,cb) =>{
     connection.query('SELECT * FROM product WHERE id=?', [id], (error,results)=>{

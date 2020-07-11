@@ -1,5 +1,6 @@
 const faker = require('faker');
 
+// create the connection to the posgres database
 const knex = require('knex')({
     client: 'postgres',
     connection: {

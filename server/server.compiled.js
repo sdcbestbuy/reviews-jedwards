@@ -15,12 +15,15 @@ var path = require('path');
 
 var PORT = 8008;
 
-var dbquery = require('../db/queries');
+var dbquery = require('../db/queries'); // const Review = require('../db/schema');
 
-var Review = require('../db/schema');
 
 var reviews2 = require('../db/schema'); // const {getReviews, postReviews} = require('../db/knexQueries');
 
+
+var _require = require('../db/schema'),
+    getReviewData = _require.getReviewData,
+    createReviewData = _require.createReviewData;
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json()); // ? MONGO ENDPOINTS =================================
@@ -35,9 +38,7 @@ app.get('/getReviews', /*#__PURE__*/function () {
             console.log('hello there');
             _context.prev = 1;
             _context.next = 4;
-            return reviews2.findOne({
-              user: 'Easton'
-            });
+            return getReviewData('Easton');
 
           case 4:
             review = _context.sent;
@@ -66,41 +67,15 @@ app.get('/getReviews', /*#__PURE__*/function () {
 }());
 app.post('/postReviews', /*#__PURE__*/function () {
   var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
-    var review, newReview;
     return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            review = new reviews2({
-              user: 'Jack',
-              revCount: 20,
-              revAvg: 3,
-              revTitle: 'total wackness',
-              review: 'This is wack'
-            });
-            _context2.prev = 1;
-            _context2.next = 4;
-            return review.save();
-
-          case 4:
-            newReview = _context2.sent;
-            res.status(201).json(newReview);
-            _context2.next = 11;
-            break;
-
-          case 8:
-            _context2.prev = 8;
-            _context2.t0 = _context2["catch"](1);
-            res.status(400).json({
-              message: _context2.t0.message
-            });
-
-          case 11:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2, null, [[1, 8]]);
+    }, _callee2);
   }));
 
   return function (_x3, _x4) {

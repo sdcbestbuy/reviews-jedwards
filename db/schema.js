@@ -7,6 +7,7 @@ const faker = require('faker');
 // make all mongoose methods and functions compliant with ES6 promises
 mongoose.Promise = global.Promise;
 
+// create the mongo connection
 mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true, useUnifiedTopology: true})
     .then( res => {
         console.log('woohoo connected!');
@@ -32,10 +33,11 @@ const reviewSchema = new mongoose.Schema({
     review: String,
 });
 
+// this funciton is used to create another csv file
 const generateData = () => {
-
+    // number of items to be created in the csv file
     var dataEntries  = 10000000;
-
+    // change the name here to create a new collection and seed it
     writer.pipe(fs.createWriteStream('data2.csv'));
 
     for(let i = 0; i < dataEntries; i++) {
@@ -54,21 +56,19 @@ const generateData = () => {
 };
 
 
-// ? ====================================
-// TODO =================================
+// ? ========================================================
+// The database queries start here ==========================
+// TODO =====================================================
 
 const getReviewData = async (columnData) => {
 
     try {
-        const review = await reviews2.findOne({user: columnData});
+        const review = await collection.findOne(columnData, function (err, adventure) {});
         return review;
-        // res.json(review);
     } catch(err) {
-        // res.status(500).json({message: err.message});
-        console.log('There is a problem getting your data');
+        console.error(err, 'There is a problem getting your data');
     }
 };
-
 
 const createReviewData = async (reviewData) => {
 
@@ -82,13 +82,14 @@ const createReviewData = async (reviewData) => {
 
     try {
         const newReview = await review.save()
-        res.status(201).json(newReview)
+        return newReview;
     } catch(err) {
-        res.status(400).json({message: err.message});
+        console.error(err, 'There is a problem posting your data');
     }
 };
 
-
+// this is the connection to the collection with the larger set of data
+// set this value to 'reviews' to work with the lighter data set
 const collection = mongoose.model('reviews2', reviewSchema);
 
 // generateData();
