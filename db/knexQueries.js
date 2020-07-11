@@ -1,3 +1,5 @@
+const faker = require('faker');
+
 const knex = require('knex')({
     client: 'postgres',
     connection: {
@@ -14,28 +16,31 @@ async function getReviews() {
 
     try {
 
-        response = await knex('Reviews').select('*').where('id', 9000000);
+        response = await knex('reviews').select('*').where('_id', '5f08faf2d91666444a1b070f');
     } catch (error) {
+
         throw error;
     }
-    
+    return response;
+}
+
+async function postReviews() {
+
+     let response;
+
+    try {
+
+        response = await knex('Reviews')
+            .insert({name: 'Butthead', review: 'this is a test'});
+    } catch (error) {
+
+        throw error;
+    }
     return response;
 }
 
 module.exports = {
 
-    getReviews
+    getReviews,
+    postReviews
 }
-
-// async function getReviews() {
-
-//     let response;
-
-//     try {
-//         response = await connection.query('SELECT * FROM reviews WHERE id= 8997650');
-//     } catch (error) {
-//         throw error;
-//     }
-    
-//     return response;
-// }

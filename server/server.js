@@ -4,8 +4,10 @@ const app = express();
 const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
-const Review = require('../db/schema');
-const {getReviews} = require('../db/knexQueries');
+// const Review = require('../db/schema');
+const reviews2 = require('../db/schema');
+// const {getReviews, postReviews} = require('../db/knexQueries');
+const { getReviewData, createReviewData } = require('../db/schema');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
@@ -13,8 +15,10 @@ app.use(express.json());
 // ? MONGO ENDPOINTS =================================
 app.get('/getReviews', async (req, res) => {
 
+    console.log('hello there');
     try {
-        const review = await Review.findById("5f078227a670cf41cdd1a299", function (err, thisReview) {});
+        // const review = await reviews2.findOne({user: 'Easton'});
+        const review = await getReviewData('Easton');
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});
@@ -23,61 +27,43 @@ app.get('/getReviews', async (req, res) => {
 
 app.post('/postReviews', async (req, res) => {
     
-    const review = new Review({
-        user: 'joe mama',
-        review: 'Hello Butthead'
-    })
+    // const review = new reviews2({
+    //     user: 'Jack',
+    //     revCount: 20,
+    //     revAvg: 3,
+    //     revTitle: 'total wackness',
+    //     review: 'This is wack'
+    // })
 
-    try {
-        const newReview = await review.save()
-        res.status(201).json(newReview)
-    } catch(err) {
-        res.status(400).json({message: err.message});
-    }
+    // try {
+    //     const newReview = await review.save()
+    //     res.status(201).json(newReview)
+    // } catch(err) {
+    //     res.status(400).json({message: err.message});
+    // }
 });
 
 // ? POSTGRES ENDPOINTS =================================
 
-app.get('/getReviewsPg', async (req, res) => {
+// app.get('/getReviewsPg', async (req, res) => {
 
-    try {
-        let getAReview = await getReviews();
-        res.json(getAReview);
-    } catch(err) {
-        res.status(500).json({message: err.message});
-    }
-});
+//     try {
+//         let getAReview = await getReviews();
+//         res.json(getAReview);
+//     } catch(err) {
+//         res.status(500).json({message: err.message});
+//     }
+// });
 
-app.post('/postReviewsPg', async (req, res) => {
+// app.post('/postReviewsPg', async (req, res) => {
     
-    try {
-        let getAReview = await dbquery.getReviews(999000);
-        res.json(getAReview);
-    } catch(err) {
-        res.status(400).json({message: err.message});
-    }
-});
-
-// ? =====================================================
-
-// app.delete('/deleteReviews', async (req, res) => {
-//     // try {
-//     //     const newReview = await review.save()
-//     //     res.status(201).json(newReview)
-//     // } catch(err) {
-//     //     res.status(400).json({message: err.message});
-//     // }
+//     try {
+//         let postAReview = await postReviews();
+//         res.json(postAReview);
+//     } catch(err) {
+//         res.status(400).json({message: err.message});
+//     }
 // });
-
-// app.put('/updateReviews', async (req, res) => {
-//     // try {
-//     //     const newReview = await review.save()
-//     //     res.status(201).json(newReview)
-//     // } catch(err) {
-//     //     res.status(400).json({message: err.message});
-//     // }
-// });
-
 
 
 // ?============================================================

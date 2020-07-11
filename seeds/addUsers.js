@@ -1,10 +1,12 @@
 const faker = require('faker');
 
 const createReview = () => ({
-  // id: reviewId,
-  name: faker.internet.userName(),
-  review: faker.lorem.words()
 
+  user: faker.name.firstName(),
+  revCount: 20,
+  revAvg: 4.5,
+  revTitle: faker.lorem.words(),
+  review: faker.lorem.words()
 });
 
 exports.seed = async function(knex, Promise) {

@@ -17,19 +17,6 @@ connection.connect( error =>{
     console.log('Connected to DB')
 });
 
-async function getReviews() {
-
-    let response;
-
-    try {
-        response = await connection.query('SELECT * FROM reviews WHERE id= 8997650');
-    } catch (error) {
-        throw error;
-    }
-    
-    return response;
-}
-
 // ?============================================================
 // ?============================================================
 // ?============================================================

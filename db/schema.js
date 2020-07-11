@@ -4,7 +4,6 @@ const csvWriter = require('csv-write-stream');
 const writer = csvWriter();
 const faker = require('faker');
 
-let counter = 0;
 // make all mongoose methods and functions compliant with ES6 promises
 mongoose.Promise = global.Promise;
 
@@ -25,26 +24,79 @@ const db = mongoose.connection;
 
 // this sets the "table" and it's "columns"
 const reviewSchema = new mongoose.Schema({
+
     user: String,
-    review: String
+    revCount: Number,
+    revAvg: Number,
+    revTitle: String,
+    review: String,
 });
 
 const generateData = () => {
-    writer.pipe(fs.createWriteStream('data.csv'));
-    for(let i = 0; i < 10000000; i++) {
+
+    var dataEntries  = 10000000;
+
+    writer.pipe(fs.createWriteStream('data2.csv'));
+
+    for(let i = 0; i < dataEntries; i++) {
+
         writer.write({
-            user: faker.internet.userName(),
+            user: faker.name.firstName(),
+            revCount: 20,
+            revAvg: 4.5,
+            revTitle: faker.lorem.words(),
             review: faker.lorem.words()
-        })
+
+        });
     }
     writer.end();
     console.log('I think I am done?');
 };
 
+
+// ? ====================================
+// TODO =================================
+
+const getReviewData = async (columnData) => {
+
+    try {
+        const review = await reviews2.findOne({user: columnData});
+        return review;
+        // res.json(review);
+    } catch(err) {
+        // res.status(500).json({message: err.message});
+        console.log('There is a problem getting your data');
+    }
+};
+
+
+const createReviewData = async (reviewData) => {
+
+    const review = new reviews2({
+        user: reviewData.user,
+        revCount: reviewData.revCount,
+        revAvg: reviewData.revAvg,
+        revTitle: reviewData.revTitle,
+        review: reviewData.review
+    })
+
+    try {
+        const newReview = await review.save()
+        res.status(201).json(newReview)
+    } catch(err) {
+        res.status(400).json({message: err.message});
+    }
+};
+
+
+const collection = mongoose.model('reviews2', reviewSchema);
+
 // generateData();
+module.exports = {
 
-// seedData();
-module.exports = mongoose.model('Review', reviewSchema);
- 
+    collection, 
+    getReviewData,
+    createReviewData
+}
 
-// user, review count, review average, review, image
+

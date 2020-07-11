@@ -19,8 +19,8 @@ var dbquery = require('../db/queries');
 
 var Review = require('../db/schema');
 
-var _require = require('../db/knexQueries'),
-    getReviews = _require.getReviews;
+var reviews2 = require('../db/schema'); // const {getReviews, postReviews} = require('../db/knexQueries');
+
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json()); // ? MONGO ENDPOINTS =================================
@@ -32,29 +32,32 @@ app.get('/getReviews', /*#__PURE__*/function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _context.prev = 0;
-            _context.next = 3;
-            return Review.findById("5f078227a670cf41cdd1a299", function (err, thisReview) {});
+            console.log('hello there');
+            _context.prev = 1;
+            _context.next = 4;
+            return reviews2.findOne({
+              user: 'Easton'
+            });
 
-          case 3:
+          case 4:
             review = _context.sent;
             res.json(review);
-            _context.next = 10;
+            _context.next = 11;
             break;
 
-          case 7:
-            _context.prev = 7;
-            _context.t0 = _context["catch"](0);
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](1);
             res.status(500).json({
               message: _context.t0.message
             });
 
-          case 10:
+          case 11:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 7]]);
+    }, _callee, null, [[1, 8]]);
   }));
 
   return function (_x, _x2) {
@@ -68,9 +71,12 @@ app.post('/postReviews', /*#__PURE__*/function () {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            review = new Review({
-              user: 'joe mama',
-              review: 'Hello Butthead'
+            review = new reviews2({
+              user: 'Jack',
+              revCount: 20,
+              revAvg: 3,
+              revTitle: 'total wackness',
+              review: 'This is wack'
             });
             _context2.prev = 1;
             _context2.next = 4;
@@ -101,94 +107,21 @@ app.post('/postReviews', /*#__PURE__*/function () {
     return _ref2.apply(this, arguments);
   };
 }()); // ? POSTGRES ENDPOINTS =================================
-
-app.get('/getReviewsPg', /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
-    var getAReview;
-    return _regenerator["default"].wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            _context3.prev = 0;
-            _context3.next = 3;
-            return getReviews();
-
-          case 3:
-            getAReview = _context3.sent;
-            res.json(getAReview);
-            _context3.next = 10;
-            break;
-
-          case 7:
-            _context3.prev = 7;
-            _context3.t0 = _context3["catch"](0);
-            res.status(500).json({
-              message: _context3.t0.message
-            });
-
-          case 10:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3, null, [[0, 7]]);
-  }));
-
-  return function (_x5, _x6) {
-    return _ref3.apply(this, arguments);
-  };
-}());
-app.post('/postReviewsPg', /*#__PURE__*/function () {
-  var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res) {
-    var getAReview;
-    return _regenerator["default"].wrap(function _callee4$(_context4) {
-      while (1) {
-        switch (_context4.prev = _context4.next) {
-          case 0:
-            _context4.prev = 0;
-            _context4.next = 3;
-            return dbquery.getReviews(999000);
-
-          case 3:
-            getAReview = _context4.sent;
-            res.json(getAReview);
-            _context4.next = 10;
-            break;
-
-          case 7:
-            _context4.prev = 7;
-            _context4.t0 = _context4["catch"](0);
-            res.status(400).json({
-              message: _context4.t0.message
-            });
-
-          case 10:
-          case "end":
-            return _context4.stop();
-        }
-      }
-    }, _callee4, null, [[0, 7]]);
-  }));
-
-  return function (_x7, _x8) {
-    return _ref4.apply(this, arguments);
-  };
-}()); // ? =====================================================
-// app.delete('/deleteReviews', async (req, res) => {
-//     // try {
-//     //     const newReview = await review.save()
-//     //     res.status(201).json(newReview)
-//     // } catch(err) {
-//     //     res.status(400).json({message: err.message});
-//     // }
+// app.get('/getReviewsPg', async (req, res) => {
+//     try {
+//         let getAReview = await getReviews();
+//         res.json(getAReview);
+//     } catch(err) {
+//         res.status(500).json({message: err.message});
+//     }
 // });
-// app.put('/updateReviews', async (req, res) => {
-//     // try {
-//     //     const newReview = await review.save()
-//     //     res.status(201).json(newReview)
-//     // } catch(err) {
-//     //     res.status(400).json({message: err.message});
-//     // }
+// app.post('/postReviewsPg', async (req, res) => {
+//     try {
+//         let postAReview = await postReviews();
+//         res.json(postAReview);
+//     } catch(err) {
+//         res.status(400).json({message: err.message});
+//     }
 // });
 // ?============================================================
 // ?============================================================
