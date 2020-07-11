@@ -14,6 +14,7 @@ app.use(express.json());
 // ? MONGO ENDPOINTS =================================
 app.get('/getReviews', async (req, res) => {
 
+    
     try {
         // const review = await reviews2.findOne({user: 'Easton'});
         const review = await getReviewData({user: 'Candido'});
