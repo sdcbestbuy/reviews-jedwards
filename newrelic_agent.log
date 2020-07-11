@@ -38,3 +38,47 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":39699,"time":"2020-07-11T16:26:00.891Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
 {"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":39699,"time":"2020-07-11T16:26:00.893Z","msg":"Agent state changed from connected to started."}
 {"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":39699,"time":"2020-07-11T16:26:01.899Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:11.882Z","msg":"Using New Relic for Node.js. Agent version: 6.11.0; Node version: v14.5.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:12.011Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:12.080Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:12.081Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:16.058Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:16.058Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BUyX3uDF7w4iACqfHCgA6YBfCfiAAAgBAAAnIQEAAKAaAgQoAOl_AwAGNi4xMS4wAA9FbGl6YWJldGhzLWlNYWMAC3Jldmlld3Mtc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:16.058Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2793244/applications/671148415","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:16.059Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:16.061Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":40986,"time":"2020-07-11T17:34:17.063Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41955,"time":"2020-07-11T18:59:31.302Z","msg":"Using New Relic for Node.js. Agent version: 6.11.0; Node version: v14.5.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41955,"time":"2020-07-11T18:59:31.426Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41955,"time":"2020-07-11T18:59:31.492Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41955,"time":"2020-07-11T18:59:31.492Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:43.622Z","msg":"Using New Relic for Node.js. Agent version: 6.11.0; Node version: v14.5.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:43.693Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:43.759Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:43.759Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:46.084Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:46.084Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BfO80T2KFcjpACqfHCgA6YBfCgxsAAgBAAAnIQEAAKQCAgQoAOl_AwAGNi4xMS4wAA9FbGl6YWJldGhzLWlNYWMAC3Jldmlld3Mtc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:46.085Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2793244/applications/671148415","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:46.085Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:46.087Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":41986,"time":"2020-07-11T18:59:47.088Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:03.277Z","msg":"Using New Relic for Node.js. Agent version: 6.11.0; Node version: v14.5.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:03.393Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:03.462Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:03.462Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:06.304Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:06.305Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BRAWiT2qqruoACqfHCgA6YBfCgzkAAgBAAAnIQEAAKQvAgQoAOl_AwAGNi4xMS4wAA9FbGl6YWJldGhzLWlNYWMAC3Jldmlld3Mtc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:06.305Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2793244/applications/671148415","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:06.306Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:06.308Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":42031,"time":"2020-07-11T19:01:07.310Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:53.353Z","msg":"Using New Relic for Node.js. Agent version: 6.11.0; Node version: v14.5.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:53.477Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:53.545Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:53.545Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:56.535Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:56.535Z","msg":"Connected to collector-010.newrelic.com:443 with agent run ID BTCqTQPOvx6-ACqfHCgA6YBfChVUAAgBAAAnIQEAAALuAgQoAOl_AwAGNi4xMS4wAA9FbGl6YWJldGhzLWlNYWMAC3Jldmlld3Mtc2Rj.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:56.535Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/2793244/applications/671148415","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:56.536Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"analytic_event_data\":833,\"custom_event_data\":83}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:56.538Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"Elizabeths-iMac","pid":750,"time":"2020-07-11T19:37:57.542Z","msg":"Starting initial 1000ms harvest."}
