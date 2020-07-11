@@ -1,4 +1,5 @@
 // 'strict mode'
+require('newrelic');
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -15,7 +16,7 @@ app.get('/getReviews', async (req, res) => {
 
     try {
         // const review = await reviews2.findOne({user: 'Easton'});
-        const review = await getReviewData({user: 'Trever'});
+        const review = await getReviewData({user: 'Candido'});
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});

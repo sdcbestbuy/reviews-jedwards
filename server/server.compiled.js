@@ -15,15 +15,12 @@ var path = require('path');
 
 var PORT = 8008;
 
-var dbquery = require('../db/queries'); // const Review = require('../db/schema');
-
-
-var reviews2 = require('../db/schema'); // const {getReviews, postReviews} = require('../db/knexQueries');
-
+var dbquery = require('../db/queries');
 
 var _require = require('../db/schema'),
     getReviewData = _require.getReviewData,
-    createReviewData = _require.createReviewData;
+    createReviewData = _require.createReviewData; // const {getReviews, postReviews} = require('../db/knexQueries');
+
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json()); // ? MONGO ENDPOINTS =================================
@@ -35,30 +32,31 @@ app.get('/getReviews', /*#__PURE__*/function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log('hello there');
-            _context.prev = 1;
-            _context.next = 4;
-            return getReviewData('Easton');
+            _context.prev = 0;
+            _context.next = 3;
+            return getReviewData({
+              user: 'Lisa'
+            });
 
-          case 4:
+          case 3:
             review = _context.sent;
             res.json(review);
-            _context.next = 11;
+            _context.next = 10;
             break;
 
-          case 8:
-            _context.prev = 8;
-            _context.t0 = _context["catch"](1);
+          case 7:
+            _context.prev = 7;
+            _context.t0 = _context["catch"](0);
             res.status(500).json({
               message: _context.t0.message
             });
 
-          case 11:
+          case 10:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[1, 8]]);
+    }, _callee, null, [[0, 7]]);
   }));
 
   return function (_x, _x2) {
@@ -67,15 +65,41 @@ app.get('/getReviews', /*#__PURE__*/function () {
 }());
 app.post('/postReviews', /*#__PURE__*/function () {
   var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
+    var reviewObj, review;
     return _regenerator["default"].wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
+            reviewObj = {
+              user: 'harry bobbleton',
+              revCount: 99,
+              revAvg: 2.7,
+              revTitle: 'harry is the most wack',
+              review: 'This guy...'
+            };
+            _context2.prev = 1;
+            _context2.next = 4;
+            return createReviewData(reviewObj);
+
+          case 4:
+            review = _context2.sent;
+            res.json(review);
+            _context2.next = 11;
+            break;
+
+          case 8:
+            _context2.prev = 8;
+            _context2.t0 = _context2["catch"](1);
+            res.status(500).json({
+              message: _context2.t0.message
+            });
+
+          case 11:
           case "end":
             return _context2.stop();
         }
       }
-    }, _callee2);
+    }, _callee2, null, [[1, 8]]);
   }));
 
   return function (_x3, _x4) {

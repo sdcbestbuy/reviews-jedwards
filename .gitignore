@@ -1,5 +1,7 @@
 /node_modules
 /Users/joshuaedwards/Desktop/sdc/reviews/ignore
+/Users/joshuaedwards/Desktop/sdc/reviews/newrelic.js
+/Users/joshuaedwards/Desktop/sdc/reviews/.env
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
