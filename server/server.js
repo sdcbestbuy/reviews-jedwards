@@ -4,10 +4,8 @@ const app = express();
 const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
-// const Review = require('../db/schema');
-const reviews2 = require('../db/schema');
-// const {getReviews, postReviews} = require('../db/knexQueries');
 const { getReviewData, createReviewData } = require('../db/schema');
+// const {getReviews, postReviews} = require('../db/knexQueries');
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
@@ -27,10 +25,10 @@ app.get('/getReviews', async (req, res) => {
 app.post('/postReviews', async (req, res) => {
     
     const reviewObj = {
-        user: 'Bob',
+        user: 'harry bobbleton',
         revCount: 99,
         revAvg: 2.7,
-        revTitle: 'bob is the most wack',
+        revTitle: 'harry is the most wack',
         review: 'This guy...'
     }
 

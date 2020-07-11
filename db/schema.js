@@ -72,7 +72,7 @@ const getReviewData = async (columnData) => {
 
 const createReviewData = async (reviewData) => {
 
-    const review = new reviews2({
+    const review = new collection({
         user: reviewData.user,
         revCount: reviewData.revCount,
         revAvg: reviewData.revAvg,
