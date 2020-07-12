@@ -6,6 +6,7 @@ const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
 const { getReviewData, createReviewData } = require('../db/schema');
+const { getReviewMongo } = require('../db/mongo');
 // const {getReviews, postReviews} = require('../db/knexQueries');
 // const {randomArray} = require('../randomArray');
 
@@ -37,6 +38,19 @@ app.post('/postReviews', async (req, res) => {
 
     try {
         const review = await createReviewData(reviewObj);
+        res.json(review);
+    } catch(err) {
+        res.status(500).json({message: err.message});
+    }
+});
+// ? VANILLA MONGO ======================================
+
+app.get('/getReviewsMongo', async (req, res) => {
+    // const index = await Math.floor(Math.random() * 1000);
+    // const userName = await randomArray[index];
+    try {
+        // const review = await reviews2.findOne({user: 'Easton'});
+        const review = await getReviewMongo({user: 'Johnathan'});
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});

@@ -62,7 +62,7 @@ const generateData = () => {
 const getReviewData = async (columnData) => {
 
     try {
-        const review = await collection.findOne(columnData, function (err, adventure) {}).lean();
+        const review = await collection.findOne(columnData, function (err, data) {}).lean();
         return review;
     } catch(err) {
         console.error(err, 'There is a problem getting your data');

@@ -21,7 +21,10 @@ var dbquery = require('../db/queries');
 
 var _require = require('../db/schema'),
     getReviewData = _require.getReviewData,
-    createReviewData = _require.createReviewData; // const {getReviews, postReviews} = require('../db/knexQueries');
+    createReviewData = _require.createReviewData;
+
+var _require2 = require('../db/mongo'),
+    getReviewMongo = _require2.getReviewMongo; // const {getReviews, postReviews} = require('../db/knexQueries');
 // const {randomArray} = require('../randomArray');
 
 
@@ -107,6 +110,45 @@ app.post('/postReviews', /*#__PURE__*/function () {
 
   return function (_x3, _x4) {
     return _ref2.apply(this, arguments);
+  };
+}()); // ? VANILLA MONGO ======================================
+
+app.get('/getReviewsMongo', /*#__PURE__*/function () {
+  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
+    var review;
+    return _regenerator["default"].wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.prev = 0;
+            _context3.next = 3;
+            return getReviewMongo({
+              user: 'Johnathan'
+            });
+
+          case 3:
+            review = _context3.sent;
+            res.json(review);
+            _context3.next = 10;
+            break;
+
+          case 7:
+            _context3.prev = 7;
+            _context3.t0 = _context3["catch"](0);
+            res.status(500).json({
+              message: _context3.t0.message
+            });
+
+          case 10:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[0, 7]]);
+  }));
+
+  return function (_x5, _x6) {
+    return _ref3.apply(this, arguments);
   };
 }()); // ? POSTGRES ENDPOINTS =================================
 // app.get('/getReviewsPg', async (req, res) => {
