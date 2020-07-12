@@ -1,27 +1,30 @@
 # Reviews_Edwards
-<h2>This is the Reviews Module</h2>
+<h2>System design Capstone</h2>
 
-<h5>The Reviews Module Consists of Four Main Sub Modules:</h5>
+<h5>This was a project to push the potential of server performance</h5>
   
-  * Overview 
-  
-  * Specifications
-  
-  * Reviews
-  
-  * Questions and Answers
-  
+The goal of this project was to build out a server and a pair databases then test them for performance.  We had to choose both a SQL and noSQL database then choose one to focus on after with built them out.  I chose Postgres and Mongo DB for my two databases and then eventually narrowed it down to Mongo DB for benchmarking.  The requirements for the course were to meet the criteria below at a bare minimum.
 
-The Reviews Module was the Primary focus as it has a Backend interface, that consist of endpoints for various Server routes that query an Amazon RDS database for imformation and then dynamically changes its contents for that certain queried product. 
+  * Server response time under 2000ms under load
 
-Overview, Specifications, and Questions and Answers are Static components that were built in the final days to fill out the Best Buy Page. 
+  * All queries needed to be executed in under 50ms
 
-The purpose of this project was to build a dynamic Component that is hosted on Amazons AWS Elastic Beanstalk with an Amazon AWS RDS Database and Amazon AWS S3 Bucket. From there, A proxy server was then built to interact with components that were built by partner programmers on a team; that when combined fill out a replicated Best Buy Website that would be functional. The Main deployed Module's would then listen for actions from the proxy server environment and would respond with the proper data from Amazon's RDS.
+  * We had to generate and seed our databases with at least 10m documents
 
-Below you can find a Diagram of the structure of the Reviews Module.
+  * Error rate had to remain under 1% under load
 
-[Imgur](https://i.imgur.com/agCEwZ2.png)
+  * Throughput needed to exceed 100rps under load
 
-Here is a Video of the Module in Action.
+Below are some benchmarks achieved through the use of a single AWS t2.micro instance
 
-[Imgur](https://imgur.com/a/gdjq60t.mp4)
+Technology used: 
+  Mongo DB, Mongoose, Postgresql, PgAdmin4
+  Express, Node, 
+  K6
+
+![Carousel Component Demo](demo/image2.png)
+
+![Carousel Component Demo](demo/image1.png)
+
+
+

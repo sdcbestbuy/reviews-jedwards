@@ -50,7 +50,7 @@ app.get('/getReviewsMongo', async (req, res) => {
     // const userName = await randomArray[index];
     try {
         // const review = await reviews2.findOne({user: 'Easton'});
-        const review = await getReviewMongo({user: 'Johnathan'});
+        const review = await getReviewMongo({ user: 'Johnathan'});
         res.json(review);
     } catch(err) {
         res.status(500).json({message: err.message});
