@@ -20,7 +20,7 @@ Below are some benchmarks achieved through the use of a single AWS t2.micro inst
 Technology used: 
   Mongo DB, Mongoose, Postgresql, PgAdmin4
   Express, Node, 
-  K6
+  K6, New Relic
 
 ![Carousel Component Demo](demo/image2.png)
 
