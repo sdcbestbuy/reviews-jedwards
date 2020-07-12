@@ -17,7 +17,7 @@ The goal of this project was to build out a server and a pair databases then tes
 
 Below are some benchmarks achieved through the use of a single AWS t2.micro instance
 
-Technology used: 
+Technology: 
   Mongo DB, Mongoose, Postgresql, PgAdmin4
   Express, Node, 
   K6, New Relic
