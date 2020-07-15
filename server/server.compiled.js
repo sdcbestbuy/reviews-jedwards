@@ -21,17 +21,15 @@ var dbquery = require('../db/queries');
 
 var _require = require('../db/schema'),
     getReviewData = _require.getReviewData,
-    createReviewData = _require.createReviewData;
-
-var _require2 = require('../db/mongo'),
-    getReviewMongo = _require2.getReviewMongo; // const {getReviews, postReviews} = require('../db/knexQueries');
-// const {randomArray} = require('../randomArray');
+    createReviewData = _require.createReviewData; // const { getReviewMongo } = require('../db/mongo'); vanilla mongo
+// const {getReviews, postReviews} = require('../db/knexQueries'); postgres
+// const {randomArray} = require('../randomArray'); random function 1000 names
 
 
 app.use(express["static"](path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json()); // ? MONGO ENDPOINTS =================================
 
-app.get('/getReviews', /*#__PURE__*/function () {
+app.get('/getReviewsData', /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res) {
     var review;
     return _regenerator["default"].wrap(function _callee$(_context) {
@@ -69,7 +67,7 @@ app.get('/getReviews', /*#__PURE__*/function () {
     return _ref.apply(this, arguments);
   };
 }());
-app.post('/postReviews', /*#__PURE__*/function () {
+app.post('/postReviewsData', /*#__PURE__*/function () {
   var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res) {
     var reviewObj, review;
     return _regenerator["default"].wrap(function _callee2$(_context2) {
@@ -112,45 +110,15 @@ app.post('/postReviews', /*#__PURE__*/function () {
     return _ref2.apply(this, arguments);
   };
 }()); // ? VANILLA MONGO ======================================
-
-app.get('/getReviewsMongo', /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
-    var review;
-    return _regenerator["default"].wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            _context3.prev = 0;
-            _context3.next = 3;
-            return getReviewMongo({
-              user: 'Johnathan'
-            });
-
-          case 3:
-            review = _context3.sent;
-            res.json(review);
-            _context3.next = 10;
-            break;
-
-          case 7:
-            _context3.prev = 7;
-            _context3.t0 = _context3["catch"](0);
-            res.status(500).json({
-              message: _context3.t0.message
-            });
-
-          case 10:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3, null, [[0, 7]]);
-  }));
-
-  return function (_x5, _x6) {
-    return _ref3.apply(this, arguments);
-  };
-}()); // ? POSTGRES ENDPOINTS =================================
+// app.get('/getReviewsMongo', async (req, res) => {
+//     try {
+//         const review = await getReviewMongo({ user: 'Johnathan'});
+//         res.json(review);
+//     } catch(err) {
+//         res.status(500).json({message: err.message});
+//     }
+// });
+// ? POSTGRES ENDPOINTS =================================
 // app.get('/getReviewsPg', async (req, res) => {
 //     try {
 //         let getAReview = await getReviews();
@@ -206,4 +174,4 @@ app.get("/api/getListOfRealProductsThumbnails", function (req, res) {
 });
 app.listen(PORT, function () {
   console.log("server is CONNECTED on PORT:".concat(PORT));
-});
+}); // scp -i joshthewebdev.pem Archive.zip ec2-3-12-160-114.us-east-2.compute.amazonaws.com:Archive.zip

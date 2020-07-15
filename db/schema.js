@@ -6,9 +6,9 @@ const faker = require('faker');
 
 // make all mongoose methods and functions compliant with ES6 promises
 mongoose.Promise = global.Promise;
-
 // create the mongo connection
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true, useUnifiedTopology: true})
+// mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://jedwards:Unlucky1!@allreviews.xin8v.mongodb.net/allReviews?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
     .then( res => {
         console.log('woohoo connected!');
     })
@@ -89,7 +89,7 @@ const createReviewData = async (reviewData) => {
 
 // this is the connection to the collection with the larger set of data
 // set this value to 'reviews' to work with the lighter data set
-const collection = mongoose.model('reviews2', reviewSchema);
+const collection = mongoose.model('reviewData', reviewSchema);
 
 // generateData();
 module.exports = {

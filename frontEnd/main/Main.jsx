@@ -51,7 +51,7 @@ class App extends React.Component {
         })
       }
     }
-    Axios.get("/api/getReviews", { params: { id: productID} })
+    Axios.get("/api/", { params: { id: productID} })
       .then((results) => {
         this.setState({
           reviewsData: results.data,

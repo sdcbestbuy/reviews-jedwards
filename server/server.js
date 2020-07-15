@@ -6,19 +6,17 @@ const path = require('path');
 const PORT = 8008;
 const dbquery = require ('../db/queries');
 const { getReviewData, createReviewData } = require('../db/schema');
-const { getReviewMongo } = require('../db/mongo');
-// const {getReviews, postReviews} = require('../db/knexQueries');
-// const {randomArray} = require('../randomArray');
+// const { getReviewMongo } = require('../db/mongo'); vanilla mongo
+// const {getReviews, postReviews} = require('../db/knexQueries'); postgres
+// const {randomArray} = require('../randomArray'); random function 1000 names
 
 app.use(express.static(path.join(__dirname, '../frontEnd/dist')));
 app.use(express.json());
 
 // ? MONGO ENDPOINTS =================================
-app.get('/getReviews', async (req, res) => {
-    // const index = await Math.floor(Math.random() * 1000);
-    // const userName = await randomArray[index];
+app.get('/getReviewsData', async (req, res) => {
+
     try {
-        // const review = await reviews2.findOne({user: 'Easton'});
         const review = await getReviewData({user: 'Johnathan'});
         res.json(review);
     } catch(err) {
@@ -26,7 +24,7 @@ app.get('/getReviews', async (req, res) => {
     }
 });
 
-app.post('/postReviews', async (req, res) => {
+app.post('/postReviewsData', async (req, res) => {
     
     const reviewObj = {
         user: 'harry bobbleton',
@@ -45,17 +43,15 @@ app.post('/postReviews', async (req, res) => {
 });
 // ? VANILLA MONGO ======================================
 
-app.get('/getReviewsMongo', async (req, res) => {
-    // const index = await Math.floor(Math.random() * 1000);
-    // const userName = await randomArray[index];
-    try {
-        // const review = await reviews2.findOne({user: 'Easton'});
-        const review = await getReviewMongo({ user: 'Johnathan'});
-        res.json(review);
-    } catch(err) {
-        res.status(500).json({message: err.message});
-    }
-});
+// app.get('/getReviewsMongo', async (req, res) => {
+
+//     try {
+//         const review = await getReviewMongo({ user: 'Johnathan'});
+//         res.json(review);
+//     } catch(err) {
+//         res.status(500).json({message: err.message});
+//     }
+// });
 
 // ? POSTGRES ENDPOINTS =================================
 
@@ -125,3 +121,4 @@ app.listen(PORT, () => {
 });
 
 
+// scp -i joshthewebdev.pem Archive.zip ec2-3-12-160-114.us-east-2.compute.amazonaws.com:Archive.zip

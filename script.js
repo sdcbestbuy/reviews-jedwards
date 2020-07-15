@@ -6,24 +6,35 @@ const errorCounter = new Counter('errorCounter');
 
 export let options = {
     
-    // vus: 1500,
-    // max_vus: 2500,
+    vus: 250,
+    max_vus: 2500,
 
     stages: [
-        { duration: '45m', target: 1750 },
-        { duration: '30m', target: 2000 },
-        { duration: '15m', target: 2200 },
-        { duration: '30m', target: 2300 },
-
+        // { duration: '1m45s', target: 250 },
+        // { duration: '1m30s', target: 300 },
+        // { duration: '1m15s', target: 350 },
+        { duration: '30m', target: 575 },
     ],
 };
 
+// ? Default GET request test function
+
+// export default function() {
+//     let res = http.get(`http://127.0.0.1:8008/getReviewsData`);
+//     check(res, { 'status was 200': r => r.status == 200 , 
+//                 'user-name is correct': r => r.json('user') == 'Johnathan'});
+//     if(res.status === 500) {
+//         errorCounter.add(1)
+//     } 
+//     sleep(1);
+// }
+
+// ? Default POST request test function
 export default function() {
 
-    let res = http.get(`http://127.0.0.1:8008/getReviews`);
+    let res = http.post(`http://127.0.0.1:8008/postReviewsData`);
 
-    check(res, { 'status was 200': r => r.status == 200 , 
-                'user-name is correct': r => r.json('user') == 'Johnathan'});
+    check(res, { 'status was 200': r => r.status == 200});
 
     if(res.status === 500) {
 
@@ -33,7 +44,7 @@ export default function() {
     sleep(1);
 }
 
-
+// ? Random name test function, needs work
 
 //     let res = http.get(``);
 // export default function() {
@@ -45,6 +56,5 @@ export default function() {
 //         'return array exists': r => {
 //             return Array.isArray(r.json())}
 //         });
-
 //     sleep(1);
 // }
