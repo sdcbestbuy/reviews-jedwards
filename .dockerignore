@@ -1,0 +1,6 @@
+*.md
+README-secret.md
+!README*.md
+node_modules
+*.csv
+npm-debug.log

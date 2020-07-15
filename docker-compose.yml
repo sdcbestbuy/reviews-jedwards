@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  sdc_bestbuy:
+    build: /Users/joshuaedwards/Desktop/sdc/reviews/Dockerfile
+    image: bestBuyImage
+    ports: 
+      - '8008:8008'
+    command: npm run start
