@@ -1,7 +1,7 @@
-FROM node:latest
-RUN mkdir /sdc_bestbuy
-ADD . /sdc_bestbuy
+FROM node:12.7.0-alpine
 WORKDIR /sdc_bestbuy
+COPY package.json .
 RUN npm install
+COPY . .
 EXPOSE 8008
-CMD ['node', 'server/server.compiled.js' ]
+CMD ['npm', 'start' ]
