@@ -24,7 +24,5 @@ Technology:
 
 ![Carousel Component Demo](demo/image2.png)
 
-![Carousel Component Demo](demo/image1.png)
-
 
 
